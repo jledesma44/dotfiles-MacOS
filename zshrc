@@ -16,6 +16,7 @@ ZSH_THEME="robbyrussell"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -95,7 +96,13 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+
+#Set Variables======================================
+#Syntax hightlighting for man pages using bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+
 # Aliases============================================
 
 alias zshconfig="lvim ~/.zshrc"
@@ -123,11 +130,11 @@ PROMPT='%{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_pr
 
 neofetch
 
+
+# Paths==================================================
 case :$PATH: in
   *:/home/$USER/bin:*) ;;
   *) PATH=/home/$USER/bin:$PATH ;;
 esac  
-
-
 
 export PATH=/Users/jaimeledesma/.local/bin:$PATH
