@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/Users/jaimeledesma/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -16,7 +16,6 @@ ZSH_THEME="robbyrussell"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -24,13 +23,14 @@ ZSH_THEME="robbyrussell"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+# export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -84,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#   xport EDITOR='vim'
 # else
 #   export EDITOR='mvim'
 # fi
@@ -97,44 +97,54 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-
-#Set Variables======================================
-#Syntax hightlighting for man pages using bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-
-# Aliases============================================
+# Aliases ==============================================================================================
 
 alias zshconfig="lvim ~/.zshrc"
 alias ohmyzsh="lvim ~/.oh-my-zsh"
-alias sshconfig="lvim ~/.ssh/config"
 alias tmuxconfig="lvim ~/.tmux.conf"
 alias kittyconfig="lvim ~/.config/kitty/kitty.conf"
+alias kittycolors="kitten themes"
+alias sshconfig="lvim ~/.ssh/config"
 alias reloadzsh="source ~/.zshrc"
 alias lvimconfig="lvim .config/lvim"
-alias dev="cd ~/Development/1.WebDev"
-alias tutorials="cd ~/Development/1.WebDev/2.tutorials"
-alias challenges="cd ~/Development/1.WebDev/1.challenges"
-alias ll="ls -lAFh"
+alias Development="cd ~/Development/1.WebDev"
+alias Sites="cd ~/Development/1.WebDev/10.Sites/"
+alias challenges="cd ~/Development/1.WebDev/1.Challenges"
+alias tutorials="cd ~/Development/1.WebDev/2.Tutorials"
+alias shopifydev="cd ~/Development/1.WebDev/10.Sites/4.Shopify-development/"
+alias tmx="tmux new -A -s General-Shell"
+alias mcc="EDITOR=lvim mc"
+alias la="ls -laFh"
+alias exa="exa -laFh --git"
+alias ls="exa -laFh --git"
+alias ll="exa --git --tree --level=2"
 alias root="sudo su"
+alias live-server="live-server --port=5505 --host=100.65.17.20 --browser='firefox developer edition' ."
+alias hss="hugo server --bind=0.0.0.0 --baseURL=http://100.65.17.20:1313 --noHTTPCache"
 
-# Functions=============================================
+# Prompt settings============================================================================================ 
+
+PROMPT='
+%{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
+
+RPROMPT='%*'
+
+# Functions ==============================================================================================
 
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
-# Prompt=================================================
-
-PROMPT='%{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# ' 
-
-neofetch
 
 
-# Paths==================================================
-case :$PATH: in
-  *:/home/$USER/bin:*) ;;
-  *) PATH=/home/$USER/bin:$PATH ;;
-esac  
+export PATH=$HOME/bin:$PATH
 
-export PATH=/Users/jaimeledesma/.local/bin:$PATH
+# fastfetch======================================================================
+
+fastfetch
+
+# NVM node version manager export path =====================================================================
+source $(brew --prefix nvm)/nvm.sh
+
+# Set up fzf keybindings and fuzzy completions
+eval "$(fzf --zsh)"
