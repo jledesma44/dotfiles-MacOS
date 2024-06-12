@@ -97,6 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# Variables========================================================================================
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+
+
 # Aliases ==============================================================================================
 
 alias zshconfig="lvim ~/.zshrc"
