@@ -9,10 +9,11 @@
     ~/.gitconfig: 
     ~/.tmux.conf: 
 
-#- create:
-  #  - ~/Work
+- create:
+    - ~/Work
+    - ~/Hobbies
 
-#- shell:
-  #  command: ./setup_homebrew.zsh
-  #  stdout: true
-  #  stderr: true
+- shell:
+    command: ./setup_homebrew.zsh
+    stdout: true
+    stderr: true
