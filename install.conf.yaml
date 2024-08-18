@@ -6,13 +6,16 @@
 
 - link:
     ~/.zshrc: 
+    ~/.zshenv: 
     ~/.gitconfig: 
     ~/.tmux.conf: 
+    ~/.config/karabiner:
+      
+# - create:
+    # - ~/Work
 
-#- create:
-  #  - ~/Work
-
-#- shell:
-  #  command: ./setup_homebrew.zsh
-  #  stdout: true
-  #  stderr: true
+# - shell:
+   # - 
+    # command: ./setup_homebrew.zsh
+    # stdout: true
+    # stderr: true

@@ -120,10 +120,12 @@ alias tutorials="cd ~/Development/1.WebDev/2.Tutorials"
 alias shopifydev="cd ~/Development/1.WebDev/10.Sites/4.Shopify-development/"
 alias tmx="tmux new -A -s General-Shell"
 alias mcc="EDITOR=lvim mc"
+alias cat="bat"
 alias la="ls -laFh"
-alias exa="exa -laFh --git"
-alias ls="exa -laFh --git"
-alias ll="exa --git --tree --level=2"
+alias eza="eza -lA --git"
+alias ls="eza -lAh --git"
+alias lsg="eza -lAhG --git"
+alias ll="eza --git --tree --level=2"
 alias root="sudo su"
 alias live-server="live-server --port=5505 --host=100.65.17.20 --browser='firefox developer edition' ."
 alias hss="hugo server --bind=0.0.0.0 --baseURL=http://100.65.17.20:1313 --noHTTPCache"
@@ -148,6 +150,8 @@ export PATH=$HOME/bin:$PATH
 # fastfetch======================================================================
 
 fastfetch
+
+figlet what up nigga!
 
 # NVM node version manager export path =====================================================================
 source $(brew --prefix nvm)/nvm.sh
