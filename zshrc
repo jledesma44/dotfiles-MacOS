@@ -97,13 +97,14 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Variables========================================================================================
+# Variables===================================================================
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# Change ZSH Options =========================================================
 
 
-# Aliases ==============================================================================================
+# Aliases ====================================================================
 
 alias zshconfig="lvim ~/.zshrc"
 alias ohmyzsh="lvim ~/.oh-my-zsh"
@@ -121,40 +122,58 @@ alias shopifydev="cd ~/Development/1.WebDev/10.Sites/4.Shopify-development/"
 alias tmx="tmux new -A -s General-Shell"
 alias mcc="EDITOR=lvim mc"
 alias cat="bat"
+<<<<<<< HEAD
 alias la="ls -laFh"
+=======
+alias la="ls -lAFh"
+>>>>>>> 29ea7283b0164c7cd27ff758981eee6f4e0d62fc
 alias eza="eza -lA --git"
 alias ls="eza -lAh --git"
 alias lsg="eza -lAhG --git"
 alias ll="eza --git --tree --level=2"
 alias root="sudo su"
-alias live-server="live-server --port=5505 --host=100.65.17.20 --browser='firefox developer edition' ."
-alias hss="hugo server --bind=0.0.0.0 --baseURL=http://100.65.17.20:1313 --noHTTPCache"
+alias live-server="live-server --port=5509 --host=100.116.96.98 --browser='firefox developer edition' ."
+alias hss="hugo server --bind=0.0.0.0 --baseURL=http://100.116.96.98:1313 --noHTTPCache"
 
-# Prompt settings============================================================================================ 
+# Prompt settings========================================================== 
 
 PROMPT='
 %{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
 
 RPROMPT='%*'
 
-# Functions ==============================================================================================
+
+
+# Add locations to $PATH Variables=========================================
+
+export PATH=$HOME/bin:$PATH
+
+# NVM node version manager export path
+source $(brew --prefix nvm)/nvm.sh
+
+
+
+
+# Functions ===============================================================
 
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
 
 
-
-export PATH=$HOME/bin:$PATH
-
-# fastfetch======================================================================
+# fastfetch================================================================
 
 fastfetch
 
+<<<<<<< HEAD
 figlet what up nigga!
 
 # NVM node version manager export path =====================================================================
 source $(brew --prefix nvm)/nvm.sh
+=======
+figlet What Up Gee! Time to work Nigga!
+
+>>>>>>> 29ea7283b0164c7cd27ff758981eee6f4e0d62fc
 
 # Set up fzf keybindings and fuzzy completions
 eval "$(fzf --zsh)"

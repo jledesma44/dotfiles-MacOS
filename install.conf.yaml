@@ -14,8 +14,19 @@
 # - create:
     # - ~/Work
 
+<<<<<<< HEAD
 # - shell:
    # - 
     # command: ./setup_homebrew.zsh
     # stdout: true
     # stderr: true
+=======
+- create:
+    - ~/Work
+    - ~/Hobbies
+
+- shell:
+    command: ./setup_homebrew.zsh
+    stdout: true
+    stderr: true
+>>>>>>> 29ea7283b0164c7cd27ff758981eee6f4e0d62fc
