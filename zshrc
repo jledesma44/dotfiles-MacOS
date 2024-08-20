@@ -145,12 +145,6 @@ RPROMPT='%*'
 
 export PATH=$HOME/bin:$PATH
 
-# NVM node version manager export path
-source $(brew --prefix nvm)/nvm.sh
-
-
-
-
 # Functions ===============================================================
 
 function mkcd() {
