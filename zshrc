@@ -131,6 +131,7 @@ alias ll="eza --git --tree --level=2"
 alias root="sudo su"
 alias live-server="live-server --port=5509 --host=100.116.96.98 --browser='firefox developer edition' ."
 alias hss="hugo server --bind=0.0.0.0 --baseURL=http://100.116.96.98:1313 --noHTTPCache"
+alias vim="lvim"
 
 # Prompt settings========================================================== 
 
@@ -156,7 +157,7 @@ function mkcd() {
 
 fastfetch
 
-figlet what up Gee
+figlet Devstack44!
 
 # NVM node version manager export path =====================================================================
 source $(brew --prefix nvm)/nvm.sh
