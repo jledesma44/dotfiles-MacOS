@@ -122,11 +122,8 @@ alias shopifydev="cd ~/Development/1.WebDev/10.Sites/4.Shopify-development/"
 alias tmx="tmux new -A -s General-Shell"
 alias mcc="EDITOR=lvim mc"
 alias cat="bat"
-<<<<<<< HEAD
 alias la="ls -laFh"
-=======
 alias la="ls -lAFh"
->>>>>>> 29ea7283b0164c7cd27ff758981eee6f4e0d62fc
 alias eza="eza -lA --git"
 alias ls="eza -lAh --git"
 alias lsg="eza -lAhG --git"
@@ -165,15 +162,11 @@ function mkcd() {
 
 fastfetch
 
-<<<<<<< HEAD
-figlet what up nigga!
+figlet what up Gee
 
 # NVM node version manager export path =====================================================================
 source $(brew --prefix nvm)/nvm.sh
-=======
-figlet What Up Gee! Time to work Nigga!
 
->>>>>>> 29ea7283b0164c7cd27ff758981eee6f4e0d62fc
 
 # Set up fzf keybindings and fuzzy completions
 eval "$(fzf --zsh)"
