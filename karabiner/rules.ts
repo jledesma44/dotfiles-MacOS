@@ -82,6 +82,8 @@ const rules: KarabinerRules[] = [
       u: app("Visual Studio Code"),
       v: app("VNC Viewer"),
       t: app("Messages"),
+      p: app("iPhone Mirroring"),
+      w: app("iPhone Mirroring"),
       // Open todo list managed via *H*ypersonic
       //h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
@@ -93,10 +95,10 @@ const rules: KarabinerRules[] = [
       // r: app("Texts"),
       // "i"Message
       i: app("Texts"),
-      p: app("Spotify"),
+      // p: app("Spotify"),
       // a: app("iA Presenter"),
       // "W"hatsApp has been replaced by Texts
-      w: open("Texts"),
+      // w: open("Texts"),
       l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
       ),
