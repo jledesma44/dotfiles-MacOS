@@ -83,6 +83,7 @@ const rules: KarabinerRules[] = [
       v: app("VNC Viewer"),
       t: app("Messages"),
       p: app("iPhone Mirroring"),
+      e: app("Finder"),
       // Open todo list managed via *H*ypersonic
       //h: open(
       //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
