@@ -131,7 +131,6 @@ alias lsg="eza -lAhG --git"
 alias ll="eza --git --tree --level=2"
 alias root="sudo su"
 alias live-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
-alias hss="hugo server --bind=0.0.0.0 --baseURL=http://0.0.0.0:1313 --noHTTPCache"
 alias vim="lvim"
 
 # Prompt settings========================================================== 
