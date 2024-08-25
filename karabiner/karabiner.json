@@ -1,5 +1,4 @@
 {
-    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
@@ -1734,7 +1733,8 @@
                     }
                 ]
             },
-            "name": "Default",
+            "name": "Gee's Keyboard",
+            "selected": true,
             "simple_modifications": [
                 {
                     "from": { "key_code": "caps_lock" },
@@ -1745,6 +1745,7 @@
                     "to": [{ "key_code": "escape" }]
                 }
             ]
-        }
+        },
+        { "name": "Default" }
     ]
 }
