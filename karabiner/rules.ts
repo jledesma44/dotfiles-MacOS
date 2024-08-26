@@ -289,9 +289,9 @@ const rules: KarabinerRules[] = [
         to: [{ key_code: "page_down" }],
       },
       i: {
-        to: [{ key_code: "page_up" }],
+        
       },
-    },
+    }
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
     c: {

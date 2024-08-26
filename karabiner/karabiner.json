@@ -34,6 +34,25 @@
                         ]
                     },
                     {
+                        "description": "Change caps_lock to control if pressed with other keys. (rev 2)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [
+                                    {
+                                        "hold_down_milliseconds": 500,
+                                        "key_code": "caps_lock"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Hyper Key + spacebar",
                         "manipulators": [
                             {
@@ -1734,17 +1753,7 @@
                 ]
             },
             "name": "Gee's Keyboard",
-            "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "caps_lock" },
-                    "to": [{ "key_code": "left_control" }]
-                },
-                {
-                    "from": { "key_code": "left_control" },
-                    "to": [{ "key_code": "escape" }]
-                }
-            ]
+            "selected": true
         },
         { "name": "Default" }
     ]
