@@ -92,6 +92,7 @@ const rules: KarabinerRules[] = [
       d: app("Firefox Developer Edition"),
       r: app("Safari"),
       m: app("Music"),
+      n: app("Parallels Desktop"),
       s: app("System Settings"),
       c: app("Visual Studio Code"),
       v: app("VNC Viewer"),
