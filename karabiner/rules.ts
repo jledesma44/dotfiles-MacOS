@@ -94,7 +94,7 @@ const rules: KarabinerRules[] = [
       m: app("Music"),
       n: app("Parallels Desktop"),
       s: app("System Settings"),
-      c: app("Visual Studio Code"),
+      c: app("Cursor"),
       v: app("VNC Viewer"),
       t: app("Messages"),
       p: app("iPhone Mirroring"),
@@ -104,6 +104,7 @@ const rules: KarabinerRules[] = [
       i: app("Texts"),
       y: app("ChatGPT"),
       x: app("OBS"),
+      a: app("Arc"),
       // a: app("iA Presenter"),
       // w: open("Texts"),
       l: open(
