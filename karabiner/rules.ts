@@ -100,20 +100,10 @@ const rules: KarabinerRules[] = [
       p: app("iPhone Mirroring"),
       e: app("Finder"),
       u: app("Calculator"),
-      // Open todo list managed via *H*ypersonic
-      //h: open(
-      //   "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      //),
       z: app("zoom.us"),
-      // "M"arkdown (Obsidian.md)
-      // m: app("Music"),
-      //f: app("Firefox"),
-      // r: app("Texts"),
-      // "i"Message
       i: app("Texts"),
-      // p: app("Spotify"),
+      y: app("ChatGPT"),
       // a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
       // w: open("Texts"),
       l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
