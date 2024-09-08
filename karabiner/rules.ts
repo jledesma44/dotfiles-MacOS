@@ -100,9 +100,10 @@ const rules: KarabinerRules[] = [
       p: app("iPhone Mirroring"),
       e: app("Finder"),
       u: app("Calculator"),
-      z: app("zoom.us"),
+      z: app("Final Cut Pro"),
       i: app("Texts"),
       y: app("ChatGPT"),
+      x: app("OBS"),
       // a: app("iA Presenter"),
       // w: open("Texts"),
       l: open(
