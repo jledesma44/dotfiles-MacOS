@@ -105,11 +105,12 @@ const rules: KarabinerRules[] = [
       y: app("ChatGPT"),
       x: app("OBS"),
       a: app("Arc"),
+      l: app("Karabiner-Elements"),
       // a: app("iA Presenter"),
       // w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
+      //l: open(
+      //  "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
+      //),
     },
 
     // TODO: This doesn't quite work yet.

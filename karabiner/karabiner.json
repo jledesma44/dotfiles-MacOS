@@ -891,10 +891,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
+                    "shell_command": "open -a 'Karabiner-Elements.app'"
                   }
                 ],
-                "description": "Open raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink",
+                "description": "Open -a 'Karabiner-Elements.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "l",
