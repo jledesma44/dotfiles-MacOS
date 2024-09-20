@@ -94,7 +94,7 @@ const rules: KarabinerRules[] = [
       m: app("Music"),
       n: app("Parallels Desktop"),
       s: app("System Settings"),
-      c: app("Cursor"),
+      c: app("Visual Studio Code"),
       v: app("VNC Viewer"),
       t: app("Messages"),
       p: app("iPhone Mirroring"),
