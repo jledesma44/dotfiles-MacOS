@@ -203,7 +203,7 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // s = "System"
+    // s = "System controls"
     s: {
       u: {
         to: [
@@ -303,7 +303,7 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // c = Musi*c* which isn't "m" because we want it to be on the left hand
+    // c = Controls for Music p:play/pause  n:fastforward b:rewind 
     c: {
       p: {
         to: [{ key_code: "play_or_pause" }],
@@ -340,6 +340,7 @@ const rules: KarabinerRules[] = [
       ),
     },
   }),
+  // Minecraft
   {
     description: "Change Backspace to Spacebar when Minecraft is focused",
     manipulators: [
