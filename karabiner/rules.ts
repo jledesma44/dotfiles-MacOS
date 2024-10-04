@@ -83,6 +83,13 @@ const rules: KarabinerRules[] = [
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
     },
+    // l = LLMs (AI applications)
+    l: {
+      g: app("ChatGPT"),
+      v: app("v0 by Vercel"),
+      c: app("Claude"),
+      
+    },
     // o = "Open" applications
     o: {
       k: app("kitty"),
