@@ -89,6 +89,7 @@ const rules: KarabinerRules[] = [
       v: app("v0 by Vercel"),
       c: app("Claude"),
       r: app("Replit"),
+      b: app("bolt"),
       
     },
     // o = "Open" applications
