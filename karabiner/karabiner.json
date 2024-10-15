@@ -522,10 +522,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'bolt.app'"
+                    "shell_command": "open -a 'bolt.gee.app'"
                   }
                 ],
-                "description": "Open -a 'bolt.app'",
+                "description": "Open -a 'bolt.gee.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "b",
