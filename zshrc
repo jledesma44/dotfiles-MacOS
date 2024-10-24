@@ -166,3 +166,6 @@ source $(brew --prefix nvm)/nvm.sh
 
 # Set up fzf keybindings and fuzzy completions
 eval "$(fzf --zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
