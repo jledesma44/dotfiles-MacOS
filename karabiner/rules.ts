@@ -300,6 +300,7 @@ const rules: KarabinerRules[] = [
       m: {
         to: [{ key_code: "j", modifiers: ["right_shift", "right_command"] }],
       },
+      // Clicking mode via homerow.app
       n: {
         to: [{ key_code: "spacebar", modifiers: ["right_shift", "right_command"] }],
       },
