@@ -89,8 +89,8 @@ const rules: KarabinerRules[] = [
       v: app("v0 by Vercel"),
       c: app("Claude"),
       r: app("RepoPrompt"),
-      b: app("bolt.gee"),
-      
+      b: app("Bolt.gee"),     
+      p: app("Perplexity"),     
     },
     // o = "Open" applications
     o: {
@@ -115,8 +115,7 @@ const rules: KarabinerRules[] = [
       x: app("OBS"),
       a: app("Arc"),
       l: app("Karabiner-Elements"),
-      // a: app("iA Presenter"),
-      // w: open("Texts"),
+      w: open("TextEdit"),
       //l: open(
       //  "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
       //),
@@ -300,7 +299,6 @@ const rules: KarabinerRules[] = [
       m: {
         to: [{ key_code: "j", modifiers: ["right_shift", "right_command"] }],
       },
-      // Clicking mode via homerow.app
       n: {
         to: [{ key_code: "spacebar", modifiers: ["right_shift", "right_command"] }],
       },
