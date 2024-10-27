@@ -130,7 +130,7 @@ alias ls="eza -lAh --git && git status && git pull"
 alias lsg="eza -lAhG --git"
 alias ll="eza --git --tree --level=2"
 alias root="sudo su"
-alias live-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
+alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias vim="lvim"
 
