@@ -70,6 +70,39 @@ const rules: KarabinerRules[] = [
         }
     ]
 },
+  //Add sleep monitor for keyboard with out eject button
+  {
+  "title": "Add Sleep Monitor for Keyboard without Eject",
+  "rules": [
+    {
+      "description": "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": [
+                "command",
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+            "key_code": "eject",
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+},
   ...createHyperSubLayers({
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
