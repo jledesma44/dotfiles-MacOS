@@ -111,6 +111,11 @@ const rules: KarabinerRules[] = [
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
     },
+    // q = Entertainment (Music)
+    q: {
+      m: app("Music"),
+      s: app("Spotify"),
+    },
     // l = LLMs (AI applications)
     l: { 
       g: app("ChatGPT"),
@@ -137,10 +142,9 @@ const rules: KarabinerRules[] = [
       x: app("OBS"),
       e: app("Finder"),
       u: app("Calculator"),
-      w: app("TextEdit"),
       l: app("Karabiner-Elements"),
-      t: app("Messages"),
-      m: app("Music"),
+      t: app("TextEdit"),
+      m: app("Messages"),
       p: app("iPhone Mirroring"),
       s: app("System Settings"),
       //i: app("Texts"),
