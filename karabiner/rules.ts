@@ -59,50 +59,45 @@ const rules: KarabinerRules[] = [
   {
     "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
     "manipulators": [
-        {
-            "from": {
-                "key_code": "caps_lock",
-                "modifiers": { "optional": ["any"] }
-            },
-            "to": [{ "key_code": "left_control" }],
-            "to_if_alone": [{ "key_code": "escape" }],
-            "type": "basic"
-        }
-    ]
-},
-  //Add sleep monitor for keyboard with out eject button
-  {
-  "title": "Add Sleep Monitor for Keyboard without Eject",
-  "rules": [
-    {
-      "description": "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
-      "manipulators": [
-        {
+      {
           "from": {
-            "key_code": "escape",
-            "modifiers": {
-              "mandatory": [
-                "command",
-                "control",
-                "shift"
-              ]
-            }
+              "key_code": "caps_lock",
+              "modifiers": { "optional": ["any"] }
           },
-          "to": [
-            {
-            "key_code": "eject",
-              "modifiers": [
-                "left_control",
-                "left_shift"
-              ]
-            }
-          ],
+          "to": [{ "key_code": "left_control" }],
+          "to_if_alone": [{ "key_code": "escape" }],
           "type": "basic"
-        }
-      ]
-    }
-  ]
-},
+      }
+    ] 
+  },
+  // Add sleep monitor for keyboard with out eject button
+  {
+    "description": "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
+    "manipulators": [
+      {
+        "from": {
+          "key_code": "escape",
+          "modifiers": {
+            "mandatory": [
+              "left_control",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+          "key_code": "eject",
+            "modifiers": [
+              "left_control",
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      }
+    ]
+  },
+  
   ...createHyperSubLayers({
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
