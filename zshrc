@@ -106,12 +106,12 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Aliases ====================================================================
 
-alias zshconfig="lvim ~/.zshrc"
-alias ohmyzsh="lvim ~/.oh-my-zsh"
-alias tmuxconfig="lvim ~/.tmux.conf"
-alias kittyconfig="lvim ~/.config/kitty/kitty.conf"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias tmuxconfig="nvim ~/.tmux.conf"
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias kittycolors="kitten themes"
-alias sshconfig="lvim ~/.ssh/config"
+alias sshconfig="nvim ~/.ssh/config"
 alias reloadzsh="source ~/.zshrc"
 alias lvimconfig="lvim .config/lvim"
 alias development="cd ~/Development/1.WebDev"
@@ -133,7 +133,7 @@ alias root="sudo su"
 alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
-alias vim="lvim"
+alias vim="nvim"
 
 
 # Prompt settings========================================================== 
@@ -141,7 +141,7 @@ alias vim="lvim"
 PROMPT='
 %{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
 
-RPROMPT='%*'
+# RPROMPT='%*'
 
 
 
@@ -171,3 +171,5 @@ eval "$(fzf --zsh)"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
+
+PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
