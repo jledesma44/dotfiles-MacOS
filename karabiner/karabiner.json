@@ -1581,6 +1581,22 @@
                                 },
                                 "to": [{ "shell_command": "open raycast://extensions/raycast/system/open-camera" }],
                                 "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_s",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909",
+                                "from": {
+                                    "key_code": "n",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909" }],
+                                "type": "basic"
                             }
                         ]
                     },

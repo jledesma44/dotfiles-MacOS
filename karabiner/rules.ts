@@ -307,6 +307,7 @@ const rules: KarabinerRules[] = [
       // "T"heme
       t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
       c: open("raycast://extensions/raycast/system/open-camera"),
+      n: open("btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909"),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
