@@ -302,14 +302,10 @@ const rules: KarabinerRules[] = [
       e: open(
         `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
       ),
-      // "D"isplay sleep
-      d: open(
-        "raycast://extensions/raycast/system/sleep-displays"
-      ),
+
       // "T"heme
       t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
       c: open("raycast://extensions/raycast/system/open-camera"),
-      n: open("btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909"),
       m: open("raycast://extensions/iamyeizi/toggle-menu-bar/toggle"),
     },
 
@@ -360,6 +356,14 @@ const rules: KarabinerRules[] = [
       b: {
         to: [{ key_code: "rewind" }],
       },
+    },
+   
+      
+    //d = Display sleep     
+      
+    d: {
+      k: open("raycast://extensions/raycast/system/sleep-displays"),
+      n: open("btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909"),
     },
 
     // r = "Raycast"
