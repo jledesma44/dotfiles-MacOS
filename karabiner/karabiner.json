@@ -224,12 +224,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://twitter.com",
+                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1",
                                 "from": {
-                                    "key_code": "t",
+                                    "key_code": "j",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open https://twitter.com" }],
+                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1" }],
                                 "type": "basic"
                             },
                             {
@@ -240,12 +240,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open https://qrtr.ly/plan",
+                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2",
                                 "from": {
-                                    "key_code": "p",
+                                    "key_code": "l",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open https://qrtr.ly/plan" }],
+                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2" }],
                                 "type": "basic"
                             },
                             {
@@ -1542,12 +1542,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background",
+                                "description": "Open raycast://extensions/raycast/system/sleep-displays",
                                 "from": {
                                     "key_code": "d",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background" }],
+                                "to": [{ "shell_command": "open raycast://extensions/raycast/system/sleep-displays" }],
                                 "type": "basic"
                             },
                             {
@@ -1596,6 +1596,22 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_s",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open raycast://extensions/iamyeizi/toggle-menu-bar/toggle",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/iamyeizi/toggle-menu-bar/toggle" }],
                                 "type": "basic"
                             }
                         ]

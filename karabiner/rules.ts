@@ -102,11 +102,13 @@ const rules: KarabinerRules[] = [
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
     ),
-    // b = "B"rowse
+    // b = "B"luetooth toggle devices
     b: {
-      t: open("https://twitter.com"),
-      // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
+      //toggle Jlab Go Air
+      j: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1"),
+      //toggle logitech BT audio living room
+      l: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2"),
+
       y: open("https://news.ycombinator.com"),
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
@@ -300,14 +302,15 @@ const rules: KarabinerRules[] = [
       e: open(
         `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
       ),
-      // "D"o not disturb toggle
+      // "D"isplay sleep
       d: open(
-        `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
+        "raycast://extensions/raycast/system/sleep-displays"
       ),
       // "T"heme
       t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
       c: open("raycast://extensions/raycast/system/open-camera"),
       n: open("btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909"),
+      m: open("raycast://extensions/iamyeizi/toggle-menu-bar/toggle"),
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
