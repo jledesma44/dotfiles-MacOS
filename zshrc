@@ -141,7 +141,7 @@ alias vim="nvim"
 PROMPT='
 %{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
 
-# RPROMPT='%*'
+RPROMPT='%*'
 
 
 
