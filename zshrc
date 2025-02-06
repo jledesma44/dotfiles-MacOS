@@ -172,4 +172,4 @@ eval "$(fzf --zsh)"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
 
-PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
