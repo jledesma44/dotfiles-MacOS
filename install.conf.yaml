@@ -13,8 +13,8 @@
 
 - create:
     - ~/test
-# - shell:
-# -
+- shell:
+    - echo "Hey you guys"
 # command: ./setup_homebrew.zsh
 # stdout: true
 # stderr: true
