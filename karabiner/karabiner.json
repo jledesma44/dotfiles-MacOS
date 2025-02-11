@@ -266,6 +266,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3",
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_b",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open https://news.ycombinator.com",
                                 "from": {
                                     "key_code": "y",

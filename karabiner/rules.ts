@@ -108,6 +108,8 @@ const rules: KarabinerRules[] = [
       j: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1"),
       //toggle logitech BT audio living room
       l: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2"),
+      //toggle Gees Trackpad
+      m: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3"),
 
       y: open("https://news.ycombinator.com"),
       f: open("https://facebook.com"),
