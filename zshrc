@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Variables syntax highlighting for man pages =================================
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export HOMRBREW_CASK_OPTS="--no-quarantine"
+export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Change ZSH Options =========================================================
 
