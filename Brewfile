@@ -17,6 +17,8 @@ cask "kitty"
 cask "alfred"
 cask "visual-studio-code"
 cask "firefox"
+
+
 # ================Firefox developer editions cask=============
 cask "firefox-developer-edition" do
   version :latest
