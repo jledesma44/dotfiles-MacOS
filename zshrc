@@ -98,8 +98,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Variables syntax highlighting for man pages =================================
-
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Change ZSH Options =========================================================
@@ -125,6 +123,7 @@ alias dot="cd ~/.dotfiles/"
 alias tmx="tmux new -A -s General-Shell"
 alias mcc="EDITOR=lvim mc"
 alias cat="bat"
+alias man="batman"
 alias la="ls -laFh"
 alias la="ls -lAFh"
 alias eza="eza -lA --git"
