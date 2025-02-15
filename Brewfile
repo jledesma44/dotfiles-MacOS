@@ -1,3 +1,4 @@
+tap "eth-p/software"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -27,6 +28,8 @@ brew "lazygit"
 brew "luarocks"
 # Utility for directing compilation
 brew "make"
+# Mac App Store command-line interface
+brew "mas"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -51,6 +54,8 @@ brew "wget"
 brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Bash scripts that integrate bat with various command-line tools
+brew "eth-p/software/bat-extras"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
 # Custom macOS statusbar with shell plugin, interaction and graph support
@@ -74,6 +79,11 @@ cask "obsidian"
 cask "rectangle"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
+mas "Amphetamine", id: 937984704
+mas "ColorSnapper2", id: 969418666
+mas "Final Cut Pro", id: 424389933
+mas "Surfingkeys", id: 1609752330
+mas "Tailscale", id: 1475387142
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
 vscode "albert.tabout"
