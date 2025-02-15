@@ -1,53 +1,79 @@
-#Taps (repositories)
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
 tap "homebrew/services"
-
-#Brews (Packages)
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Get/set bluetooth power and discoverable state
 brew "blueutil"
+# Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
+# Banner-like program prints strings as ASCII art
 brew "figlet"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Distributed revision control system
 brew "git"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Lazier way to manage everything docker
 brew "lazydocker"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Package manager for the Lua programming language
 brew "luarocks"
+# Utility for directing compilation
 brew "make"
+# Fast, highly customisable system info script
 brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Platform built on V8 to build network applications
 brew "node"
+# Manage multiple Node.js versions
 brew "nvm"
+# Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
 brew "rust"
+# Terminal multiplexer
 brew "tmux"
+# Internet file retriever
 brew "wget"
+# JavaScript package manager
 brew "yarn"
+# UNIX shell (command interpreter)
 brew "zsh"
+# A window border system for macOS
 brew "felixkratz/formulae/borders"
+# Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
-
-#Casks (Applications)
+# Application launcher and productivity software
 cask "alfred"
-cask "bettertouchtool"
+# Client for the Dropbox cloud storage service
 cask "dropbox"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-pro"
+# Keyboard shortcuts for every button on your screen
 cask "homerow"
+# Keyboard customiser
 cask "karabiner-elements"
+# GPU-based terminal emulator
 cask "kitty"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
-cask "visual-studio-code"
-
-
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
 vscode "albert.tabout"
