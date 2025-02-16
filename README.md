@@ -12,3 +12,4 @@ These are the dotfiles for my machines running MacOS.
 - Trackpad (Three finger drag and tap to click)
 - .zshrc
 - Git (config and ssh)
+- Homebrew Install 
