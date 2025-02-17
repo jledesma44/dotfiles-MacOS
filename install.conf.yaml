@@ -10,6 +10,7 @@
     ~/.gitconfig:
     ~/.tmux.conf:
     ~/.config/karabiner:
+    ~/.config/bat:
 
 - create:
     - ~/test
