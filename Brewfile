@@ -1,89 +1,131 @@
-tap "eth-p/software"
+tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "jesseduffield/lazygit"
+tap "koekeishiya/formulae"
+tap "shopify/shopify"
+# C library implementing the SSH2 protocol
+brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Get/set bluetooth power and discoverable state
-brew "blueutil"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Linux/OSX/FreeBSD resource monitor
+brew "bpytop"
+# Asynchronous event library
+brew "libevent"
+# GNU Emacs text editor
+brew "emacs", link: false
+# Emacs dependency management
+brew "cask"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# Tool to install, manage and use Progressive Web Apps in Mozilla Firefox
+brew "firefoxpwa"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
+# Core application library for C
+brew "glib"
+# Improved top (interactive process viewer)
+brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Configurable static site generator
+brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Lazier way to manage everything docker
-brew "lazydocker"
-# Simple terminal UI for git commands
-brew "lazygit"
-# Package manager for the Lua programming language
-brew "luarocks"
+# Pager program similar to more
+brew "less"
 # Utility for directing compilation
 brew "make"
-# Mac App Store command-line interface
-brew "mas"
+# Terminal-based visual file manager
+brew "midnight-commander"
+# Remote terminal application
+brew "mosh"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
+# Platform built on V8 to build network applications
+brew "node@20"
 # Manage multiple Node.js versions
 brew "nvm"
+# OpenBSD freely-licensed SSH connectivity tools
+brew "openssh"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
+# Pure Python Vim clone
+brew "pyvim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # Safe, concurrent, practical language
 brew "rust"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
 # Terminal multiplexer
 brew "tmux"
+# Language for application scale JavaScript development
+brew "typescript"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Internet file retriever
 brew "wget"
 # JavaScript package manager
 brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Bash scripts that integrate bat with various command-line tools
-brew "eth-p/software/bat-extras"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
+# A simple terminal UI for git commands, written in Go
+brew "jesseduffield/lazygit/lazygit"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A CLI tool to build for the Shopify platform
+brew "shopify/shopify/shopify-cli"
+# Theme Kit is a tool kit for manipulating shopify themes
+brew "shopify/shopify/themekit"
 # Application launcher and productivity software
 cask "alfred"
-# Client for the Dropbox cloud storage service
-cask "dropbox"
+# GUI app for Homebrew
+cask "cakebrew"
+# Text editor
+cask "emacs"
 cask "font-hack-nerd-font"
-cask "font-jetbrains-mono-nerd-font"
 cask "font-sf-pro"
-# Keyboard shortcuts for every button on your screen
-cask "homerow"
-# Keyboard customiser
-cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
-mas "Amphetamine", id: 937984704
-mas "ColorSnapper2", id: 969418666
-mas "Final Cut Pro", id: 424389933
-mas "Surfingkeys", id: 1609752330
-mas "Tailscale", id: 1475387142
+# Rust-based terminal
+cask "warp"
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
 vscode "albert.tabout"
@@ -104,6 +146,7 @@ vscode "dbaeumer.vscode-eslint"
 vscode "dracula-theme.theme-dracula"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "ecmel.vscode-html-css"
+vscode "equinusocio.vsc-community-material-theme"
 vscode "equinusocio.vsc-material-theme"
 vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
@@ -119,6 +162,7 @@ vscode "johnpapa.vscode-peacock"
 vscode "kamikillerto.vscode-colorize"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "kubescape.kubescape"
+vscode "lizhizhuanshu.autolua-debugger"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "mrmlnc.vscode-scss"
 vscode "ms-azuretools.vscode-docker"
