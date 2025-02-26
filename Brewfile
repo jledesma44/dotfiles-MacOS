@@ -1,7 +1,5 @@
-tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
