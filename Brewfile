@@ -1,5 +1,7 @@
+tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
@@ -48,6 +50,8 @@ brew "jq"
 brew "less"
 # Utility for directing compilation
 brew "make"
+# Mac App Store command-line interface
+brew "mas"
 # Terminal-based visual file manager
 brew "midnight-commander"
 # Remote terminal application
@@ -110,20 +114,33 @@ brew "koekeishiya/formulae/skhd"
 brew "shopify/shopify/shopify-cli"
 # Theme Kit is a tool kit for manipulating shopify themes
 brew "shopify/shopify/themekit"
-# Application launcher and productivity software
-cask "alfred"
-# GUI app for Homebrew
-cask "cakebrew"
 # Text editor
 cask "emacs"
 cask "font-hack-nerd-font"
 cask "font-sf-pro"
 # GPU-based terminal emulator
 cask "kitty"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
 # Rust-based terminal
 cask "warp"
+mas "1Password 7", id: 1333542190
+mas "Affinity Designer 2", id: 1616831348
+mas "Amphetamine", id: 937984704
+mas "ColorSnapper2", id: 969418666
+mas "Eagle for Safari", id: 1526651672
+mas "Final Cut Pro", id: 424389933
+mas "GarageBand", id: 682658836
+mas "Motion", id: 434290957
+mas "Nisus Thesaurus", id: 471448642
+mas "Surfingkeys", id: 1609752330
+mas "Tailscale", id: 1475387142
+mas "TestFlight", id: 899247664
+mas "Ulysses", id: 1225570693
+mas "WhatFont", id: 1437138382
+mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
 vscode "albert.tabout"
