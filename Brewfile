@@ -16,8 +16,6 @@ brew "python@3.12"
 brew "bpytop"
 # Asynchronous event library
 brew "libevent"
-# GNU Emacs text editor
-brew "emacs", link: false
 # Emacs dependency management
 brew "cask"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
@@ -28,8 +26,6 @@ brew "eza"
 brew "fastfetch"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
-# Tool to install, manage and use Progressive Web Apps in Mozilla Firefox
-brew "firefoxpwa"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -88,6 +84,8 @@ brew "rust"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Open source continuous file synchronization application
+brew "syncthing"
 # Easiest, most secure way to use WireGuard and 2FA
 brew "tailscale"
 # Terminal multiplexer
@@ -114,25 +112,51 @@ brew "koekeishiya/formulae/skhd"
 brew "shopify/shopify/shopify-cli"
 # Theme Kit is a tool kit for manipulating shopify themes
 brew "shopify/shopify/themekit"
-# Text editor
-cask "emacs"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# Collaborative team software
+cask "figma"
+# Web browser
+cask "firefox"
+# Web browser
+cask "firefox@developer-edition"
 cask "font-hack-nerd-font"
 cask "font-sf-pro"
+# Keyboard shortcuts for every button on your screen
+cask "homerow"
+# Vector graphics editor
+cask "inkscape"
+# Keyboard customiser
+cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# WordPress local development tool by Flywheel
+cask "local"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 # Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
-# Rust-based terminal
-cask "warp"
+# Music streaming service
+cask "spotify"
+# Temperature monitoring, fan control and diagnostics
+cask "tg-pro"
+# Open-source code editor
+cask "visual-studio-code"
+# Remote desktop application focusing on security
+cask "vnc-viewer"
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer 2", id: 1616831348
 mas "Amphetamine", id: 937984704
-mas "ColorSnapper2", id: 969418666
 mas "Eagle for Safari", id: 1526651672
 mas "Final Cut Pro", id: 424389933
-mas "GarageBand", id: 682658836
 mas "Motion", id: 434290957
 mas "Nisus Thesaurus", id: 471448642
 mas "Surfingkeys", id: 1609752330
