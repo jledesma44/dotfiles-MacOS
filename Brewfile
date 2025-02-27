@@ -114,6 +114,8 @@ brew "shopify/shopify/shopify-cli"
 brew "shopify/shopify/themekit"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# Tool to customise input devices and automate computer systems
+cask "bettertouchtool"
 # Collaborative team software
 cask "figma"
 # Web browser
