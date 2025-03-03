@@ -19,3 +19,6 @@
     - command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
+    - command: ./macos_prefs.zsh
+      stdout: true
+      stderr: true
