@@ -138,6 +138,8 @@ cask "lm-studio"
 cask "local"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Control your tools with a few keystrokes
@@ -188,8 +190,6 @@ vscode "dracula-theme.theme-dracula"
 vscode "dsznajder.es7-react-js-snippets"
 vscode "ecmel.vscode-html-css"
 vscode "equinusocio.vsc-community-material-theme"
-vscode "equinusocio.vsc-material-theme"
-vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
 vscode "figma.figma-vscode-extension"
 vscode "firefox-devtools.vscode-firefox-debug"
