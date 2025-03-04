@@ -151,7 +151,7 @@ const rules: KarabinerRules[] = [
       m: app("Messages"),
       p: app("iPhone Mirroring"),
       s: app("System Settings"),
-      //i: app("Texts"),
+      i: app("obsidian"),
       //b: app("bolt.gee"),     
       //y: app("ChatGPT"),
       //l: open(
