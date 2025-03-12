@@ -177,3 +177,5 @@ export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+
