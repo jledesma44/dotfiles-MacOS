@@ -11,6 +11,7 @@
     ~/.tmux.conf:
     ~/.config/karabiner:
     ~/.config/bat:
+    ~/.config/nvim:
 
 - create:
     - ~/test
