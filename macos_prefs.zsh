@@ -2,8 +2,11 @@
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
+echo "Closing System Preferences"
 osascript -e 'tell application "System Preferences" to quit'
 
+
+echo "Please enter administrator password to beging setting your preferences"
 # Ask for the administrator password upfront
 sudo -v
 
@@ -46,13 +49,6 @@ defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryCli
 # Trackpad: Three finger drag
 defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerDrag" -bool "true"
 
-# Trackpad / Mouse: Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
-
 # Trackpad / Mouse: Tracking speed
 defaults write NSGlobalDomain com.apple.mouse.scaling -float "2"
 
@@ -74,12 +70,6 @@ sudo pmset -a lidwake 1
 # Restart automatically on power loss
 sudo pmset -a autorestart 1
 
-# Restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
-
-# Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
-
 # Disable machine sleep while charging
 sudo pmset -c sleep 0
 
@@ -89,8 +79,6 @@ sudo pmset -b sleep 5
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
-# Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
@@ -223,9 +211,6 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-
-# Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
