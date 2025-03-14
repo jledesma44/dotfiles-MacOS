@@ -12,3 +12,5 @@ function exists() {
 }
 
 export PATH=/Users/jaimeledesma/.local/bin:$PATH
+
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
