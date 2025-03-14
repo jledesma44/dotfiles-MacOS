@@ -17,9 +17,9 @@
     - ~/test
 
 - shell:
-    - command: ./macos_prefs.zsh
+    - command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
-    - command: ./setup_homebrew.zsh
+    - command: ./macos_prefs.zsh
       stdout: true
       stderr: true
