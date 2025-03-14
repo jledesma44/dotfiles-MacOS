@@ -304,6 +304,9 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 defaults write com.apple.commerce AutoUpdate -bool true
 
 
+echo "###############################################################################"
+echo "#          User Preferences are set... PLEASE RESTART YOUR MAC!!!             #"
+echo "###############################################################################"
 
 
 
