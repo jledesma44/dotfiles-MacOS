@@ -165,7 +165,5 @@ mas "Motion", id: 434290957
 mas "Nisus Thesaurus", id: 471448642
 mas "Surfingkeys", id: 1609752330
 mas "Tailscale", id: 1475387142
-mas "TestFlight", id: 899247664
-mas "Ulysses", id: 1225570693
 mas "WhatFont", id: 1437138382
 mas "Xcode", id: 497799835
