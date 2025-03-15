@@ -12,6 +12,7 @@
     ~/.config/karabiner:
     ~/.config/bat:
     ~/.config/nvim:
+    ~/.config/kitty:
 
 - create:
     - ~/test
