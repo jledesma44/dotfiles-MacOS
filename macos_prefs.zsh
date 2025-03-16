@@ -5,8 +5,14 @@
 echo "Closing System Preferences"
 osascript -e 'tell application "System Preferences" to quit'
 
+echo "######################################################################################"
+echo "#                   !! SETTING YOUR MAC-OS USER PREFERENCES !!                       #"
+echo "#                                                                                    #"
+echo "#  Please enter administrator password to begin setting your preferences for MacOS   #"
+echo "#                                      -OR-                                          #" 
+echo "#                      press ctrl-c to abort this operation!!                        #"
+echo "######################################################################################"
 
-echo "Please enter administrator password to beging setting your preferences"
 # Ask for the administrator password upfront
 sudo -v
 
