@@ -39,21 +39,6 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
     ],
   },
   {
@@ -102,7 +87,9 @@ const rules: KarabinerRules[] = [
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
     ),
-    // b = "B"luetooth toggle devices
+
+// B = Bluetooth toggle devices ==========================
+
     b: {
       //toggle Jlab Go Air
       j: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1"),
@@ -115,12 +102,39 @@ const rules: KarabinerRules[] = [
       f: open("https://facebook.com"),
       r: open("https://reddit.com"),
     },
-    // q = Entertainment (Music)
-    q: {
-      m: app("Music"),
-      s: app("Spotify"),
+
+// C = Controls for Music p:play/pause  n:fastforward b:rewind ======================
+    c: {
+      p: {
+        to: [{ key_code: "play_or_pause" }],
+      },
+      n: {
+        to: [{ key_code: "fastforward" }],
+      },
+      b: {
+        to: [{ key_code: "rewind" }],
+      },
     },
-    // l = LLMs (AI applications)
+   
+      
+//D = Display / Dismiss =============================================================     
+      
+    d: {
+    // Display sleep / kill  
+      k: open("raycast://extensions/raycast/system/sleep-displays"),
+    //Dismiss Notification banner
+      n: open("btt://execute_assigned_actions_for_trigger/?uuid=93543ACA-AE92-4936-A74B-5D0A894D658E"),
+    },
+
+// E = Entertainment (Music) ============================
+ 
+    e: {
+      m: app("Music"),
+      n: app("Spotify"),
+    },
+
+// L = LLMs (AI applications) ==========================
+
     l: { 
       g: app("ChatGPT"),
       v: app("v0 by Vercel"),
@@ -130,7 +144,9 @@ const rules: KarabinerRules[] = [
       x: app("Perplexity"),     
       s: app("LM Studio"),     
     },
-    // o = "Open" applications
+
+// O = "Open" applications ==============================
+
     o: {
       g: app("Google Chrome"),
       f: app("Firefox"),
@@ -154,27 +170,135 @@ const rules: KarabinerRules[] = [
       i: app("obsidian"),
       //b: app("bolt.gee"),     
       //y: app("ChatGPT"),
-      //l: open(
-      //  "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      //),
     },
 
-    // TODO: This doesn't quite work yet.
-    // l = "Layouts" via Raycast's custom window management
-    // l: {
-    //   // Coding layout
-    //   c: shell`
-    //     open -a "Visual Studio Code.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topLeft&relativeWidth=0.5"
+// R = "Raycast" ==================================================================
 
-    //     open -a "Terminal.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topRight&relativeWidth=0.5"
-    //   `,
-    // },
+    r: {
+      c: open("raycast://extensions/thomas/color-picker/pick-color"),
+      n: open("raycast://script-commands/dismiss-notifications"),
+      l: open(
+        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
+      ),
+      e: open(
+        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+      ),
+      p: open("raycast://extensions/raycast/raycast/confetti"),
+      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      s: open("raycast://extensions/peduarte/silent-mention/index"),
+      h: open(
+        "raycast://extensions/raycast/clipboard-history/clipboard-history"
+      ),
+      1: open(
+        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
+      ),
+      2: open(
+        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
+      ),
+    },
 
-    // w = "Window" via rectangle.app
+// S = "System controls" =======================================
+
+    s: {
+      u: {
+        to: [
+          {
+            key_code: "volume_increment",
+          },
+        ],
+      },
+      j: {
+        to: [
+          {
+            key_code: "volume_decrement",
+          },
+        ],
+      },
+      i: {
+        to: [
+          {
+            key_code: "display_brightness_increment",
+          },
+        ],
+      },
+      k: {
+        to: [
+          {
+            key_code: "display_brightness_decrement",
+          },
+        ],
+      },
+      l: {
+        to: [
+          {
+            key_code: "q",
+            modifiers: ["right_control", "right_command"],
+          },
+        ],
+      },
+      p: {
+        to: [
+          {
+            key_code: "play_or_pause",
+          },
+        ],
+      },
+      semicolon: {
+        to: [
+          {
+            key_code: "fastforward",
+          },
+        ],
+      },
+      e: open(
+        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
+      ),
+
+      // "T"heme
+      t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
+      c: open("raycast://extensions/raycast/system/open-camera"),
+      m: open("raycast://extensions/iamyeizi/toggle-menu-bar/toggle"),
+    },
+
+// V = "moVe" which isn't "m" because we want it to be on the left hand
+// so that hjkl work like they do in vim ==========================================
+
+    v: {
+      h: {
+        to: [{ key_code: "left_arrow" }],
+      },
+      j: {
+        to: [{ key_code: "down_arrow" }],
+      },
+      k: {
+        to: [{ key_code: "up_arrow" }],
+      },
+      l: {
+        to: [{ key_code: "right_arrow" }],
+      },
+      // Magicmove via homerow.app
+      o: {
+        to: [{ key_code: "f", modifiers: ["right_control"] }],
+        // TODO: Trigger Vim Easymotion when VSCode is focused
+      },
+      // Scroll mode via homerow.app
+      m: {
+        to: [{ key_code: "j", modifiers: ["right_shift", "right_command"] }],
+      },
+      n: {
+        to: [{ key_code: "spacebar", modifiers: ["right_shift", "right_command"] }],
+      },
+      u: {
+        to: [{ key_code: "page_down" }],
+      },
+      i: {
+        to: [{ key_code: "page_up" }],
+        
+      },
+    },
+
+// W = "Window" via rectangle.app =======================
+
     w: {
       semicolon: {
         description: "Window: Hide",
@@ -248,175 +372,7 @@ const rules: KarabinerRules[] = [
         ],
       },
     },
-
-    // s = "System controls"
-    s: {
-      u: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
-      i: {
-        to: [
-          {
-            key_code: "display_brightness_increment",
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: "display_brightness_decrement",
-          },
-        ],
-      },
-      l: {
-        to: [
-          {
-            key_code: "q",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
-      p: {
-        to: [
-          {
-            key_code: "play_or_pause",
-          },
-        ],
-      },
-      semicolon: {
-        to: [
-          {
-            key_code: "fastforward",
-          },
-        ],
-      },
-      e: open(
-        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
-      ),
-
-      // "T"heme
-      t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
-      c: open("raycast://extensions/raycast/system/open-camera"),
-      m: open("raycast://extensions/iamyeizi/toggle-menu-bar/toggle"),
-    },
-
-    // v = "moVe" which isn't "m" because we want it to be on the left hand
-    // so that hjkl work like they do in vim
-    v: {
-      h: {
-        to: [{ key_code: "left_arrow" }],
-      },
-      j: {
-        to: [{ key_code: "down_arrow" }],
-      },
-      k: {
-        to: [{ key_code: "up_arrow" }],
-      },
-      l: {
-        to: [{ key_code: "right_arrow" }],
-      },
-      // Magicmove via homerow.app
-      o: {
-        to: [{ key_code: "f", modifiers: ["right_control"] }],
-        // TODO: Trigger Vim Easymotion when VSCode is focused
-      },
-      // Scroll mode via homerow.app
-      m: {
-        to: [{ key_code: "j", modifiers: ["right_shift", "right_command"] }],
-      },
-      n: {
-        to: [{ key_code: "spacebar", modifiers: ["right_shift", "right_command"] }],
-      },
-      u: {
-        to: [{ key_code: "page_down" }],
-      },
-      i: {
-        to: [{ key_code: "page_up" }],
-        
-      },
-    },
-
-    // c = Controls for Music p:play/pause  n:fastforward b:rewind 
-    c: {
-      p: {
-        to: [{ key_code: "play_or_pause" }],
-      },
-      n: {
-        to: [{ key_code: "fastforward" }],
-      },
-      b: {
-        to: [{ key_code: "rewind" }],
-      },
-    },
-   
-      
-    //d = Display sleep     
-      
-    d: {
-      k: open("raycast://extensions/raycast/system/sleep-displays"),
-      n: open("btt://execute_assigned_actions_for_trigger/?uuid=F280A815-6BED-494F-8B71-9A07F1CF6909"),
-    },
-
-    // r = "Raycast"
-    r: {
-      c: open("raycast://extensions/thomas/color-picker/pick-color"),
-      n: open("raycast://script-commands/dismiss-notifications"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
-      e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
-    },
   }),
-  // Minecraft
-  {
-    description: "Change Backspace to Spacebar when Minecraft is focused",
-    manipulators: [
-      {
-        type: "basic",
-        from: {
-          key_code: "delete_or_backspace",
-        },
-        to: [
-          {
-            key_code: "spacebar",
-          },
-        ],
-        conditions: [
-          {
-            type: "frontmost_application_if",
-            file_paths: [
-              "^/Users/mxstbr/Library/Application Support/minecraft/runtime/java-runtime-gamma/mac-os-arm64/java-runtime-gamma/jre.bundle/Contents/Home/bin/java$",
-            ],
-          },
-        ],
-      },
-    ],
-  },
 ];
 
 fs.writeFileSync(

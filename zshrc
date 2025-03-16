@@ -136,6 +136,7 @@ alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
 alias vim="nvim"
 alias bbd="brew bundle dump --force --describe"
+alias dn="osascript -e 'display notification' "this is a test notification" with title "What up nigga!!!"'"
 
 
 # Prompt settings========================================================== 
