@@ -1,7 +1,6 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
@@ -10,8 +9,6 @@ tap "shopify/shopify"
 brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
 # Asynchronous event library
@@ -64,12 +61,12 @@ brew "node@20"
 brew "nvm"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Pure Python Vim clone
@@ -150,6 +147,8 @@ cask "rectangle"
 cask "sf-symbols"
 # Music streaming service
 cask "spotify"
+# Real time file synchronisation software
+cask "syncthing"
 # Temperature monitoring, fan control and diagnostics
 cask "tg-pro"
 # Open-source code editor
