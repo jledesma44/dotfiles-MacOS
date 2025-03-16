@@ -98,9 +98,6 @@ const rules: KarabinerRules[] = [
       //toggle Gees Trackpad
       m: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3"),
 
-      y: open("https://news.ycombinator.com"),
-      f: open("https://facebook.com"),
-      r: open("https://reddit.com"),
     },
 
 // C = Controls for Music p:play/pause  n:fastforward b:rewind ======================
