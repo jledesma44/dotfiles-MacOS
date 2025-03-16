@@ -273,54 +273,6 @@
                                 },
                                 "to": [{ "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3" }],
                                 "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_b",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open https://news.ycombinator.com",
-                                "from": {
-                                    "key_code": "y",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://news.ycombinator.com" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_b",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open https://facebook.com",
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://facebook.com" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "hyper_sublayer_b",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Open https://reddit.com",
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "shell_command": "open https://reddit.com" }],
-                                "type": "basic"
                             }
                         ]
                     },
@@ -971,6 +923,22 @@
                                         }
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "Open -a '1Password 7.app'",
+                                "from": {
+                                    "key_code": "1",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a '1Password 7.app'" }],
                                 "type": "basic"
                             },
                             {
@@ -2168,7 +2136,7 @@
                                 ],
                                 "description": "Window: next-display",
                                 "from": {
-                                    "key_code": "o",
+                                    "key_code": "u",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "shell_command": "open -g rectangle://execute-action?name=next-display" }],
@@ -2264,7 +2232,7 @@
                                 ],
                                 "description": "Window: Previous Tab",
                                 "from": {
-                                    "key_code": "u",
+                                    "key_code": "i",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -2285,7 +2253,7 @@
                                 ],
                                 "description": "Window: Next Tab",
                                 "from": {
-                                    "key_code": "i",
+                                    "key_code": "o",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [

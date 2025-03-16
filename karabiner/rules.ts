@@ -165,7 +165,7 @@ const rules: KarabinerRules[] = [
       p: app("iPhone Mirroring"),
       s: app("System Settings"),
       i: app("obsidian"),
-      //b: app("bolt.gee"),     
+      1: app("1Password 7"),     
       //y: app("ChatGPT"),
     },
 
@@ -307,13 +307,13 @@ const rules: KarabinerRules[] = [
         ],
       },
       y: rectangle("previous-display"),
-      o: rectangle("next-display"),
+      u: rectangle("next-display"),
       k: rectangle("top-half"),
       j: rectangle("bottom-half"),
       h: rectangle("left-half"),
       l: rectangle("right-half"),
       f: rectangle("maximize"),
-      u: {
+      i: {
         description: "Window: Previous Tab",
         to: [
           {
@@ -322,7 +322,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      i: {
+      o: {
         description: "Window: Next Tab",
         to: [
           {
