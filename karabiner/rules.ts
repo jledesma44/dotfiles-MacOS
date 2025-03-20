@@ -3,7 +3,8 @@ import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
-  // Define the Hyper key itself
+
+  // ===Define the Hyper key itself===
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
     manipulators: [
@@ -41,6 +42,8 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+
+  // ===Define caps_lock to left_control if pressed with other keys and escape if pressed alone.===
   {
     "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
     "manipulators": [
@@ -55,7 +58,9 @@ const rules: KarabinerRules[] = [
       }
     ] 
   },
-  // Add sleep monitor for keyboard with out eject button
+
+  // ===Add sleep monitor keybinds for keyboards with out 'Eject' button===
+  //                 ===Ctrl+Shfit+Esc====
   {
     "description": "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
     "manipulators": [
@@ -83,6 +88,7 @@ const rules: KarabinerRules[] = [
     ]
   },
   
+// === This is the HyperSublayers section 
   ...createHyperSubLayers({
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
