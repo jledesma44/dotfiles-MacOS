@@ -137,6 +137,12 @@ alias a-server="pnpm astro dev --host 0.0.0.0"
 alias vim="nvim"
 alias bbd="brew bundle dump --force --describe"
 
+#Obsidian Vault-------------
+alias oo="$HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Devstack44"
+
+alias bbd="brew bundle dump --force --describe"
+alias bbd="brew bundle dump --force --describe"
+
 
 # Prompt settings========================================================== 
 
