@@ -165,13 +165,14 @@ const rules: KarabinerRules[] = [
       x: app("OBS"),
       e: app("Finder"),
       u: app("Calculator"),
-      l: app("Karabiner-Elements"),
       t: app("TextEdit"),
       m: app("Messages"),
       p: app("iPhone Mirroring"),
       s: app("System Settings"),
       i: app("obsidian"),
       1: app("1Password 7"),     
+      2: app("Karabiner-Elements"),
+      3: app("Karabiner-EventViewer"),
       //y: app("ChatGPT"),
     },
 
@@ -319,6 +320,7 @@ const rules: KarabinerRules[] = [
       h: rectangle("left-half"),
       l: rectangle("right-half"),
       f: rectangle("maximize"),
+      c: rectangle("center"),
       i: {
         description: "Window: Previous Tab",
         to: [
