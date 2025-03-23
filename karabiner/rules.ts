@@ -60,7 +60,7 @@ const rules: KarabinerRules[] = [
   },
 
   // ===Add sleep monitor keybinds for keyboards with out 'Eject' button===
-  //                 ===Ctrl+Shfit+Esc====
+  //                 (Ctrl+Shfit+Esc)
   {
     "description": "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
     "manipulators": [
@@ -106,7 +106,7 @@ const rules: KarabinerRules[] = [
 
     },
 
-// C = Controls for Music p:play/pause  n:fastforward b:rewind ======================
+// C = Controls for Music p:play/pause n:fast-forward b:rewind ======================
     c: {
       p: {
         to: [{ key_code: "play_or_pause" }],
@@ -120,12 +120,10 @@ const rules: KarabinerRules[] = [
     },
    
       
-//D = Display / Dismiss =============================================================     
+//D = Dismiss =============================================================     
       
     d: {
-    // Display sleep / kill  
-      k: open("raycast://extensions/raycast/system/sleep-displays"),
-    //Dismiss Notification banner
+    //Dismiss Notification banner / Bettertouchtool app
       n: open("btt://execute_assigned_actions_for_trigger/?uuid=93543ACA-AE92-4936-A74B-5D0A894D658E"),
     },
 
@@ -160,7 +158,7 @@ const rules: KarabinerRules[] = [
       c: app("Visual Studio Code"),
       h: app("Figma"),
       v: app("VNC Viewer"),
-      n: app("Parallels Desktop"),
+      n: open("Parallels Desktop"),
       z: app("Final Cut Pro"),
       x: app("OBS"),
       e: app("Finder"),
@@ -172,38 +170,47 @@ const rules: KarabinerRules[] = [
       i: app("obsidian"),
       1: app("1Password 7"),     
       2: app("Karabiner-Elements"),
-      3: app("Karabiner-EventViewer"),
-      //y: app("ChatGPT"),
+      3: app("Rectangle"),
     },
 
 // R = "Raycast" ==================================================================
 
     r: {
+      // Open AI Chat
+      o: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      // Color Picker
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
-      n: open("raycast://script-commands/dismiss-notifications"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
+      // Open Raycast Emoji's
       e: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
-      p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
+      // Open Clipboard History
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
       ),
+      // Create Short link
+      l: open(
+        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
+      ),
+      // Dismiss Notifications / Apple Script
+      n: open("raycast://script-commands/dismiss-notifications"),
+      // Raycast Confetti
+      p: open("raycast://extensions/raycast/raycast/confetti"),
+      s: open("raycast://extensions/peduarte/silent-mention/index"),
+      //Bluetooth Favorite device 1
       1: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       ),
+      //Bluetooth Favorite device 2
       2: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
       ),
     },
 
-// S = "System controls" =======================================
+// S = "System controls" ===========================================================
 
     s: {
+      // Increase Volume
       u: {
         to: [
           {
@@ -211,6 +218,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // Decrease Volume
       j: {
         to: [
           {
@@ -218,6 +226,23 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // Play / Pause
+      p: {
+        to: [
+          {
+            key_code: "play_or_pause",
+          },
+        ],
+      },
+      // Fast-forward
+      semicolon: {
+        to: [
+          {
+            key_code: "fastforward",
+          },
+        ],
+      },
+      // Increase display brightness
       i: {
         to: [
           {
@@ -225,6 +250,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // Decrease display brightness
       k: {
         to: [
           {
@@ -232,6 +258,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      // Log out
       l: {
         to: [
           {
@@ -240,17 +267,12 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      p: {
+      n: {
+      // Show Notification Center  
         to: [
           {
-            key_code: "play_or_pause",
-          },
-        ],
-      },
-      semicolon: {
-        to: [
-          {
-            key_code: "fastforward",
+            key_code: "n",
+            modifiers: ["left_command", "left_shift"],
           },
         ],
       },
@@ -258,16 +280,20 @@ const rules: KarabinerRules[] = [
         `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
       ),
 
-      // "T"heme
+      // "Theme toggle system appearance
       t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
+      // Open Camera
       c: open("raycast://extensions/raycast/system/open-camera"),
+      // Toggle Menu-bar
       m: open("raycast://extensions/iamyeizi/toggle-menu-bar/toggle"),
+      // Display sleep   
+      d: open("raycast://extensions/raycast/system/sleep-displays"),
     },
 
-// V = "moVe" which isn't "m" because we want it to be on the left hand
-// so that hjkl work like they do in vim ==========================================
+// V = "moVe"  ========================================================j
 
     v: {
+      // hjkl work like they do in vim
       h: {
         to: [{ key_code: "left_arrow" }],
       },
@@ -280,7 +306,16 @@ const rules: KarabinerRules[] = [
       l: {
         to: [{ key_code: "right_arrow" }],
       },
-      // Magicmove via homerow.app
+      // Page up / down
+      u: {
+        to: [{ key_code: "page_down" }],
+      },
+      i: {
+        to: [{ key_code: "page_up" }],  
+      },
+
+      //-------------------Homerow app --------------------------
+      // Magicmove via homerow app
       o: {
         to: [{ key_code: "f", modifiers: ["right_control"] }],
         // TODO: Trigger Vim Easymotion when VSCode is focused
@@ -289,19 +324,14 @@ const rules: KarabinerRules[] = [
       m: {
         to: [{ key_code: "j", modifiers: ["right_shift", "right_command"] }],
       },
+      // Mouse Click mode via Homerow app
       n: {
         to: [{ key_code: "spacebar", modifiers: ["right_shift", "right_command"] }],
       },
-      u: {
-        to: [{ key_code: "page_down" }],
-      },
-      i: {
-        to: [{ key_code: "page_up" }],
-        
-      },
     },
 
-// W = "Window" via rectangle.app =======================
+
+// W = "Window" via rectangle.app ==================================
 
     w: {
       semicolon: {
@@ -321,6 +351,8 @@ const rules: KarabinerRules[] = [
       l: rectangle("right-half"),
       f: rectangle("maximize"),
       c: rectangle("center"),
+      r: rectangle("make-smaller"),
+      t: rectangle("make-larger"),
       i: {
         description: "Window: Previous Tab",
         to: [
