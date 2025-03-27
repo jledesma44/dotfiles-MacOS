@@ -105,15 +105,15 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Aliases ====================================================================
 
-alias zshconfig="nvim ~/.zshrc"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias tmuxconfig="nvim ~/.tmux.conf"
-alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
+alias zshconfig="nvims ~/.zshrc"
+alias ohmyzsh="nvims ~/.oh-my-zsh"
+alias tmuxconfig="nvims ~/.tmux.conf"
+alias kittyconfig="nvims ~/.config/kitty/kitty.conf"
 alias kittycolors="kitten themes"
-alias sshconfig="nvim ~/.ssh/config"
+alias sshconfig="nvims ~/.ssh/config"
 alias reloadzsh="source ~/.zshrc"
-alias nvimconfig="nvim .config/nvim"
-alias gitconfig="nvim ~/.gitconfig"
+alias nvimconfig="nvims .config/nvim"
+alias gitconfig="nvims ~/.gitconfig"
 alias development="cd ~/Development/1.WebDev"
 alias sites="cd ~/Development/1.WebDev/10.Sites/"
 alias challenges="cd ~/Development/1.WebDev/1.Challenges"
@@ -134,7 +134,7 @@ alias root="sudo su"
 alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
-alias vim="nvim"
+alias vim="nvims"
 alias bbd="brew bundle dump --force --describe"
 
 #Obsidian Vault-------------
@@ -142,6 +142,30 @@ alias oo="$HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Devstack4
 
 alias bbd="brew bundle dump --force --describe"
 alias bbd="brew bundle dump --force --describe"
+
+
+# Neovim Distribution switcher ===============================================
+
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-devstack44="NVIM_APPNAME=Devstack44nvim nvim"
+alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+function nvims() {
+  items=("default" "Devstack44nvim" "LazyVim" "NvChad" "AstroNvim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+
+bindkey -s ^n "nvims\n"
+
+
 
 
 # Prompt settings========================================================== 
