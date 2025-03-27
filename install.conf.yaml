@@ -11,7 +11,8 @@
     ~/.tmux.conf:
     ~/.config/karabiner:
     ~/.config/bat:
-    ~/.config/nvim:
+    ~/.config/Devstack44nvim:
+    ~/.config/Lazyvim:
     ~/.config/kitty:
 
 - create:
