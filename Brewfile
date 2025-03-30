@@ -1,14 +1,19 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # C library implementing the SSH2 protocol
 brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
 # Asynchronous event library
@@ -61,12 +66,12 @@ brew "node@20"
 brew "nvm"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Fast, disk space efficient package manager
 brew "pnpm"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Pure Python Vim clone
@@ -121,10 +126,14 @@ cask "firefox"
 cask "firefox@developer-edition"
 cask "font-hack-nerd-font"
 cask "font-sf-pro"
+# Free and open-source image editor
+cask "gimp"
 # Keyboard shortcuts for every button on your screen
 cask "homerow"
 # Vector graphics editor
 cask "inkscape"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
 # GPU-based terminal emulator
@@ -162,7 +171,10 @@ mas "Eagle for Safari", id: 1526651672
 mas "Final Cut Pro", id: 424389933
 mas "Motion", id: 434290957
 mas "Nisus Thesaurus", id: 471448642
+mas "Pages", id: 409201541
 mas "Surfingkeys", id: 1609752330
 mas "Tailscale", id: 1475387142
+mas "TestFlight", id: 899247664
+mas "Ulysses", id: 1225570693
 mas "WhatFont", id: 1437138382
 mas "Xcode", id: 497799835
