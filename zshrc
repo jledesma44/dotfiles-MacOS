@@ -134,7 +134,6 @@ alias root="sudo su"
 alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
-alias vim="nvims"
 alias bbd="brew bundle dump --force --describe"
 
 #Obsidian Vault-------------
@@ -149,7 +148,7 @@ alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 
 function nvims() {
-  items=("default" "Devstack44nvim" "LazyVim" "NvChad" "AstroNvim")
+  items=("Lazyvim" "Devstack44nvim" "default" "NvChad" "AstroNvim")
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
@@ -162,7 +161,8 @@ function nvims() {
 
 bindkey -s ^n "nvims\n"
 
-
+alias vim="nvims"
+alias nvim="nvims"
 
 
 # Prompt settings========================================================== 
