@@ -32,17 +32,6 @@ end, { silent = true })
 
 -- All snippets =============================
 
-s(
-  "snip",
-  fmt(
-    [[
-      s({}, fmt(
-    ]],
-    {
-      i(1, "snippetname"),
-    }
-  )
-)
 local date = function()
   return { os.date("%B %d,%Y") }
 end
@@ -57,4 +46,15 @@ ls.add_snippets(nil, {
       f(date, {}),
     }),
   },
+  s(
+    "snip",
+    fmt(
+      [[
+      s({}, fmt(
+    ]],
+      {
+        i(1, "snippetname"),
+      }
+    )
+  ),
 })
