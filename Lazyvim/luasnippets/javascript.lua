@@ -42,10 +42,20 @@ ls.add_snippets("javascript", {
   }),
 
   -- console.log
-  s("clog", {
-    t("console.log("),
-    i(1),
-    t(");"),
-    i(0),
-  }),
+  s(
+    {
+      trig = "clg",
+      name = "console.log",
+      dscr = "console log",
+    },
+    fmt(
+      [=[
+        console.log('{}'):{}
+      ]=],
+      {
+        i(1, "test"),
+        i(0),
+      }
+    )
+  ),
 })
