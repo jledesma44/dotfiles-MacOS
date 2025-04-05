@@ -55,7 +55,11 @@ ls.add_snippets("css", {
 
   --Media Query min-width
   s(
-    "mqmin",
+    {
+      trig = "mqmin",
+      name = "media-query",
+      dscr = "min-width",
+    },
     fmt(
       [[
       @media (min-width: {}) {{
@@ -76,7 +80,11 @@ ls.add_snippets("css", {
 
   --Media Query max-width
   s(
-    "mqmax",
+    {
+      trig = "mqmax",
+      name = "media-query",
+      dscr = "max-width",
+    },
     fmt(
       [[
       @media (max-width: {}) {{
@@ -97,7 +105,11 @@ ls.add_snippets("css", {
 
   --Box shadow
   s(
-    "box-shadow",
+    {
+      trig = "bs",
+      name = "box-shadow",
+      dscr = "css box-shadow",
+    },
     fmt(
       [[ 
       {} {{
@@ -117,7 +129,11 @@ ls.add_snippets("css", {
 
   --Transparent button
   s(
-    "trans-btn",
+    {
+      trig = "trans-btn",
+      name = "transparent-background btn",
+      dscr = "button with transparent background",
+    },
     fmt(
       [[ 
       .btn {{
@@ -137,7 +153,11 @@ ls.add_snippets("css", {
 
   --Solid button
   s(
-    "solid-btn",
+    {
+      trig = "solid-btn",
+      name = "solid-background btn",
+      dscr = "button with solid color background",
+    },
     fmt(
       [[ 
       .btn {{
@@ -159,25 +179,34 @@ ls.add_snippets("css", {
 
   --Linear Gradient
   s(
-    "linear-grad",
+    {
+      trig = "lin-grad",
+      name = "linear-gradient background",
+      dscr = "css linear-gradient background",
+    },
     fmt(
       [[ 
-      .card {{
+      .{} {{
         background-image: linear-gradient(to right, {}, {});
         color: {};
       }}
     ]],
       {
-        i(1, "#ed7cda"),
-        i(2, "#ffaa1b"),
-        i(3, "white"),
+        i(1, "card"),
+        i(2, "#ed7cda"),
+        i(3, "#ffaa1b"),
+        i(4, "white"),
       }
     )
   ),
 
   --Css reset
   s(
-    "reset",
+    {
+      trig = "reset",
+      name = "Jaime's css reset",
+      dscr = "css reset values",
+    },
     fmt(
       [[ 
       *,
@@ -240,7 +269,11 @@ ls.add_snippets("css", {
 
   --Root snippet
   s(
-    "root",
+    {
+      trig = "root",
+      name = "starter variables",
+      dscr = "root css variables",
+    },
     fmt(
       [[ 
        @import url('https://fonts.googleapis.com/css2?family={}:wght@200,300,400,500,600,700,800,900&family={}:wght@200,300,400,500,600,700,800,900&display=swap');
