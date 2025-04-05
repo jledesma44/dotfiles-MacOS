@@ -38,23 +38,48 @@ end
 
 ls.add_snippets(nil, {
   all = {
+    -- Date snippet
     s({
       trig = "ddate",
-      name = "Date",
-      dscr = "Date in the form of MM-DD-YYYY",
+      name = "Date with format",
+      dscr = "Date in the form of Jan 20, 1995",
     }, {
       f(date, {}),
     }),
-  },
-  s(
-    "snip",
-    fmt(
-      [[
-      s({}, fmt(
-    ]],
+
+    -- Snippet template
+    s(
       {
-        i(1, "snippetname"),
-      }
-    )
-  ),
+        trig = "snip",
+        name = "snippet-template",
+        dscr = "snippet for creating a lua snippet template",
+      },
+      fmt(
+        [[
+        s(
+          {{
+            trig = "{}",
+            name = "{}",
+            dscr = "{}",
+          }},
+          fmt(
+            [=[
+              {}
+            ]=],
+            {{
+              i(1, "{}"),
+            }}
+          )
+        ),
+        ]],
+        {
+          i(1, "trigger"),
+          i(2, "snippet-name"),
+          i(3, "snippet-dscr"),
+          i(4, "snippet-body"),
+          i(5, "insert-1"),
+        }
+      )
+    ),
+  },
 })
