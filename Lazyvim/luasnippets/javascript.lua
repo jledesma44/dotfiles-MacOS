@@ -41,6 +41,24 @@ ls.add_snippets("javascript", {
     t("}"),
   }),
 
+  -- Variable insert
+  s(
+    {
+      trig = "invar",
+      name = "variable",
+      dscr = "variable snippet",
+    },
+    fmt(
+      [=[
+        ${{{}}}{}
+      ]=],
+      {
+        i(1, "'name'"),
+        i(0),
+      }
+    )
+  ),
+
   -- console.log
   s(
     {
@@ -50,11 +68,47 @@ ls.add_snippets("javascript", {
     },
     fmt(
       [=[
-        console.log('{}'):{}
+        console.log({});{}
       ]=],
       {
-        i(1, "test"),
+        i(1, "'test'"),
         i(0),
+      }
+    )
+  ),
+
+  -- Let Varibale
+  s(
+    {
+      trig = "let",
+      name = "let",
+      dscr = "js let variable",
+    },
+    fmt(
+      [=[
+        let {} = {};
+      ]=],
+      {
+        i(1, "x"),
+        i(2, "5"),
+      }
+    )
+  ),
+
+  -- Const Variable
+  s(
+    {
+      trig = "const",
+      name = "constant",
+      dscr = "js constant variable",
+    },
+    fmt(
+      [=[
+        const {} = {};
+      ]=],
+      {
+        i(1, "y"),
+        i(2, "9"),
       }
     )
   ),
