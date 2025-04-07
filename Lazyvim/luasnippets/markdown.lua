@@ -30,22 +30,28 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
   end
 end, { silent = true })
 
--- All filetype snippets ====================================
-
-local date = function()
-  return { os.date("%B %d,%Y") }
-end
-
-ls.add_snippets(nil, {
-  all = {
-    s({
-      trig = "ddate",
-      name = "Date",
-      dscr = "Date in the form of MM-DD-YYYY",
-    }, {
-      f(date, {}),
-    }),
-  },
-})
-
 -- Markdown snippets =======================================
+
+ls.add_snippets("markdown", {
+  s(
+    {
+      trig = "codeblock",
+      name = "markdown codeblock",
+      dscr = "Adds code block snippet",
+    },
+    fmt(
+      [=[
+        ```{}
+        {}
+        ```
+
+        {}
+      ]=],
+      {
+        i(1, "Code-lang"),
+        i(2, "Past Code here!"),
+        i(0),
+      }
+    )
+  ),
+})
