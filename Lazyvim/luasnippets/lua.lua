@@ -31,16 +31,4 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
 end, { silent = true })
 
 --Lua snippets =================================
-ls.add_snippets("lua", {
-  s(
-    "snip",
-    fmt(
-      [[
-      s({}, fmt(
-    ]],
-      {
-        i(1, "snippetname"),
-      }
-    )
-  ),
-})
+ls.add_snippets("lua", {})

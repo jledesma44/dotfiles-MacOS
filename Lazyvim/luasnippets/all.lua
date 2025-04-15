@@ -50,9 +50,9 @@ ls.add_snippets(nil, {
     -- Snippet template
     s(
       {
-        trig = "snip",
-        name = "snippet-template",
-        dscr = "snippet for creating a lua snippet template",
+        trig = "luasnip",
+        name = "snippet template",
+        dscr = "lua snippet template",
       },
       fmt(
         [[

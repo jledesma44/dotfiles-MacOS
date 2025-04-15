@@ -275,7 +275,7 @@ ls.add_snippets("css", {
   s(
     {
       trig = "root",
-      name = "starter variables",
+      name = "Jaime's starter variables",
       dscr = "root css variables",
     },
     fmt(
@@ -307,11 +307,11 @@ ls.add_snippets("css", {
         /* font size */
         --fs-nav: {}px;
       
-        --fs-btn: 16px;
-        --fs-body: 16px;
-        --fs-h1: 50px;
-        --fs-h2: 32px;
-        --fs-h3: 28px;
+        --fs-btn: {}px;
+        --fs-body: {}px;
+        --fs-h1: {}px;
+        --fs-h2: {}px;
+        --fs-h3: {}px;
       
         /*  ============== Spacing =============== * */
         --sec-pad: 150px 0;
@@ -322,23 +322,23 @@ ls.add_snippets("css", {
       
       @media (min-width: 800px) {{
         :root {{
-          --fs-nav: 16px;
-          --fs-body: 16px;
-          --fs-btn: 16px;
-          --fs-h1: 60px;
-          --fs-h2: 48px;
-          --fs-h3: 28px;
+          --fs-nav: {}px;
+          --fs-body: {}px;
+          --fs-btn: {}px;
+          --fs-h1: {}px;
+          --fs-h2: {}px;
+          --fs-h3: {}px;
         }}
       }}
     
       @media (min-width: 1100px) {{
         :root {{
-          --fs-nav: 18px;
-          --fs-body: 18px;
-          --fs-btn: 18px;
-          --fs-h1: 80px;
-          --fs-h2: 56px;
-          --fs-h3: 32px;
+          --fs-nav: {}px;
+          --fs-body: {}px;
+          --fs-btn: {}px;
+          --fs-h1: {}px;
+          --fs-h2: {}px;
+          --fs-h3: {}px;
         }}
       }}
     ]],
@@ -353,7 +353,24 @@ ls.add_snippets("css", {
         i(8, "fcf8ff"),
         rep(1),
         rep(2),
-        i(9, "16"),
+        i(9, "12"),
+        i(10, "14"),
+        i(11, "14"),
+        i(12, "54"),
+        i(13, "38"),
+        i(14, "18"),
+        i(15, "14"),
+        i(16, "16"),
+        i(17, "16"),
+        i(18, "58"),
+        i(19, "42"),
+        i(20, "24"),
+        i(21, "16"),
+        i(22, "16"),
+        i(23, "16"),
+        i(24, "62"),
+        i(25, "48"),
+        i(26, "28"),
       }
     )
   ),
