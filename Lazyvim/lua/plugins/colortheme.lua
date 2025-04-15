@@ -1,7 +1,13 @@
+--Tokyonight-night colorscheme====================
+
 return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "night" },
+    priorty = 1000,
+    opts = {
+      style = "night",
+      transparent = true,
+    },
   },
 }
