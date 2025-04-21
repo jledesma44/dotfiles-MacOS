@@ -16,3 +16,9 @@ vim.keymap.set("n", "<Up>", ":resize -2<CR>", { desc = "resize-up", noremap = tr
 vim.keymap.set("n", "<Down>", ":resize +2<CR>", { desc = "resize-down", noremap = true, silent = true })
 vim.keymap.set("n", "<Left>", ":vertical resize +2<CR>", { desc = "resize-vertical", noremap = true, silent = true })
 vim.keymap.set("n", "<Right>", ":vertical resize -2<CR>", { desc = "resize-horizontal", noremap = true, silent = true })
+
+-- ColorPicker
+vim.keymap.set("n", "<leader>cp", ":CccPick<CR>", { desc = "ColorPicker", noremap = true, silent = true })
+
+-- Toggle px to rem
+vim.keymap.set("n", "<leader>pt", ":TogglePxRem<CR>", { desc = "Toggle_Px_To_Rem", noremap = true, silent = true })
