@@ -112,4 +112,25 @@ ls.add_snippets("javascript", {
       }
     )
   ),
+  s(
+    {
+      trig = "as",
+      name = "arrow function simple",
+      dscr = "converts regular expression to arrow function",
+    },
+    fmt(
+      [=[
+      {} {} = ({}) => {{
+       return {};
+      }};{} 
+    ]=],
+      {
+        i(1, "const"),
+        i(2, "calArea"),
+        i(3, "radius"),
+        i(4, "3.14 * radius**2"),
+        i(0),
+      }
+    )
+  ),
 })
