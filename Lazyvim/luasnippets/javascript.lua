@@ -133,4 +133,40 @@ ls.add_snippets("javascript", {
       }
     )
   ),
+  s(
+    {
+      trig = "qs",
+      name = "querySelector",
+      dscr = "1uery selector",
+    },
+    fmt(
+      [=[
+        {} {} = document.querySelector({});{}
+      ]=],
+      {
+        i(1, "const"),
+        i(2, "para"),
+        i(3, "'p'"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "qsa",
+      name = "querySelectorAll",
+      dscr = "1uery selector all",
+    },
+    fmt(
+      [=[
+        {} {} = document.querySelectorAll({});{}
+      ]=],
+      {
+        i(1, "const"),
+        i(2, "para"),
+        i(3, "'p'"),
+        i(0),
+      }
+    )
+  ),
 })
