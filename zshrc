@@ -103,7 +103,7 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 # Change ZSH Options =========================================================
 
 
-# Aliases ====================================================================
+# Aliases (app configs) ====================================================================
 
 alias zshconfig="nvims ~/.zshrc"
 alias ohmyzsh="nvims ~/.oh-my-zsh"
@@ -114,6 +114,10 @@ alias sshconfig="nvims ~/.ssh/config"
 alias reloadzsh="source ~/.zshrc"
 alias nvimconfig="nvims .config/nvim"
 alias gitconfig="nvims ~/.gitconfig"
+
+
+# Aliases (quick cd/ directories) ================================
+
 alias development="cd ~/Development/1.WebDev"
 alias sites="cd ~/Development/1.WebDev/10.Sites/"
 alias challenges="cd ~/Development/1.WebDev/1.Challenges"
@@ -124,6 +128,9 @@ alias tmx="tmux new -A -s General-Shell"
 alias mcc="EDITOR=lvim mc"
 alias cat="bat"
 alias man="batman"
+
+# Aliases (file management) ============================
+
 alias la="ls -laFh"
 alias la="ls -lAFh"
 alias eza="eza -lA --git"
@@ -131,10 +138,30 @@ alias ls="eza -lAh --git && git status && git pull"
 alias lsg="eza -lAhG --git"
 alias ll="eza --git --tree --level=2"
 alias root="sudo su"
+
+# Aliases (server start up) ============================
+
 alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
 alias b-server="browser-sync start --server --host 0.0.0.0 --port 8001 --watch --browser 'firefox developer edition'"
+
+# Aliases (Git) =========================================
+
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
+alias gd='git diff'
+alias gcl="git clone"
+alias gc="git commit -m"
+alias gl="git log"
+alias gi="git init"
+alias gp="git push"
+alias gu="git pull"
+
+
+#Alias for brew bundle =================================
+
 alias bbd="brew bundle dump --force --describe"
 
 #Obsidian Vault-------------
