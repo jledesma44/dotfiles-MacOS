@@ -31,3 +31,29 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
 end, { silent = true })
 
 --Html snippets ==========================================
+--
+ls.add_snippets("html", {
+
+  --container snippet
+  s(
+    {
+      trig = "font-link",
+      name = ".google font link",
+      dscr = "link to google fonts",
+    },
+    fmt(
+      [[
+      <link
+         href='https://fonts.googleapis.com/css2?
+         family={}:wght@200,300,400,500,600,700,800,900&
+         family={}:wght@200,300,400,500,600,700,800,900&display=swap'
+         rel='stylesheet'
+      />
+    ]],
+      {
+        i(1, "Ralway"),
+        i(2, "Poppins"),
+      }
+    )
+  ),
+})
