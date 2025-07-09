@@ -15,7 +15,7 @@ local fmt = require("luasnip.extras.fmt").fmt
 -- Keymap for insert and selections of snippets
 
 vim.keymap.set({ "i" }, "<C-K>", function()
-  ls.expand()
+  ls.expand(table)
 end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<C-L>", function()
   ls.jump(1)
