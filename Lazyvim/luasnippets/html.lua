@@ -44,7 +44,9 @@ ls.add_snippets("html", {
     fmt(
       [[
       <link
-         href='https://fonts.googleapis.com/css2?family={}:wght@200;300;400;500;600;700;800;900&family={}:wght@200;300;400;500;600;700;800;900&display=swap'
+         href='https://fonts.googleapis.com/css2?
+         family={}:wght@200;300;400;500;600;700;800;900&
+         family={}:wght@200;300;400;500;600;700;800;900&display=swap'
          rel='stylesheet'
       />
     ]],
