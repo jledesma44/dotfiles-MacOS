@@ -37,9 +37,9 @@ ls.add_snippets("html", {
   --container snippet
   s(
     {
-      trig = "font-link",
+      trig = "google-font",
       name = "google font link",
-      dscr = "link to google fonts",
+      dscr = "html link to google fonts",
     },
     fmt(
       [[
@@ -58,8 +58,8 @@ ls.add_snippets("html", {
   ),
   s(
     {
-      trig = "awesome",
-      name = "font awesome link ",
+      trig = "font-awesome",
+      name = "font awesome icon link",
       dscr = "cdn link to font awesome",
     },
     fmt(
