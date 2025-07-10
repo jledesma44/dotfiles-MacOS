@@ -374,19 +374,4 @@ ls.add_snippets("css", {
       }
     )
   ),
-  s(
-    {
-      trig = "trigger",
-      name = "snippet-name",
-      dscr = "snippet-dscr",
-    },
-    fmt(
-      [=[
-        snippet-body
-      ]=],
-      {
-        i(1, "insert-1"),
-      }
-    )
-  ),
 })
