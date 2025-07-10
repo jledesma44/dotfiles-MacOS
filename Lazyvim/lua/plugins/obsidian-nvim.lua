@@ -5,9 +5,9 @@ return {
     lazy = true,
     ft = "markdown",
     dependencies = {
-      "nvim-lua/planery.nvim",
+      "nvim-lua/plenary.nvim",
     },
-    function()
+    config = function()
       require("obsidian").setup({
         workspaces = {
           {
