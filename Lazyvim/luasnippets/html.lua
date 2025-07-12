@@ -73,4 +73,20 @@ ls.add_snippets("html", {
       }
     )
   ),
+  s(
+    {
+      trig = "fa",
+      name = "font-awesome icon",
+      dscr = "font-awesome html icon snippet",
+    },
+    fmt(
+      [[
+        <i class="fa-{} fa-{}"></i>
+      ]],
+      {
+        i(1, "solid"),
+        i(2, "envelope-open"),
+      }
+    )
+  ),
 })
