@@ -1,8 +1,5 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -12,8 +9,6 @@ brew "bash"
 brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
 # Asynchronous event library
@@ -70,6 +65,8 @@ brew "openssh"
 brew "pipx"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Pure Python Vim clone
@@ -164,8 +161,6 @@ cask "syncthing-app"
 cask "tg-pro"
 # Open-source code editor
 cask "visual-studio-code"
-# Remote desktop application focusing on security
-cask "vnc-viewer"
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer 2", id: 1616831348
 mas "Amphetamine", id: 937984704
@@ -215,7 +210,6 @@ vscode "josemurilloc.aura-spirit-dracula"
 vscode "kamikillerto.vscode-colorize"
 vscode "kisstkondoros.vscode-gutter-preview"
 vscode "kubescape.kubescape"
-vscode "lizhizhuanshu.autolua-debugger"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "mrmlnc.vscode-scss"
 vscode "ms-azuretools.vscode-containers"
