@@ -37,16 +37,14 @@ ls.add_snippets("html", {
   --container snippet
   s(
     {
-      trig = "google-font",
+      trig = "gfl",
       name = "google font link",
       dscr = "html link to google fonts",
     },
     fmt(
       [[
       <link
-         href='https://fonts.googleapis.com/css2?
-         family={}:wght@200;300;400;500;600;700;800;900&
-         family={}:wght@200;300;400;500;600;700;800;900&display=swap'
+         href='https://fonts.googleapis.com/css2?family={}:wght@200;300;400;500;600;700;800;900&family={}:wght@200;300;400;500;600;700;800;900&display=swap'
          rel='stylesheet'
       />
     ]],
@@ -58,7 +56,7 @@ ls.add_snippets("html", {
   ),
   s(
     {
-      trig = "font-awesome",
+      trig = "fa-link",
       name = "font awesome icon link",
       dscr = "cdn link to font awesome",
     },
@@ -75,9 +73,9 @@ ls.add_snippets("html", {
   ),
   s(
     {
-      trig = "fa",
-      name = "font-awesome icon",
-      dscr = "font-awesome html icon snippet",
+      trig = "fa-solid",
+      name = "font-awesome classic",
+      dscr = "font-awesome icon snippet solid",
     },
     fmt(
       [[
@@ -85,7 +83,23 @@ ls.add_snippets("html", {
       ]],
       {
         i(1, "solid"),
-        i(2, "envelope-open"),
+        i(2, "bars"),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "fa-brands",
+      name = "font-awesome brands",
+      dscr = "font-awesome icon snippet brands",
+    },
+    fmt(
+      [[
+        <i class="fa-{} fa-{}"></i>
+      ]],
+      {
+        i(1, "brands"),
+        i(2, "facebook"),
       }
     )
   ),
