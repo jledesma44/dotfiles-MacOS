@@ -18,9 +18,15 @@
     ~/.config/kitty:
 
 - create:
-    - ~/test
+    - ~/Development
 
 - shell:
+    - command: ./setup_ohmyzsh.zsh
+      stdout: true
+      stderr: true
+    - command: ./setup_tpm.zsh
+      stdout: true
+      stderr: true
     - command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
