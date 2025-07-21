@@ -26,7 +26,7 @@ fi
 # Now check for Homebrew
 if command -v brew >/dev/null 2>&1; then
     echo "***** Homebrew is already installed *******"
-    echo "***** Now checking for any updates!!! ******"
+    echo "***** Now checking brewfile for installs and/or updates!!! ******"
 else
     echo "Installing Homebrew..."
     # Your installation code
