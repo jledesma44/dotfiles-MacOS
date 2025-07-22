@@ -4,6 +4,10 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/Development
+    - ~/.config
+
 - link:
     ~/.zshrc:
     ~/.zshenv:
@@ -16,9 +20,6 @@
     ~/.config/NvChad:
     ~/.config/Lazyvim:
     ~/.config/kitty:
-
-- create:
-    - ~/Development
 
 - shell:
     - command: ./setup_ohmyzsh.zsh
