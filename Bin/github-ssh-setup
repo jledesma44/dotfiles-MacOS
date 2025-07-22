@@ -1,0 +1,332 @@
+#!/bin/bash
+
+# GitHub SSH Key Generator for macOS
+# This script creates SSH keys for GitHub with device-specific naming and adds them to keychain
+
+set -e  # Exit on any error
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+NC='\033[0m' # No Color
+
+# Function to print colored output
+print_status() {
+    echo -e "${GREEN}[INFO]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
+
+print_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+print_header() {
+    echo -e "${BLUE}[SETUP]${NC} $1"
+}
+
+# Function to show usage
+show_usage() {
+    echo -e "${BLUE}GitHub SSH Key Generator for macOS${NC}"
+    echo ""
+    echo -e "${BLUE}Usage:${NC}"
+    echo "  $0 [email] [key-type]"
+    echo ""
+    echo -e "${BLUE}Parameters:${NC}"
+    echo "  email     : Your GitHub email address (optional - will prompt if not provided)"
+    echo "  key-type  : SSH key type: rsa, ed25519 (default: ed25519)"
+    echo ""
+    echo -e "${BLUE}Examples:${NC}"
+    echo "  $0 user@example.com ed25519"
+    echo "  $0 user@example.com"
+    echo "  $0"
+    echo ""
+    echo -e "${BLUE}Generated files will be named:${NC}"
+    echo "  ~/.ssh/id_{key-type}_gh_{device-name}"
+    echo "  ~/.ssh/id_{key-type}_gh_{device-name}.pub"
+}
+
+# Function to get device name
+get_device_name() {
+    # Get computer name and clean it for use in filename
+    local device_name=$(scutil --get ComputerName 2>/dev/null || hostname)
+    # Replace spaces and special characters with underscores, convert to lowercase
+    device_name=$(echo "$device_name" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/_/g' | sed 's/__*/_/g' | sed 's/^_\|_$//g')
+    echo "$device_name"
+}
+
+# Function to get email address
+get_email() {
+    local email="$1"
+    
+    if [ -z "$email" ]; then
+        echo -e "${BLUE}Enter your GitHub email address:${NC}"
+        read -r email
+        
+        if [ -z "$email" ]; then
+            print_error "Email address is required."
+            exit 1
+        fi
+    fi
+    
+    # Basic email validation
+    if [[ ! "$email" =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
+        print_error "Invalid email address format."
+        exit 1
+    fi
+    
+    echo "$email"
+}
+
+# Function to validate key type
+validate_key_type() {
+    local key_type="$1"
+    
+    case "$key_type" in
+        "rsa"|"ed25519")
+            echo "$key_type"
+            ;;
+        "")
+            echo "ed25519"  # Default
+            ;;
+        *)
+            print_error "Invalid key type: $key_type. Supported types: rsa, ed25519"
+            exit 1
+            ;;
+    esac
+}
+
+# Function to check if SSH directory exists
+ensure_ssh_directory() {
+    if [ ! -d "$HOME/.ssh" ]; then
+        print_status "Creating ~/.ssh directory..."
+        mkdir -p "$HOME/.ssh"
+        chmod 700 "$HOME/.ssh"
+    fi
+}
+
+# Function to generate SSH key
+generate_ssh_key() {
+    local email="$1"
+    local key_type="$2"
+    local device_name="$3"
+    local key_file="$HOME/.ssh/id_${key_type}_gh_${device_name}"
+    
+    # Check if key already exists
+    if [ -f "$key_file" ]; then
+        print_warning "SSH key already exists: $key_file"
+        echo -e "${YELLOW}Do you want to overwrite it? (y/N):${NC}"
+        read -r confirm
+        if [[ ! "$confirm" =~ ^[Yy]$ ]]; then
+            print_status "Operation cancelled."
+            exit 0
+        fi
+    fi
+    
+    print_status "Generating $key_type SSH key for GitHub..."
+    
+    # Generate key based on type
+    case "$key_type" in
+        "rsa")
+            ssh-keygen -t rsa -b 4096 -C "$email" -f "$key_file" -N ""
+            ;;
+        "ed25519")
+            ssh-keygen -t ed25519 -C "$email" -f "$key_file" -N ""
+            ;;
+    esac
+    
+    if [ $? -eq 0 ]; then
+        print_success "SSH key generated successfully!"
+        print_status "Private key: $key_file"
+        print_status "Public key: ${key_file}.pub"
+    else
+        print_error "Failed to generate SSH key."
+        exit 1
+    fi
+    
+    echo "$key_file"
+}
+
+# Function to add key to SSH agent
+add_to_ssh_agent() {
+    local key_file="$1"
+    
+    print_status "Starting SSH agent..."
+    eval "$(ssh-agent -s)" > /dev/null
+    
+    print_status "Adding SSH key to SSH agent..."
+    ssh-add "$key_file"
+    
+    if [ $? -eq 0 ]; then
+        print_success "SSH key added to SSH agent!"
+    else
+        print_error "Failed to add SSH key to SSH agent."
+        return 1
+    fi
+}
+
+# Function to add key to macOS keychain
+add_to_keychain() {
+    local key_file="$1"
+    
+    print_status "Adding SSH key to macOS Keychain..."
+    ssh-add --apple-use-keychain "$key_file"
+    
+    if [ $? -eq 0 ]; then
+        print_success "SSH key added to macOS Keychain!"
+    else
+        print_warning "Failed to add SSH key to keychain, but key is still functional."
+    fi
+}
+
+# Function to create/update SSH config
+update_ssh_config() {
+    local key_file="$1"
+    local device_name="$2"
+    local config_file="$HOME/.ssh/config"
+    local host_name="github.com-$device_name"
+    
+    print_status "Updating SSH config..."
+    
+    # Create config entry
+    local config_entry="
+# GitHub configuration for $device_name
+Host $host_name
+    HostName github.com
+    User git
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile $key_file
+"
+    
+    # Check if config file exists and if this host already exists
+    if [ -f "$config_file" ]; then
+        if grep -q "Host $host_name" "$config_file"; then
+            print_warning "SSH config entry for $host_name already exists."
+            return 0
+        fi
+    else
+        touch "$config_file"
+        chmod 600 "$config_file"
+    fi
+    
+    # Add config entry
+    echo "$config_entry" >> "$config_file"
+    print_success "SSH config updated!"
+    print_status "You can now use: git clone git@$host_name:username/repo.git"
+}
+
+# Function to display public key
+show_public_key() {
+    local key_file="$1"
+    local pub_key_file="${key_file}.pub"
+    
+    print_header "Your GitHub SSH Public Key:"
+    echo ""
+    echo -e "${PURPLE}$(cat "$pub_key_file")${NC}"
+    echo ""
+}
+
+# Function to provide instructions
+show_instructions() {
+    local device_name="$1"
+    local host_name="github.com-$device_name"
+    
+    print_header "Next Steps:"
+    echo ""
+    echo "1. Copy the public key above"
+    echo "2. Go to GitHub.com → Settings → SSH and GPG Keys"
+    echo "3. Click 'New SSH Key'"
+    echo "4. Paste your public key and give it a title (e.g., '$device_name')"
+    echo ""
+    print_header "Usage Examples:"
+    echo ""
+    echo "# Clone a repository using this key:"
+    echo "git clone git@$host_name:username/repository.git"
+    echo ""
+    echo "# Set this as default for existing repos:"
+    echo "git remote set-url origin git@$host_name:username/repository.git"
+    echo ""
+    echo "# Or use the standard github.com (if this is your primary key):"
+    echo "git clone git@github.com:username/repository.git"
+    echo ""
+    print_success "Setup complete! Your SSH key is ready to use with GitHub."
+}
+
+# Function to test GitHub connection
+test_github_connection() {
+    local device_name="$1"
+    local host_name="github.com-$device_name"
+    
+    echo -e "${YELLOW}Would you like to test the GitHub connection? (y/N):${NC}"
+    read -r test_connection
+    
+    if [[ "$test_connection" =~ ^[Yy]$ ]]; then
+        print_status "Testing GitHub connection..."
+        print_warning "Note: You need to add the public key to GitHub first for this to work."
+        
+        ssh -T "git@$host_name" 2>&1 | head -5
+        
+        echo ""
+        print_status "If you see 'successfully authenticated', your key is working!"
+    fi
+}
+
+# Main function
+main() {
+    # Check for help flag
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+        show_usage
+        exit 0
+    fi
+    
+    print_header "GitHub SSH Key Generator for macOS"
+    echo ""
+    
+    # Get parameters
+    local email=$(get_email "$1")
+    local key_type=$(validate_key_type "$2")
+    local device_name=$(get_device_name)
+    
+    print_status "Configuration:"
+    print_status "  Email: $email"
+    print_status "  Key Type: $key_type"
+    print_status "  Device Name: $device_name"
+    echo ""
+    
+    # Ensure SSH directory exists
+    ensure_ssh_directory
+    
+    # Generate SSH key
+    local key_file=$(generate_ssh_key "$email" "$key_type" "$device_name")
+    
+    # Add to SSH agent
+    add_to_ssh_agent "$key_file"
+    
+    # Add to macOS keychain
+    add_to_keychain "$key_file"
+    
+    # Update SSH config
+    update_ssh_config "$key_file" "$device_name"
+    
+    # Show public key
+    show_public_key "$key_file"
+    
+    # Show instructions
+    show_instructions "$device_name"
+    
+    # Test connection
+    test_github_connection "$device_name"
+}
+
+# Run main function with all arguments
+main "$@"
