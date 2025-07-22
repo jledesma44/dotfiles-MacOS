@@ -20,6 +20,7 @@
     ~/.config/NvChad:
     ~/.config/Lazyvim:
     ~/.config/kitty:
+    ~/Bin:
 
 - shell:
     - command: ./setup_ohmyzsh.zsh
