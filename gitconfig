@@ -27,3 +27,5 @@
   showStash = true
   showUntrackedFiles = all
 
+[credential]
+	helper = store
