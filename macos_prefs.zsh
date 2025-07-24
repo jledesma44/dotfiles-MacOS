@@ -234,6 +234,9 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Position Dock on the left side
 defaults write com.apple.dock "orientation" -string "left" && killall Dock
 
+# Removes all default apps from the dock
+defaults write com.apple.dock persistent-apps -array && killall Dock
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
