@@ -26,3 +26,11 @@ vim.keymap.set("v", "<leader>pt", ":PxToRemLine<CR>", { desc = "Toggle_Px_To_Rem
 
 -- Toggle Auto Save
 vim.keymap.set("n", "<leader>as", ":ASToggle<CR>", { desc = "Toggle_Auto_Save", noremap = true, silent = true })
+
+-- yank to clipboard
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to clipboard", noremap = true, silent = true })
+-- yank line to clipboard
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to clipboard", noremap = true, silent = true })
+
+-- delete without yanking
+vim.keymap.set({ "n", "v" }, "<leader>", [["_d]], { desc = "Delete without yanking", noremap = true, silent = true })
