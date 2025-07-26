@@ -118,7 +118,7 @@ alias gitconfig="nvims ~/.gitconfig"
 
 # Aliases (quick cd/ directories) ================================
 
-alias development="cd ~/Development/1.WebDev"
+alias development="/Users/jaimeledesma/Documents/Development/"
 alias sites="cd ~/Development/1.WebDev/10.Sites/"
 alias challenges="cd ~/Development/1.WebDev/1.Challenges"
 alias tutorials="cd ~/Development/1.WebDev/2.Tutorials"
@@ -141,7 +141,7 @@ alias root="sudo su"
 
 # Aliases (server start up) ============================
 
-alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
+alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
 alias b-server="browser-sync start --server --host 0.0.0.0 --port 8001 --watch --browser 'firefox developer edition'"
