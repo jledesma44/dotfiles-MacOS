@@ -3,7 +3,6 @@ import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle, shell } from "./utils";
 
 const rules: KarabinerRules[] = [
-
   // ===Define the Hyper key itself===
   {
     description: "Hyper Key (⌃⌥⇧⌘)",
@@ -25,7 +24,6 @@ const rules: KarabinerRules[] = [
           },
         ],
         to_after_key_up: [
-          
           {
             set_variable: {
               name: "hyper",
@@ -45,68 +43,68 @@ const rules: KarabinerRules[] = [
 
   // ===Define caps_lock to left_control if pressed with other keys and escape if pressed alone.===
   {
-    "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
-    "manipulators": [
+    description:
+      "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
+    manipulators: [
       {
-          "from": {
-              "key_code": "caps_lock",
-              "modifiers": { "optional": ["any"] }
-          },
-          "to": [{ "key_code": "left_control" }],
-          "to_if_alone": [{ "key_code": "escape" }],
-          "type": "basic"
-      }
-    ] 
+        from: {
+          key_code: "caps_lock",
+          modifiers: { optional: ["any"] },
+        },
+        to: [{ key_code: "left_control" }],
+        to_if_alone: [{ key_code: "escape" }],
+        type: "basic",
+      },
+    ],
   },
 
   // ===Add sleep monitor keybinds for keyboards with out 'Eject' button===
   //                 (Ctrl+Shfit+Esc)
   {
-    "description": "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
-    "manipulators": [
+    description: "Ctrl+Cmd+Shift+Esc to Sleep Monitor",
+    manipulators: [
       {
-        "from": {
-          "key_code": "escape",
-          "modifiers": {
-            "mandatory": [
-              "left_control",
-              "left_shift"
-            ]
-          }
+        from: {
+          key_code: "escape",
+          modifiers: {
+            mandatory: ["left_control", "left_shift"],
+          },
         },
-        "to": [
+        to: [
           {
-          "key_code": "eject",
-            "modifiers": [
-              "left_control",
-              "left_shift"
-            ]
-          }
+            key_code: "eject",
+            modifiers: ["left_control", "left_shift"],
+          },
         ],
-        "type": "basic"
-      }
-    ]
+        type: "basic",
+      },
+    ],
   },
-  
-// === This is the HyperSublayers section 
+
+  // === This is the HyperSublayers section
   ...createHyperSubLayers({
     spacebar: open(
       "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
     ),
 
-// B = Bluetooth toggle devices ==========================
+    // B = Bluetooth toggle devices ==========================
 
     b: {
       //toggle Jlab Go Air
-      j: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1"),
+      j: open(
+        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1"
+      ),
       //toggle logitech BT audio living room
-      l: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2"),
+      l: open(
+        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2"
+      ),
       //toggle Gees Trackpad
-      m: open("raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3"),
-
+      m: open(
+        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3"
+      ),
     },
 
-// C = Controls for Music p:play/pause n:fast-forward b:rewind ======================
+    // C = Controls for Music p:play/pause n:fast-forward b:rewind ======================
     c: {
       p: {
         to: [{ key_code: "play_or_pause" }],
@@ -118,35 +116,36 @@ const rules: KarabinerRules[] = [
         to: [{ key_code: "rewind" }],
       },
     },
-   
-      
-//D = Dismiss =============================================================     
-      
+
+    //D = Dismiss =============================================================
+
     d: {
-    //Dismiss Notification banner / Bettertouchtool app
-      n: open("btt://execute_assigned_actions_for_trigger/?uuid=93543ACA-AE92-4936-A74B-5D0A894D658E"),
+      //Dismiss Notification banner / Bettertouchtool app
+      n: open(
+        "btt://execute_assigned_actions_for_trigger/?uuid=93543ACA-AE92-4936-A74B-5D0A894D658E"
+      ),
     },
 
-// E = Entertainment (Music) ============================
- 
+    // E = Entertainment (Music) ============================
+
     e: {
       m: app("Music"),
       n: app("Spotify"),
     },
 
-// L = LLMs (AI applications) ==========================
+    // L = LLMs (AI applications) ==========================
 
-    l: { 
+    l: {
       g: app("ChatGPT"),
       v: app("v0 by Vercel"),
       c: app("Claude"),
       r: app("RepoPrompt"),
-      b: app("Bolt.gee"),     
-      x: app("Perplexity"),     
-      s: app("LM Studio"),     
+      b: app("Bolt.gee"),
+      x: app("Perplexity"),
+      s: app("LM Studio"),
     },
 
-// O = "Open" applications ==============================
+    // O = "Open" applications ==============================
 
     o: {
       g: app("Google Chrome"),
@@ -157,7 +156,7 @@ const rules: KarabinerRules[] = [
       k: app("kitty"),
       c: app("Visual Studio Code"),
       h: app("Figma"),
-      v: app("VNC Viewer"),
+      v: app("RustDesk"),
       n: open("Parallels Desktop"),
       z: app("Final Cut Pro"),
       x: app("OBS"),
@@ -168,12 +167,12 @@ const rules: KarabinerRules[] = [
       p: app("iPhone Mirroring"),
       s: app("System Settings"),
       i: app("obsidian"),
-      1: app("1Password 7"),     
+      1: app("1Password 7"),
       2: app("Karabiner-Elements"),
       3: app("Rectangle"),
     },
 
-// R = "Raycast" ==================================================================
+    // R = "Raycast" ==================================================================
 
     r: {
       // Open AI Chat
@@ -207,7 +206,7 @@ const rules: KarabinerRules[] = [
       ),
     },
 
-// S = "System controls" ===========================================================
+    // S = "System controls" ===========================================================
 
     s: {
       // Increase Volume
@@ -268,7 +267,7 @@ const rules: KarabinerRules[] = [
         ],
       },
       n: {
-      // Show Notification Center  
+        // Show Notification Center
         to: [
           {
             key_code: "n",
@@ -286,11 +285,11 @@ const rules: KarabinerRules[] = [
       c: open("raycast://extensions/raycast/system/open-camera"),
       // Toggle Menu-bar
       m: open("raycast://extensions/iamyeizi/toggle-menu-bar/toggle"),
-      // Display sleep   
+      // Display sleep
       d: open("raycast://extensions/raycast/system/sleep-displays"),
     },
 
-// V = "moVe"  ========================================================j
+    // V = "moVe"  ========================================================j
 
     v: {
       // hjkl work like they do in vim
@@ -311,7 +310,7 @@ const rules: KarabinerRules[] = [
         to: [{ key_code: "page_down" }],
       },
       i: {
-        to: [{ key_code: "page_up" }],  
+        to: [{ key_code: "page_up" }],
       },
 
       //-------------------Homerow app --------------------------
@@ -326,12 +325,13 @@ const rules: KarabinerRules[] = [
       },
       // Mouse Click mode via Homerow app
       n: {
-        to: [{ key_code: "spacebar", modifiers: ["right_shift", "right_command"] }],
+        to: [
+          { key_code: "spacebar", modifiers: ["right_shift", "right_command"] },
+        ],
       },
     },
 
-
-// W = "Window" via rectangle.app ==================================
+    // W = "Window" via rectangle.app ==================================
 
     w: {
       semicolon: {
