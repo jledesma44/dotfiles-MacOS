@@ -118,7 +118,7 @@ alias gitconfig="nvims ~/.gitconfig"
 
 # Aliases (quick cd/ directories) ================================
 
-alias development="/Users/jaimeledesma/Documents/Development/"
+alias development="cd ~/Development/"
 alias sites="cd ~/Development/1.WebDev/10.Sites/"
 alias challenges="cd ~/Development/1.WebDev/1.Challenges"
 alias tutorials="cd ~/Development/1.WebDev/2.Tutorials"
