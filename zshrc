@@ -138,6 +138,7 @@ alias ls="eza -lAh --git && git status && git pull"
 alias lsg="eza -lAhG --git"
 alias ll="eza --git --tree --level=2"
 alias root="sudo su"
+alias lg="lazygit"
 
 # Aliases (server start up) ============================
 
