@@ -49,4 +49,26 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+  s(
+    {
+      trig = "comp",
+      name = "react component",
+      dscr = "react component snippet",
+    },
+    fmt(
+      [[
+        function {}() {{
+          return {}
+        }}
+
+
+        export default {};
+      ]],
+      {
+        i(1, "greeting"),
+        i(2, "<h1>Hello</h1>"),
+        rep(1),
+      }
+    )
+  ),
 })
