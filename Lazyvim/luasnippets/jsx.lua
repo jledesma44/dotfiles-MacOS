@@ -71,4 +71,26 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+  s(
+    {
+      trig = "props",
+      name = "react props",
+      dscr = "react property snippet",
+    },
+    fmt(
+      [[
+        function {}(props) {{
+          return {}
+        }}
+
+
+        export default {};
+      ]],
+      {
+        i(1, "greeting"),
+        i(2, "<h1>Hello,{props.name}!</h1>"),
+        rep(1),
+      }
+    )
+  ),
 })
