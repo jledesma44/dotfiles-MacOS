@@ -221,7 +221,7 @@ function mkcd() {
 
 fastfetch
 
-figlet Devstack44!
+figlet Devstack44
 
 # NVM node version manager export path =====================================================================
 source $(brew --prefix nvm)/nvm.sh
