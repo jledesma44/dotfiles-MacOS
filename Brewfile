@@ -1,5 +1,7 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -39,6 +41,8 @@ brew "httpie"
 brew "hugo"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Simple terminal UI for git commands
+brew "lazygit"
 # Pager program similar to more
 brew "less"
 # Utility for directing compilation
@@ -97,12 +101,12 @@ brew "wget"
 brew "yarn"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
 # Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
-# A simple terminal UI for git commands, written in Go
-brew "jesseduffield/lazygit/lazygit"
 # Simple hotkey-daemon for macOS.
 brew "koekeishiya/formulae/skhd"
 # A CLI tool to build for the Shopify platform
@@ -173,6 +177,7 @@ mas "Surfingkeys", id: 1609752330
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
 mas "Ulysses", id: 1225570693
+mas "UTM", id: 1538878817
 mas "WhatFont", id: 1437138382
 mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
