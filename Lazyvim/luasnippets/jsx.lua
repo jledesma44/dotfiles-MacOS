@@ -93,4 +93,26 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+  s(
+    {
+      trig = "props-btn",
+      name = "react props-btn",
+      dscr = "react property button snippet",
+    },
+    fmt(
+      [[
+        function {}(props) {{
+          return <button onClick={{props.handleClick}}>{}</button>
+        }}
+
+
+        export default {};
+      ]],
+      {
+        i(1, "Button"),
+        i(2, "Click Me"),
+        rep(1),
+      }
+    )
+  ),
 })
