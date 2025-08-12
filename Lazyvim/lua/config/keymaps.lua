@@ -9,7 +9,8 @@ vim.keymap.set("n", "<leader>ps", ":PencilSoft<CR>") -- toggle PencilSoft
 -- Use jj to esc insert mode
 vim.keymap.set("i", "jj", "<Esc>", { desc = "escapes with jj" })
 
-vim.keymap.set("n", "<leader>ww", ":w!<CR>") -- save
+--  Save file
+vim.keymap.set("n", "<leader>ww", ":w!<CR>", { desc = "Save File", noremap = true, silent = true })
 
 -- Resize with arrows
 vim.keymap.set("n", "<Up>", ":resize -2<CR>", { desc = "resize-up", noremap = true, silent = true })
