@@ -15,7 +15,7 @@ local fmt = require("luasnip.extras.fmt").fmt
 -- Keymap for insert and selections of snippets
 
 vim.keymap.set({ "i" }, "<C-K>", function()
-  ls.expand(table)
+  ls.expand()
 end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<C-L>", function()
   ls.jump(1)
@@ -166,6 +166,29 @@ ls.add_snippets("javascript", {
         i(2, "para"),
         i(3, "'p'"),
         i(0),
+      }
+    )
+  ),
+  s(
+    {
+      trig = "object",
+      name = "javascript object",
+      dscr = "javascript object snippet",
+    },
+    fmt(
+      [=[
+        const {} = {{
+          {}: {},
+          {}: {}
+        }};
+      ]=],
+
+      {
+        i(1, "user"),
+        i(2, "name"),
+        i(3, "'John Doe'"),
+        i(4, "age"),
+        i(5, "30"),
       }
     )
   ),
