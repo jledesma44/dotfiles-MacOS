@@ -1,7 +1,5 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -91,6 +89,8 @@ brew "syncthing"
 brew "tailscale"
 # Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Language for application scale JavaScript development
 brew "typescript"
 # Tool for creating isolated virtual python environments
