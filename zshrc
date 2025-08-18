@@ -142,7 +142,7 @@ alias lg="lazygit"
 
 # Aliases (server start up) ============================
 
-alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='' ."
+alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
 alias p-server="python3 -m http.server 8080 --b 0.0.0.0"
 alias a-server="pnpm astro dev --host 0.0.0.0"
 alias b-server="browser-sync start --server --host 0.0.0.0 --port 8001 --watch --browser 'firefox developer edition'"
