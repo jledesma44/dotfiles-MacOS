@@ -127,6 +127,8 @@ cask "font-hack-nerd-font"
 cask "font-sf-pro"
 # Free and open-source image editor
 cask "gimp"
+# Web browser
+cask "google-chrome"
 # Keyboard shortcuts for every button on your screen
 cask "homerow"
 # Vector graphics editor
@@ -241,6 +243,7 @@ vscode "sainoba.px-to-rem"
 vscode "saoudrizwan.claude-dev"
 vscode "simonsiefke.svg-preview"
 vscode "syler.sass-indented"
+vscode "tailscale.vscode-tailscale"
 vscode "techer.open-in-browser"
 vscode "thekalinga.bootstrap4-vscode"
 vscode "thenikso.github-plus-theme"
