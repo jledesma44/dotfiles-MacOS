@@ -1,5 +1,7 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -67,6 +69,8 @@ brew "openssh"
 brew "pipx"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Modern API client that lives in your terminal
+brew "posting"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Interpreted, interactive, object-oriented programming language
