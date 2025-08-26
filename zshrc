@@ -119,6 +119,7 @@ alias gitconfig="nvims ~/.gitconfig"
 # Aliases (quick cd/ directories) ================================
 
 alias development="cd ~/Development/"
+alias downloads="cd ~/Downloads/"
 alias sites="cd ~/Development/1.WebDev/10.Sites/"
 alias challenges="cd ~/Development/1.WebDev/1.Challenges"
 alias tutorials="cd ~/Development/1.WebDev/2.Tutorials"
@@ -238,3 +239,4 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 
+export EDITOR=vim
