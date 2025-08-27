@@ -5,6 +5,7 @@ tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
+tap "sst/tap"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # C library implementing the SSH2 protocol
@@ -39,6 +40,8 @@ brew "htop"
 brew "httpie"
 # Configurable static site generator
 brew "hugo"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -87,6 +90,8 @@ brew "rust"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Modern and pretty fancy file manager for the terminal
+brew "superfile"
 # Open source continuous file synchronization application
 brew "syncthing"
 # Easiest, most secure way to use WireGuard and 2FA
