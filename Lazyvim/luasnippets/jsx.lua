@@ -115,4 +115,20 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+  s(
+    {
+      trig = "const",
+      name = "constant",
+      dscr = "js constant variable",
+    },
+    fmt(
+      [=[
+        const {} = {};
+      ]=],
+      {
+        i(1, "y"),
+        i(2, "9"),
+      }
+    )
+  ),
 })
