@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mynum=200
-
-if [ $mynum -eq 200 ]; then
-  echo "The condition is true."
-
+command=/usr/bin/htop
+if [ -f $command ]; then
+  echo "The app $command is installed."
+else
+  echo "The app $command does not exist."
 fi
