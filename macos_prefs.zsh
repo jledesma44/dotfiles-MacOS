@@ -255,8 +255,11 @@ defaults write com.apple.dock show-process-indicators -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Automatically hide dock in settings
+defaults write com.apple.dock autohide -bool true && killall Dock
+
 # Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-delay -float 0 && killall Dock
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
