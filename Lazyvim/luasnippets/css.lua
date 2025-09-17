@@ -374,4 +374,20 @@ ls.add_snippets("css", {
       }
     )
   ),
+  s(
+    {
+      trig = "gfont",
+      name = "google font",
+      dscr = "google font @import snippet",
+    },
+    fmt(
+      [=[
+       @import url('https://fonts.googleapis.com/css2?family={}:wght@200,300,400,500,600,700,800,900&family={}:wght@200,300,400,500,600,700,800,900&display=swap');
+      ]=],
+      {
+        i(1, "Roboto"),
+        i(2, "Ralway"),
+      }
+    )
+  ),
 })
