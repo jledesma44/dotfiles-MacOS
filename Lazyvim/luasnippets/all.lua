@@ -81,5 +81,35 @@ ls.add_snippets(nil, {
         }
       )
     ),
+    s(
+      {
+        trig = "shebang-gee",
+        name = "shebang bash snippet",
+        dscr = "snippet bash shebang",
+      },
+      fmt(
+        [=[
+          #!/bin/{}
+        ]=],
+        {
+          i(1, "bash"),
+        }
+      )
+    ),
+    s(
+      {
+        trig = "shebang-env",
+        name = "shebang bash env",
+        dscr = "bash shebang env snippet",
+      },
+      fmt(
+        [=[
+          #!/usr/bin/env {}
+        ]=],
+        {
+          i(1, "bash"),
+        }
+      )
+    ),
   },
 })
