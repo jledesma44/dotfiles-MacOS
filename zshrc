@@ -169,6 +169,14 @@ alias gu="git pull"
 
 alias bbd="brew bundle dump --force --describe"
 
+#Alias for Macos Updates and verions=======================
+
+alias macos="sw_vers"
+alias updates="softwareupdate -l"
+alias upgradeall="sudo softwareupdate -i -a --restart"
+
+
+
 #Obsidian Vault-------------
 alias oo="$HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Devstack44"
 
