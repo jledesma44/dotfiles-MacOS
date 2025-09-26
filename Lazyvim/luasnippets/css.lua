@@ -110,23 +110,20 @@ ls.add_snippets("css", {
   --Box shadow
   s(
     {
-      trig = "bs",
+      trig = "boxs",
       name = "box-shadow",
       dscr = "css box-shadow",
     },
     fmt(
       [[ 
-      {} {{
-      "  box-shadow: {}px {}px {}px {}px rgba(0, 0, 0, {});
-      }} 
+    box-shadow: {}px {}px {}px {}px rgba(0, 0, 0, {});
     ]],
       {
-        i(1, ".card"),
-        i(2, "0"),
-        i(3, "10"),
-        i(4, "40"),
-        i(5, "0"),
-        i(6, "0.25"),
+        i(1, "0"),
+        i(2, "10"),
+        i(3, "40"),
+        i(4, "0"),
+        i(5, "0.25"),
       }
     )
   ),
