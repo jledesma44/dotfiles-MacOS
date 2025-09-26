@@ -39,7 +39,7 @@ ls.add_snippets("css", {
     {
       trig = "cont",
       name = ".container",
-      dscr = "css container div spcaing prep-sets",
+      dscr = "css container class",
     },
     fmt(
       [[
