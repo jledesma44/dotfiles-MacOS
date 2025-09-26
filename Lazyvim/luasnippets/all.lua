@@ -107,7 +107,7 @@ ls.add_snippets(nil, {
           #!/usr/bin/env {}
         ]=],
         {
-          i(1, "bash"),
+          i(1, "zsh"),
         }
       )
     ),
