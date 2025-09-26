@@ -22,8 +22,12 @@ vim.keymap.set("n", "<Right>", ":vertical resize -2<CR>", { desc = "resize-horiz
 vim.keymap.set("n", "<leader>cp", ":CccPick<CR>", { desc = "ColorPicker", noremap = true, silent = true })
 
 -- Toggle px to rem
-vim.keymap.set("n", "<leader>pt", ":PxToRemLine<CR>", { desc = "Toggle_Px_To_Rem", noremap = true, silent = true })
-vim.keymap.set("v", "<leader>pt", ":PxToRemLine<CR>", { desc = "Toggle_Px_To_Rem", noremap = true, silent = true })
+vim.keymap.set(
+  { "n", "v" },
+  "<leader>pt",
+  ":PxToRemLine<CR>",
+  { desc = "Toggle_Px_To_Rem", noremap = true, silent = true }
+)
 
 -- Toggle Auto Save
 vim.keymap.set("n", "<leader>as", ":ASToggle<CR>", { desc = "Toggle_Auto_Save", noremap = true, silent = true })
