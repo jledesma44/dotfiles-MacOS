@@ -20,7 +20,7 @@ end, { silent = true })
 vim.keymap.set({ "i", "s" }, "<C-L>", function()
   ls.jump(1)
 end, { silent = true })
-vim.keymap.set({ "i", "s" }, "<C-J>", function()
+vim.keymap.set({ "i", "s" }, "<C-H>", function()
   ls.jump(-1)
 end, { silent = true })
 
@@ -33,37 +33,10 @@ end, { silent = true })
 --Javascript snippets =================================
 ls.add_snippets("javascript", {
 
-  -- Variable snippet -
-
-  s("var", {
-    t("${"),
-    i(1),
-    t("}"),
-  }),
-
-  -- Variable insert
-  s(
-    {
-      trig = "invar",
-      name = "variable",
-      dscr = "variable snippet",
-    },
-    fmt(
-      [=[
-        ${{{}}}{}
-      ]=],
-      {
-        i(1, "'name'"),
-        i(0),
-      }
-    )
-  ),
-
   -- console.log
   s(
     {
       trig = "clg",
-      name = "console.log",
       dscr = "console log",
     },
     fmt(
@@ -76,45 +49,30 @@ ls.add_snippets("javascript", {
       }
     )
   ),
-
-  -- Let Varibale
+  --Initiate Variable
   s(
     {
-      trig = "let",
-      name = "let",
-      dscr = "js let variable",
+      trig = "var",
+      dscr = "Initiate a javascript variable",
     },
     fmt(
       [=[
-        let {} = {};
+        {} {} = {};
       ]=],
       {
-        i(1, "x"),
-        i(2, "5"),
-      }
-    )
-  ),
-
-  -- Const Variable
-  s(
-    {
-      trig = "const",
-      name = "constant",
-      dscr = "js constant variable",
-    },
-    fmt(
-      [=[
-        const {} = {};
-      ]=],
-      {
-        i(1, "y"),
-        i(2, "9"),
+        c(1, {
+          t("var"),
+          t("const"),
+          t("let"),
+        }),
+        i(2, "x"),
+        i(3, "5"),
       }
     )
   ),
   s(
     {
-      trig = "as",
+      trig = "arrow",
       name = "arrow function simple",
       dscr = "converts regular expression to arrow function",
     },
@@ -137,7 +95,7 @@ ls.add_snippets("javascript", {
     {
       trig = "qs",
       name = "querySelector",
-      dscr = "1uery selector",
+      dscr = "query selector",
     },
     fmt(
       [=[
@@ -155,7 +113,7 @@ ls.add_snippets("javascript", {
     {
       trig = "qsa",
       name = "querySelectorAll",
-      dscr = "1uery selector all",
+      dscr = "query selector all",
     },
     fmt(
       [=[
