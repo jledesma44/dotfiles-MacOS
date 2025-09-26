@@ -36,7 +36,6 @@ ls.add_snippets("markdown", {
   s(
     {
       trig = "codeblock",
-      name = "markdown codeblock",
       dscr = "Adds code block snippet",
     },
     fmt(

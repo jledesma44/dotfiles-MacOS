@@ -37,8 +37,7 @@ ls.add_snippets("html", {
   --container snippet
   s(
     {
-      trig = "gfl",
-      name = "google font link",
+      trig = "g-font",
       dscr = "html link to google fonts",
     },
     fmt(
@@ -57,24 +56,20 @@ ls.add_snippets("html", {
   s(
     {
       trig = "fa-link",
-      name = "font awesome icon link",
       dscr = "cdn link to font awesome",
     },
     fmt(
       [[
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" {} />
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
       ]],
-      {
-        i(1, "insert-1"),
-      }
+      {}
     )
   ),
   s(
     {
-      trig = "fa-solid",
-      name = "font-awesome classic",
+      trig = "fa",
       dscr = "font-awesome icon snippet solid",
     },
     fmt(
@@ -82,15 +77,14 @@ ls.add_snippets("html", {
         <i class="fa-{} fa-{}"></i>
       ]],
       {
-        i(1, "solid"),
-        i(2, "bars"),
+        c(1, { t("solid"), t("regular"), t("light"), t("thin") }),
+        c(2, { t("bars"), t("envelope"), t("calendar"), t("user"), t("house"), t("file") }),
       }
     )
   ),
   s(
     {
       trig = "fa-brands",
-      name = "font-awesome brands",
       dscr = "font-awesome icon snippet brands",
     },
     fmt(
@@ -99,7 +93,17 @@ ls.add_snippets("html", {
       ]],
       {
         i(1, "brands"),
-        i(2, "facebook"),
+        c(2, {
+          t("facebook"),
+          t("instagram"),
+          t("youtube"),
+          t("x-twitter"),
+          t("linkedin"),
+          t("github"),
+          t("facebook-messanger"),
+          t("discord"),
+          t("slack"),
+        }),
       }
     )
   ),

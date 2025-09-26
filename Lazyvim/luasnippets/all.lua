@@ -41,7 +41,6 @@ ls.add_snippets(nil, {
     -- Date snippet
     s({
       trig = "ddate",
-      name = "Date with format",
       dscr = "Date in the form of Jan 20, 1995",
     }, {
       f(date, {}),
@@ -51,7 +50,6 @@ ls.add_snippets(nil, {
     s(
       {
         trig = "luasnip",
-        name = "snippet template",
         dscr = "lua snippet template",
       },
       fmt(
@@ -84,8 +82,7 @@ ls.add_snippets(nil, {
     s(
       {
         trig = "shebang-gee",
-        name = "shebang bash snippet",
-        dscr = "snippet bash shebang",
+        dscr = " bash shebang snippet",
       },
       fmt(
         [=[
@@ -99,7 +96,6 @@ ls.add_snippets(nil, {
     s(
       {
         trig = "shebang-env",
-        name = "shebang bash env",
         dscr = "bash shebang env snippet",
       },
       fmt(

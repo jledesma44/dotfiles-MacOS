@@ -38,7 +38,6 @@ ls.add_snippets("css", {
   s(
     {
       trig = "cont",
-      name = ".container",
       dscr = "css container class",
     },
     fmt(
@@ -61,8 +60,7 @@ ls.add_snippets("css", {
   s(
     {
       trig = "mqmin",
-      name = "media-query",
-      dscr = "min-width",
+      dscr = "media-query min-width",
     },
     fmt(
       [[
@@ -86,8 +84,7 @@ ls.add_snippets("css", {
   s(
     {
       trig = "mqmax",
-      name = "media-query",
-      dscr = "max-width",
+      dscr = "media-query max-width",
     },
     fmt(
       [[
@@ -110,8 +107,7 @@ ls.add_snippets("css", {
   --Box shadow
   s(
     {
-      trig = "boxs",
-      name = "box-shadow",
+      trig = "boxsh",
       dscr = "css box-shadow",
     },
     fmt(
@@ -132,7 +128,6 @@ ls.add_snippets("css", {
   s(
     {
       trig = "trans-btn",
-      name = "transparent-background btn",
       dscr = "button with transparent background",
     },
     fmt(
@@ -156,7 +151,6 @@ ls.add_snippets("css", {
   s(
     {
       trig = "solid-btn",
-      name = "solid-background btn",
       dscr = "button with solid color background",
     },
     fmt(
@@ -182,7 +176,6 @@ ls.add_snippets("css", {
   s(
     {
       trig = "lin-grad",
-      name = "linear-gradient background",
       dscr = "css linear-gradient background",
     },
     fmt(
@@ -205,7 +198,6 @@ ls.add_snippets("css", {
   s(
     {
       trig = "reset",
-      name = "Jaime's css reset",
       dscr = "css reset values",
     },
     fmt(
@@ -272,8 +264,7 @@ ls.add_snippets("css", {
   s(
     {
       trig = "root",
-      name = "Jaime's starter variables",
-      dscr = "root css variables",
+      dscr = "css root variables",
     },
     fmt(
       [[ 
@@ -374,7 +365,6 @@ ls.add_snippets("css", {
   s(
     {
       trig = "gfont",
-      name = "google font",
       dscr = "google font @import snippet",
     },
     fmt(

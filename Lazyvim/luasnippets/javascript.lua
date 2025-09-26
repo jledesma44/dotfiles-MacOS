@@ -73,7 +73,6 @@ ls.add_snippets("javascript", {
   s(
     {
       trig = "arrow",
-      name = "arrow function simple",
       dscr = "converts regular expression to arrow function",
     },
     fmt(
@@ -94,7 +93,6 @@ ls.add_snippets("javascript", {
   s(
     {
       trig = "qs",
-      name = "querySelector",
       dscr = "query selector",
     },
     fmt(
@@ -112,7 +110,6 @@ ls.add_snippets("javascript", {
   s(
     {
       trig = "qsa",
-      name = "querySelectorAll",
       dscr = "query selector all",
     },
     fmt(
@@ -130,7 +127,6 @@ ls.add_snippets("javascript", {
   s(
     {
       trig = "object",
-      name = "javascript object",
       dscr = "javascript object snippet",
     },
     fmt(

@@ -37,8 +37,7 @@ ls.add_snippets("javascriptreact", {
     {
 
       trig = "cn",
-      name = "className",
-      dscr = "Adding JSX classes",
+      dscr = "JSX className",
     },
     fmt(
       [[
@@ -52,7 +51,6 @@ ls.add_snippets("javascriptreact", {
   s(
     {
       trig = "comp",
-      name = "react component",
       dscr = "react component snippet",
     },
     fmt(
@@ -74,7 +72,6 @@ ls.add_snippets("javascriptreact", {
   s(
     {
       trig = "props",
-      name = "react props",
       dscr = "react property snippet",
     },
     fmt(
@@ -96,7 +93,6 @@ ls.add_snippets("javascriptreact", {
   s(
     {
       trig = "props-btn",
-      name = "react props-btn",
       dscr = "react property button snippet",
     },
     fmt(
@@ -118,7 +114,6 @@ ls.add_snippets("javascriptreact", {
   s(
     {
       trig = "const",
-      name = "constant",
       dscr = "js constant variable",
     },
     fmt(
