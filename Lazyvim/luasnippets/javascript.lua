@@ -49,6 +49,20 @@ ls.add_snippets("javascript", {
       }
     )
   ),
+  s(
+    {
+      trig = "invar",
+      dscr = "variable input",
+    },
+    fmt(
+      [=[
+        ${{{}}}
+      ]=],
+      {
+        i(1, "name"),
+      }
+    )
+  ),
   --Initiate Variable
   s(
     {
