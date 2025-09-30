@@ -154,6 +154,8 @@ cask "kitty"
 cask "lm-studio"
 # WordPress local development tool by Flywheel
 cask "local"
+# Open-source cross-platform alternative to AirDrop
+cask "localsend"
 # Mouse control with the keyboard
 cask "mouseless"
 # Open-source software for live streaming and screen recording
