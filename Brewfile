@@ -138,6 +138,8 @@ cask "font-hack-nerd-font"
 cask "font-sf-pro"
 # Free and open-source image editor
 cask "gimp"
+# Git client focusing on productivity
+cask "gitkraken"
 # Web browser
 cask "google-chrome"
 # Keyboard shortcuts for every button on your screen
