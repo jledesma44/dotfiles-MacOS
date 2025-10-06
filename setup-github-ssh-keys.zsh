@@ -5,9 +5,9 @@
 
 set -e  # Exit on error
 
-echo "==================================="
-echo "GitHub SSH Key Setup for macOS"
-echo "==================================="
+echo "######################################################################################"
+echo "#                   !! GITHUB SSH KEY SETUP !!                       #"
+echo "######################################################################################"
 echo ""
 echo "This script will:"
 echo "  • Generate a new SSH key pair for GitHub"
