@@ -11,7 +11,8 @@ echo "==================================="
 echo ""
 
 # Get user's email for SSH key
-read -p "Enter your GitHub email address: " email
+echo -n "Enter your GitHub email address: "
+read email
 
 if [ -z "$email" ]; then
     echo "Error: Email address is required"
@@ -114,11 +115,13 @@ echo "3. You should see: 'Hi <username>! You've successfully authenticated...'"
 echo ""
 
 # Step 8: Change dotfiles repo from HTTPS to SSH
-read -p "Do you want to convert your current git repository from HTTPS to SSH? (y/n): " convert_repo
+echo -n "Do you want to convert your current git repository from HTTPS to SSH? (y/n): "
+read convert_repo
 
 if [[ "$convert_repo" =~ ^[Yy]$ ]]; then
     echo ""
-    read -p "Enter the path to your git repository (or press Enter for current directory): " repo_path
+    echo -n "Enter the path to your git repository (or press Enter for current directory): "
+    read repo_path
     
     if [ -z "$repo_path" ]; then
         repo_path="."
@@ -133,8 +136,8 @@ if [[ "$convert_repo" =~ ^[Yy]$ ]]; then
             
             # Extract username and repo name from HTTPS URL
             if [[ "$current_url" =~ https://github.com/([^/]+)/([^/]+)(\.git)?$ ]]; then
-                username="${BASH_REMATCH[1]}"
-                repo="${BASH_REMATCH[2]}"
+                username="${match[1]}"
+                repo="${match[2]}"
                 repo="${repo%.git}"  # Remove .git if present
                 
                 new_url="git@github.com:${username}/${repo}.git"
@@ -165,5 +168,3 @@ echo "  - Private key: $key_path"
 echo "  - Public key: ${key_path}.pub"
 echo "  - SSH config: $ssh_config"
 echo ""
-
-
