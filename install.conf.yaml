@@ -35,6 +35,7 @@
       stderr: true
     - command: ./setup-github-ssh-keys.zsh
       stdout: true
+      stdin: true
       stderr: true
     - command: ./macos_prefs.zsh
       stdout: true
