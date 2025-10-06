@@ -2,16 +2,32 @@
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
-echo "Closing System Preferences"
-osascript -e 'tell application "System Preferences" to quit'
 
 echo "######################################################################################"
 echo "#                   !! SETTING YOUR MAC-OS USER PREFERENCES !!                       #"
-echo "#                                                                                    #"
-echo "#  Please enter administrator password to begin setting your preferences for MacOS   #"
-echo "#                                      -OR-                                          #" 
-echo "#                      press ctrl-c to abort this operation!!                        #"
 echo "######################################################################################"
+
+set -e
+
+echo -n "Do you want to proceed with setting your MacOS Preferences? (y/n): "
+read proceed
+
+if [[ ! "$proceed" =~ ^[Yy]$ ]]; then
+    echo ""
+    echo "Setup cancelled. No changes were made."
+    echo ""
+    exit 0
+fi
+
+echo ""
+echo "Proceeding with setup..."
+echo ""
+
+
+
+echo "Closing System Preferences"
+osascript -e 'tell application "System Preferences" to quit'
+
 
 # Ask for the administrator password upfront
 sudo -v
