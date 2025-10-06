@@ -17,6 +17,24 @@
 
 
 # Add Homebrew to PATH regardless of architecture
+# if [[ -d "/opt/homebrew/bin" ]]; then
+#     export PATH="/opt/homebrew/bin:$PATH"
+# elif [[ -d "/usr/local/bin" ]]; then
+#     export PATH="/usr/local/bin:$PATH"
+# fi
+#
+# # Now check for Homebrew
+# if command -v brew >/dev/null 2>&1; then
+#     echo "***** Homebrew is already installed *******"
+#     echo "***** Now checking brewfile for installs and/or updates!!! ******"
+# else
+#     echo "Installing Homebrew..."
+#    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# fi
+#
+# brew bundle --verbose
+
+# Add Homebrew to PATH regardless of architecture
 if [[ -d "/opt/homebrew/bin" ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
 elif [[ -d "/usr/local/bin" ]]; then
@@ -29,8 +47,22 @@ if command -v brew >/dev/null 2>&1; then
     echo "***** Now checking brewfile for installs and/or updates!!! ******"
 else
     echo "Installing Homebrew..."
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    
+    # After installation, source Homebrew's environment
+    if [[ -f "/opt/homebrew/bin/brew" ]]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [[ -f "/usr/local/bin/brew" ]]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+    fi
+    
+    # Verify brew is now available
+    if ! command -v brew >/dev/null 2>&1; then
+        echo "Error: Homebrew installation failed or brew command not found"
+        exit 1
+    fi
+    
+    echo "***** Homebrew installed successfully! *****"
 fi
 
 brew bundle --verbose
-
