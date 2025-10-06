@@ -40,3 +40,4 @@
     - command: ./macos_prefs.zsh
       stdout: true
       stderr: true
+      stdin: true
