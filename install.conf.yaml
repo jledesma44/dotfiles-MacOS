@@ -31,6 +31,7 @@
       stderr: true
     - command: ./setup_homebrew.zsh
       stdout: true
+      stdin: true
       stderr: true
     - command: ./setup-github-ssh-keys.zsh
       stdout: true
