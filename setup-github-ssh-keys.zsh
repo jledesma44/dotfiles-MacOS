@@ -9,6 +9,25 @@ echo "==================================="
 echo "GitHub SSH Key Setup for macOS"
 echo "==================================="
 echo ""
+echo "This script will:"
+echo "  • Generate a new SSH key pair for GitHub"
+echo "  • Configure ssh-agent and macOS keychain"
+echo "  • Update your ~/.ssh/config file"
+echo "  • Optionally convert git repos from HTTPS to SSH"
+echo ""
+echo -n "Do you want to proceed with SSH key setup for github? (y/n): "
+read proceed
+
+if [[ ! "$proceed" =~ ^[Yy]$ ]]; then
+    echo ""
+    echo "Setup cancelled. No changes were made."
+    echo ""
+    exit 0
+fi
+
+echo ""
+echo "Proceeding with setup..."
+echo ""
 
 # Get user's email for SSH key
 echo -n "Enter your GitHub email address: "
