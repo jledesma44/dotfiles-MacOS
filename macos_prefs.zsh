@@ -10,7 +10,7 @@ BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo "######################################################################################"
-echo "#          ${YELLOW}!! 󰀵 󰀶 SETTING YOUR MAC-OS USER PREFERENCES !!${NC}              #"
+echo "          ${YELLOW}!! 󰀵 󰀶 SETTING YOUR MAC-OS USER PREFERENCES !!${NC}                "
 echo "######################################################################################"
 
 set -e

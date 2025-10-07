@@ -13,7 +13,7 @@ NC='\033[0m' # No Color
 set -e  # Exit on error
 
 echo "######################################################################################"
-echo "#                   ${YELLOW}!!  GITHUB SSH KEY SETUP !!${NC}                       #"
+echo "                   ${YELLOW}!!  GITHUB SSH KEY SETUP !!${NC}                         "
 echo "######################################################################################"
 echo ""
 echo "This script will:"
