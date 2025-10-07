@@ -8,8 +8,14 @@
 
 # Add Homebrew to PATH regardless of architecture
 
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
 echo "######################################################################################"
-echo "#                   !! HOMEBREW INSTALLATION / UPDATES !!                       #"
+echo "#        ${YELLOW} !! 🍺 HOMEBREW INSTALLATION / UPDATES !!${NC}                     #"
 echo "######################################################################################"
 
 
@@ -21,8 +27,8 @@ fi
 
 # Now check for Homebrew
 if command -v brew >/dev/null 2>&1; then
-    echo "***** Homebrew is already installed *******"
-    echo "***** Now checking brewfile for installs and/or updates!!! ******"
+    echo "${GREEN}***** Homebrew is already installed *******${NC}"
+    echo "${BLUE}***** Now checking brewfile for installs and/or updates!!! ******${NC}"
 else
     echo "Installing Homebrew..."
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

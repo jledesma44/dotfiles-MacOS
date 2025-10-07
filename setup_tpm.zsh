@@ -1,8 +1,15 @@
 #!/bin/zsh
-#
+
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
 echo "######################################################################################"
-echo "#                   !! TMUX TPM SETUP !!                       #"
+echo "#                   ${YELLOW}!! TMUX TPM SETUP !!${NC}                               #"
 echo "######################################################################################"
+
 
 # Script to check for and install tmux plugin manager (TPM) on macOS
 
@@ -11,12 +18,12 @@ TPM_DIR="$HOME/.tmux/plugins/tpm"
 
 # Check if TPM is already installed
 if [ -d "$TPM_DIR" ]; then
-    echo "✅ tmux plugin manager (TPM) is already installed at $TPM_DIR"
+    echo "✅ ${GREEN}tmux plugin manager (TPM) is already installed at $TPM_DIR${NC}"
     echo "🔄 Skipping installation"
     exit 0
 fi
 
-echo "❌ tmux plugin manager (TPM) not found"
+echo "❌ ${YELLOW}tmux plugin manager (TPM) not found${NC}"
 echo "📦 Installing TPM..."
 
 # Create the plugins directory if it doesn't exist
