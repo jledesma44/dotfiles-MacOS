@@ -3,10 +3,17 @@
 # GitHub SSH Key Setup Script for macOS
 # This script creates SSH keys for GitHub and configures your system
 
+
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
 set -e  # Exit on error
 
 echo "######################################################################################"
-echo "#                   !! GITHUB SSH KEY SETUP !!                       #"
+echo "#                   ${YELLOW}!!  GITHUB SSH KEY SETUP !!${NC}                       #"
 echo "######################################################################################"
 echo ""
 echo "This script will:"
@@ -15,7 +22,7 @@ echo "  • Configure ssh-agent and macOS keychain"
 echo "  • Update your ~/.ssh/config file"
 echo "  • Optionally convert git repos from HTTPS to SSH"
 echo ""
-echo -n "Do you want to proceed with SSH key setup for github? (y/n): "
+echo -n "${BLUE}Do you want to proceed with SSH key setup for github? (y/n): ${NC}"
 read proceed
 
 if [[ ! "$proceed" =~ ^[Yy]$ ]]; then

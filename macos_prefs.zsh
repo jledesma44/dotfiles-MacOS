@@ -1,15 +1,21 @@
 #!/usr/bin/env zsh
 
 # Close any open System Preferences panes, to prevent them from overriding
-# settings we’re about to change
+# settings we’re about to changes
+
+# Colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
 echo "######################################################################################"
-echo "#                   !! SETTING YOUR MAC-OS USER PREFERENCES !!                       #"
+echo "#          ${YELLOW}!! 󰀵 󰀶 SETTING YOUR MAC-OS USER PREFERENCES !!${NC}              #"
 echo "######################################################################################"
 
 set -e
 
-echo -n "Do you want to proceed with setting your MacOS Preferences? (y/n): "
+echo -n "${BLUE}Do you want to proceed with setting your MacOS Preferences? (y/n): ${NC}"
 read proceed
 
 if [[ ! "$proceed" =~ ^[Yy]$ ]]; then
