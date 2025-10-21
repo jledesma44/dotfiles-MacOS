@@ -86,6 +86,30 @@ ls.add_snippets("javascript", {
   ),
   s(
     {
+      trig = "func",
+      dscr = "javacript function",
+    },
+    fmt(
+      [=[
+        function {}({}) {{
+          {};
+        }}
+
+        {}({});{}
+
+      ]=],
+      {
+        i(1, "funcName"),
+        i(2, "param"),
+        i(3, "funcBody"),
+        rep(1),
+        i(4, "argum"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    {
       trig = "arrow",
       dscr = "converts regular expression to arrow function",
     },
@@ -147,7 +171,8 @@ ls.add_snippets("javascript", {
       [=[
         const {} = {{
           {}: {},
-          {}: {}
+          {}: {},
+          {}
         }};
       ]=],
 
@@ -157,6 +182,41 @@ ls.add_snippets("javascript", {
         i(3, "'John Doe'"),
         i(4, "age"),
         i(5, "30"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    -- object key-value pair string
+    {
+      trig = "okvs",
+      dscr = "object key value pair (string)",
+    },
+    fmt(
+      [=[
+        {}: "{}",{}
+      ]=],
+      {
+        i(1, "name"),
+        i(2, "John"),
+        i(0),
+      }
+    )
+  ),
+  s(
+    -- object key-value number/boolean
+    {
+      trig = "okvn",
+      dscr = "object key value pair (number/boolean)",
+    },
+    fmt(
+      [=[
+        {}: {},{}
+      ]=],
+      {
+        i(1, "value"),
+        i(2, "1"),
+        i(0),
       }
     )
   ),
