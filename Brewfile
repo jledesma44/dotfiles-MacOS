@@ -1,5 +1,7 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -10,6 +12,8 @@ brew "bash"
 brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Get/set bluetooth power and discoverable state
+brew "blueutil"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
 # Asynchronous event library
@@ -42,6 +46,8 @@ brew "hugo"
 brew "imagemagick"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Lazier way to manage everything docker
 brew "lazydocker"
 # Simple terminal UI for git commands
@@ -60,9 +66,9 @@ brew "mosh"
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node@20"
 # Manage multiple Node.js versions
 brew "nvm"
@@ -162,6 +168,8 @@ cask "mouseless"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Kubernetes and container management on the desktop
+cask "rancher"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Control your tools with a few keystrokes
