@@ -175,6 +175,8 @@ alias macos="sw_vers"
 alias updates="softwareupdate -l"
 alias upgradeall="sudo softwareupdate -i -a --restart"
 
+#Alias for kubectl================================
+alias k="kubectl"
 
 
 #Obsidian Vault-------------
@@ -248,3 +250,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 
 export EDITOR=vim
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jaimeledesma/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
