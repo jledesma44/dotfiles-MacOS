@@ -176,7 +176,9 @@ alias updates="softwareupdate -l"
 alias upgradeall="sudo softwareupdate -i -a --restart"
 
 #Alias for kubectl================================
+source <(kubectl completion zsh)
 alias k="kubectl"
+export KUBE_EDITOR="nvim"
 
 
 #Obsidian Vault-------------
