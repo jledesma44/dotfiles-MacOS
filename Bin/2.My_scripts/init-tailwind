@@ -1,0 +1,17 @@
+#!/bin/bash
+SOURCE="$HOME/Development/1.WebDev/2.Tutorials/1.html-css-tutorials/8.TailwindsCss-from-scratch/4.Tailwind-projects/website-projects/tailwind-boilerplate"
+TARGET="${1:-.}"
+
+if [ ! -d "$SOURCE" ]; then
+  echo "Template directory not found: $SOURCE"
+  exit 1
+fi
+
+if [ "$TARGET" != "." ]; then
+  mkdir -p "$TARGET"
+fi
+
+rsync -av --exclude='node_modules' --exclude='.git' "$SOURCE/" "$TARGET/"
+cd "$TARGET" && npm install
+
+echo "Tailwind project initialized in $TARGET"
