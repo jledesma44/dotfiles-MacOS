@@ -1,8 +1,0 @@
-#!/bin/bash
-
-command=/usr/bin/htop
-if [ -f $command ]; then
-  echo "The app $command is installed."
-else
-  echo "The app $command does not exist."
-fi
