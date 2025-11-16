@@ -1,7 +1,5 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -12,6 +10,8 @@ brew "bash"
 brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Bash scripts that integrate bat with various command-line tools
+brew "bat-extras"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
 # Linux/OSX/FreeBSD resource monitor
@@ -170,6 +170,8 @@ cask "mouseless"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Desktop virtualization software
+cask "parallels"
 # Kubernetes and container management on the desktop
 cask "rancher"
 # Imaging utility to install operating systems to a microSD card
