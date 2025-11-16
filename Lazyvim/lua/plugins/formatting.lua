@@ -9,10 +9,14 @@ return {
       json = { "prettierd", "prettier" },
       css = { "prettierd", "prettier" },
       html = { "prettierd", "prettier" },
+      sh = { "shfmt" },
+      bash = { "shfmt" },
+      zsh = { "shfmt" },
+      formatters = {
+        shfmt = {
+          prepend_args = { "-i", "2", "-ci" },
+        },
+      },
     },
-    -- format_on_save = {
-    --   timeout_ms = 500,
-    --   lsp_fallback = true,
-    -- },
   },
 }
