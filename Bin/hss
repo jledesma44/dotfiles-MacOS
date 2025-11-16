@@ -1,3 +1,0 @@
-#!/bin/bash
-
-hugo server --baseURL=http://100.110.184.89:1313 --bind=0.0.0.0 --noHTTPCache
