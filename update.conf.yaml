@@ -7,15 +7,15 @@
 - link:
     ~/.zshrc:
     ~/.zshenv:
-    ~/.bashrc:
     ~/.gitconfig:
     ~/.tmux.conf:
+    ~/.config/karabiner:
     ~/.config/bat:
-    ~/.config/nvim:
+    ~/.config/Devstack44nvim:
+    ~/.config/AstroNvim:
+    ~/.config/NvChad:
+    ~/.config/Lazyvim:
     ~/.config/kitty:
-    ~/.config/kmonad:
-    ~/.config/hypr:
-    ~/.config/waybar:
     ~/.local/bin:
 
 - shell:
