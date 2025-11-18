@@ -170,8 +170,6 @@ cask "mouseless"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Desktop virtualization software
-cask "parallels"
 # Kubernetes and container management on the desktop
 cask "rancher"
 # Imaging utility to install operating systems to a microSD card
@@ -203,7 +201,6 @@ mas "Pages", id: 409201541
 mas "Surfingkeys", id: 1609752330
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
-mas "Ulysses", id: 1225570693
 mas "UTM", id: 1538878817
 mas "WhatFont", id: 1437138382
 mas "Xcode", id: 497799835
