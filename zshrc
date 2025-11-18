@@ -102,7 +102,6 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Change ZSH Options =========================================================
 
-
 # Aliases (app configs) ====================================================================
 
 alias zshconfig="nvims ~/.zshrc"
@@ -114,7 +113,6 @@ alias sshconfig="nvims ~/.ssh/config"
 alias reloadzsh="source ~/.zshrc"
 alias nvimconfig="nvims .config/nvim"
 alias gitconfig="nvims ~/.gitconfig"
-
 
 # Aliases (quick cd/ directories) ================================
 
@@ -149,21 +147,19 @@ alias a-server="pnpm astro dev --host 0.0.0.0"
 alias b-server="browser-sync start --server --host 0.0.0.0 --port 8001 --watch --browser 'firefox developer edition'"
 alias h-server="hugo server --baseURL=http://100.65.17.20:1313 --bind=0.0.0.0 --noHTTPCache"
 
-
-
 # Aliases (Git) =========================================
 
 alias gs='git status'
 alias ga='git add'
 alias gb='git branch'
 alias gd='git diff'
-alias gcl="git clone"
+alias gclmac="git clone git@github.com:jledesma44/dotfiles-MacOS.git ."
+alias gcllinux="git clone git@github.com:jledesma44/dotfiles-linux.git ."
 alias gc="git commit -m"
 alias gl="git log"
 alias gi="git init"
 alias gp="git push"
 alias gu="git pull"
-
 
 #Alias for brew bundle =================================
 
@@ -180,10 +176,8 @@ source <(kubectl completion zsh)
 alias k="kubectl"
 export KUBE_EDITOR="nvim"
 
-
 #Obsidian Vault-------------
 alias oo="$HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Devstack44"
-
 
 # Neovim Distribution switcher ===============================================
 
@@ -209,15 +203,12 @@ bindkey -s ^n "nvims\n"
 alias vim="nvims"
 alias nvim="nvims"
 
-
-# Prompt settings========================================================== 
+# Prompt settings==========================================================
 
 PROMPT='
 %{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
 
 RPROMPT='%*'
-
-
 
 # Add locations to $PATH Variables=========================================
 
@@ -226,9 +217,8 @@ export PATH=$HOME/bin:$PATH
 # Functions ===============================================================
 
 function mkcd() {
-  mkdir -p "$@" && cd "$_";
+  mkdir -p "$@" && cd "$_"
 }
-
 
 # fastfetch================================================================
 
@@ -239,7 +229,6 @@ figlet Devstack44
 # NVM node version manager export path =====================================================================
 source $(brew --prefix nvm)/nvm.sh
 
-
 # Set up fzf keybindings and fuzzy completions
 eval "$(fzf --zsh)"
 
@@ -249,7 +238,6 @@ export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
 
 export EDITOR=vim
 
