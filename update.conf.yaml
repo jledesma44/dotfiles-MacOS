@@ -1,0 +1,25 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ["~"]
+
+- link:
+    ~/.zshrc:
+    ~/.zshenv:
+    ~/.bashrc:
+    ~/.gitconfig:
+    ~/.tmux.conf:
+    ~/.config/bat:
+    ~/.config/nvim:
+    ~/.config/kitty:
+    ~/.config/kmonad:
+    ~/.config/hypr:
+    ~/.config/waybar:
+    ~/.local/bin:
+
+- shell:
+    - command: ./setup_homebrew.zsh
+      stdout: true
+      stdin: true
+      stderr: true
