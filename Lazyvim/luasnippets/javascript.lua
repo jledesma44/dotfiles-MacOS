@@ -220,4 +220,20 @@ ls.add_snippets("javascript", {
       }
     )
   ),
+  s(
+    {
+      trig = "array",
+      dscr = "array snippet",
+    },
+    fmt(
+      [=[
+        [ {}, {}, {} ]
+      ]=],
+      {
+        i(1, "object-1"),
+        i(2, "object-2"),
+        i(3, "object-3"),
+      }
+    )
+  ),
 })
