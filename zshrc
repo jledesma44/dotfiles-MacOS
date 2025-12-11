@@ -171,16 +171,56 @@ alias macos="sw_vers"
 alias updates="softwareupdate -l"
 alias upgradeall="sudo softwareupdate -i -a --restart"
 
-#Alias for kubectl================================
+#Alias for kubectl kubernetes================================
 source <(kubectl completion zsh)
 alias k="kubectl"
 export KUBE_EDITOR="nvim"
 
-#Obsidian Vault-------------
+#Obsidian Vault==============================================
 alias oo="$HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Devstack44"
 
-# Neovim Distribution switcher ===============================================
+# Prompt settings==============================================================
 
+PROMPT='
+%{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
+
+RPROMPT='%*'
+
+# TERMINAL APPS================================================================
+
+fastfetch
+
+figlet Devstack44
+
+# $PATH Variables=============================================================
+
+# export path to the home bin directory
+export PATH=$HOME/bin:$PATH
+
+# NVM node version manager export path
+source $(brew --prefix nvm)/nvm.sh
+
+# Set up fzf keybindings and fuzzy completions
+eval "$(fzf --zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
+
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# use the vim editor
+export EDITOR=vim
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jaimeledesma/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# FUNCTIONS ===================================================================
+
+# Neovim Distribution switcher
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 alias nvim-devstack44="NVIM_APPNAME=Devstack44nvim nvim"
 alias nvim-chad="NVIM_APPNAME=NvChad nvim"
@@ -203,44 +243,14 @@ bindkey -s ^n "nvims\n"
 alias vim="nvims"
 alias nvim="nvims"
 
-# Prompt settings==========================================================
-
-PROMPT='
-%{$fg_bold[blue]%}$USER@%{$fg[green]%}%m%}%{$fg_bold[cyan]%} %c $(git_prompt_info)%{$reset_color%} %L %# '
-
-RPROMPT='%*'
-
-# Add locations to $PATH Variables=========================================
-
-export PATH=$HOME/bin:$PATH
-
-# Functions ===============================================================
-
+# Make a directory and cd into to it
 function mkcd() {
   mkdir -p "$@" && cd "$_"
 }
 
-# fastfetch================================================================
+# Start up a Tmux session automatically when launching terminal
+[[ $- != *i* ]] && return
 
-fastfetch
-
-figlet Devstack44
-
-# NVM node version manager export path =====================================================================
-source $(brew --prefix nvm)/nvm.sh
-
-# Set up fzf keybindings and fuzzy completions
-eval "$(fzf --zsh)"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/jaimeledesma/.cache/lm-studio/bin"
-
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-export EDITOR=vim
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/jaimeledesma/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+if [ -z "$TMUX" ]; then
+  tmux new-session -A -s General-Shell
+fi
