@@ -1,5 +1,7 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -74,6 +76,10 @@ brew "node"
 brew "node@20"
 # Manage multiple Node.js versions
 brew "nvm"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
 # Execute binaries from Python packages in isolated environments
@@ -88,8 +94,6 @@ brew "python@3.12"
 brew "python@3.9"
 # Pure Python Vim clone
 brew "pyvim"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Safe, concurrent, practical language
@@ -201,6 +205,7 @@ mas "Pages", id: 409201541
 mas "Surfingkeys", id: 1609752330
 mas "Tailscale", id: 1475387142
 mas "TestFlight", id: 899247664
+mas "Ulysses", id: 1225570693
 mas "UTM", id: 1538878817
 mas "WhatFont", id: 1437138382
 mas "Xcode", id: 497799835
