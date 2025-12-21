@@ -1,7 +1,5 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -76,6 +74,8 @@ brew "node"
 brew "node@20"
 # Manage multiple Node.js versions
 brew "nvm"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # AI coding agent, built for the terminal
@@ -174,6 +174,8 @@ cask "mouseless"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Desktop virtualization software
+cask "parallels"
 # Kubernetes and container management on the desktop
 cask "rancher"
 # Imaging utility to install operating systems to a microSD card
