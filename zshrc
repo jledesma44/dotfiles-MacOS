@@ -254,3 +254,8 @@ function mkcd() {
 if [ -z "$TMUX" ]; then
   tmux new-session -A -s General-Shell
 fi
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/jaimeledesma/.lmstudio/bin"
+# End of LM Studio CLI section
+
