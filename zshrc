@@ -259,3 +259,4 @@ fi
 export PATH="$PATH:/Users/jaimeledesma/.lmstudio/bin"
 # End of LM Studio CLI section
 
+export PATH="$HOME/.local/bin:$PATH"
