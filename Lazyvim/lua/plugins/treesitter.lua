@@ -10,5 +10,12 @@ return {
       "css",
       "html",
     },
+    vim.filetype.add({
+      extension = {
+        kit = function(path, bufnr)
+          return "html"
+        end,
+      },
+    }),
   },
 }
