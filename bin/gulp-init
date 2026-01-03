@@ -1,0 +1,135 @@
+#!/bin/zsh
+
+# Gulp Project Initializer Script
+# Allows interactive selection and copying of Gulp templates
+
+# Configuration
+TEMPLATES_DIR="/Users/jaimeledesma/Development/1.WebDev/6.Gulp-apps/Gulp-starter-templates"
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Function to print colored output
+print_success() {
+    echo -e "${GREEN}✓ $1${NC}"
+}
+
+print_error() {
+    echo -e "${RED}✗ $1${NC}"
+}
+
+print_info() {
+    echo -e "${BLUE}ℹ $1${NC}"
+}
+
+print_warning() {
+    echo -e "${YELLOW}⚠ $1${NC}"
+}
+
+# Check if templates directory exists
+if [[ ! -d "$TEMPLATES_DIR" ]]; then
+    print_error "Templates directory not found: $TEMPLATES_DIR"
+    exit 1
+fi
+
+# Get list of templates
+templates=()
+for template_dir in "$TEMPLATES_DIR"/*; do
+    if [[ -d "$template_dir" ]]; then
+        template_name=$(basename "$template_dir")
+        templates+=("$template_name")
+    fi
+done
+
+# Check if templates are available
+if [[ ${#templates[@]} -eq 0 ]]; then
+    print_error "No templates found in $TEMPLATES_DIR"
+    exit 1
+fi
+
+# Display welcome message
+echo -e "${BLUE}=== Gulp Project Initializer ===${NC}"
+echo
+
+# Interactive template selection
+echo "Available Gulp templates:"
+echo
+
+for i in {1..${#templates[@]}}; do
+    echo "  $i) ${templates[$i]}"
+done
+
+echo
+
+# Get user selection
+while true; do
+    echo -n "Select a template (1-${#templates[@]}): "
+    read choice
+    
+    if [[ "$choice" =~ ^[0-9]+$ ]] && [[ "$choice" -ge 1 ]] && [[ "$choice" -le ${#templates[@]} ]]; then
+        selected_template="${templates[$choice-1]}"
+        break
+    else
+        print_error "Invalid selection. Please enter a number between 1 and ${#templates[@]}"
+    fi
+done
+
+# Get project name
+while true; do
+    echo -n "Enter project name: "
+    read project_name
+    
+    if [[ -z "$project_name" ]]; then
+        print_error "Project name cannot be empty"
+        continue
+    fi
+    
+    if [[ -d "$project_name" ]]; then
+        print_error "Directory '$project_name' already exists"
+        continue
+    fi
+    
+    break
+done
+
+# Copy template to new project
+template_path="$TEMPLATES_DIR/$selected_template"
+print_info "Copying template '$selected_template' to '$project_name'..."
+
+if cp -r "$template_path" "$project_name"; then
+    print_success "Template copied successfully!"
+    
+    # Change to project directory
+    cd "$project_name" || exit 1
+    
+    # Update package.json if it exists
+    if [[ -f "package.json" ]]; then
+        print_info "Updating package.json with project name..."
+        
+        # Use sed to replace name field (macOS compatible)
+        if command -v gsed >/dev/null 2>&1; then
+            gsed -i "s/\"name\": \".*\"/\"name\": \"$project_name\"/" package.json
+        else
+            sed -i '' "s/\"name\": \".*\"/\"name\": \"$project_name\"/" package.json
+        fi
+        
+        print_success "package.json updated!"
+    fi
+    
+    echo
+    print_success "Project '$project_name' initialized successfully!"
+    echo
+    print_info "Next steps:"
+    echo "  1. cd $project_name"
+    echo "  2. npm install"
+    echo "  3. npm run dev"
+    echo
+    
+else
+    print_error "Failed to copy template"
+    exit 1
+fi
