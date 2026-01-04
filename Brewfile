@@ -16,6 +16,8 @@ brew "bat-extras"
 brew "blueutil"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
+# Core application library for C
+brew "glib"
 # Asynchronous event library
 brew "libevent"
 # Emacs dependency management
@@ -34,8 +36,6 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Core application library for C
-brew "glib"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -172,8 +172,6 @@ cask "mouseless"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Desktop virtualization software
-cask "parallels"
 # Kubernetes and container management on the desktop
 cask "rancher"
 # Imaging utility to install operating systems to a microSD card
