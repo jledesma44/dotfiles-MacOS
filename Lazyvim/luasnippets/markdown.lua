@@ -31,8 +31,17 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
 end, { silent = true })
 
 -- Markdown snippets =======================================
+local date = function()
+  return { os.date("%B %d,%Y") }
+end
 
 ls.add_snippets("markdown", {
+  s({
+    trig = "ddate",
+    dscr = "Date in the form of Jan 20, 1995",
+  }, {
+    f(date, {}),
+  }),
   s(
     {
       trig = "codeblock",
