@@ -1,7 +1,8 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "keybinds": {
-    "leader": "ctrl+space"
+    "leader": "ctrl+space",
+    "input_newline": "ctrl+j"
   },
   "mcp": {}
 }
