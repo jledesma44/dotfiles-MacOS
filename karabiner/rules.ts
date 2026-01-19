@@ -135,8 +135,9 @@ const rules: KarabinerRules[] = [
 
     // F = Finder
     f: {
-      u: open(" raycast://extensions/timothy_boye/open-folders/downloads"),
-      i: open(" raycast://extensions/timothy_boye/open-folders/desktop"),
+      u: shell` open ~/Downloads`,
+      i: shell` open ~/Desktop`,
+      o: shell` open ~`,
     },
 
     // L = LLMs (AI applications) ==========================
