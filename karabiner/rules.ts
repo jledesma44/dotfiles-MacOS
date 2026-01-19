@@ -133,6 +133,12 @@ const rules: KarabinerRules[] = [
       n: app("Spotify"),
     },
 
+    // F = Finder
+    f: {
+      u: open(" raycast://extensions/timothy_boye/open-folders/downloads"),
+      i: open(" raycast://extensions/timothy_boye/open-folders/desktop"),
+    },
+
     // L = LLMs (AI applications) ==========================
 
     l: {
