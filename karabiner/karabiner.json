@@ -1873,12 +1873,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": " open ~/Downloads",
+                                "description": " open ~",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open ~/Downloads" }],
+                                "to": [{ "shell_command": "open ~" }],
                                 "type": "basic"
                             },
                             {
@@ -1905,12 +1905,60 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": " open ~",
+                                "description": " open ~/Documents",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open ~" }],
+                                "to": [{ "shell_command": "open ~/Documents" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_f",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": " open ~/Development",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open ~/Development" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_f",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": " open /Applications",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open /Applications" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_f",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": " open ~/Downloads",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open ~/Downloads" }],
                                 "type": "basic"
                             }
                         ]
