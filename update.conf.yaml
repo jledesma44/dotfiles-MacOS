@@ -5,18 +5,19 @@
 - clean: ["~"]
 
 - link:
-    ~/.zshrc:
-    ~/.zshenv:
-    ~/.gitconfig:
-    ~/.tmux.conf:
-    ~/.config/karabiner:
+    ~/.local/bin:
+    ~/.config/AstroNvim:
     ~/.config/bat:
     ~/.config/Devstack44nvim:
-    ~/.config/AstroNvim:
-    ~/.config/NvChad:
-    ~/.config/Lazyvim:
+    ~/.config/karabiner:
     ~/.config/kitty:
-    ~/.local/bin:
+    ~/.config/Lazyvim:
+    ~/.config/NvChad:
+    ~/.config/opencode:
+    ~/.gitconfig:
+    ~/.tmux.conf:
+    ~/.zshenv:
+    ~/.zshrc:
 
 - shell:
     - command: ./setup_homebrew.zsh
