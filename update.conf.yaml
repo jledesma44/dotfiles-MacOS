@@ -20,7 +20,7 @@
     ~/.zshrc:
 
 - shell:
-    - command: ./setup_homebrew.zsh
+    - command: ./1.Scripts/setup_homebrew.zsh
       stdout: true
       stdin: true
       stderr: true
