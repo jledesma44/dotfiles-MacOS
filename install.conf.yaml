@@ -24,21 +24,21 @@
     ~/.zshrc:
 
 - shell:
-    - command: ./setup_ohmyzsh.zsh
+    - command: ./1.Scripts/setup_ohmyzsh.zsh
       stdout: true
       stderr: true
-    - command: ./setup_tpm.zsh
+    - command: ./1.Scripts/setup_tpm.zsh
       stdout: true
       stderr: true
-    - command: ./setup_homebrew.zsh
-      stdout: true
-      stdin: true
-      stderr: true
-    - command: ./setup-github-ssh-keys.zsh
+    - command: ./1.Scripts/setup_homebrew.zsh
       stdout: true
       stdin: true
       stderr: true
-    - command: ./macos_prefs.zsh
+    - command: ./1.Scripts/setup-github-ssh-keys.zsh
+      stdout: true
+      stdin: true
+      stderr: true
+    - command: ./1.Scripts/macos_prefs.zsh
       stdout: true
       stderr: true
       stdin: true
