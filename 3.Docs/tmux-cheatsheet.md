@@ -18,10 +18,12 @@
 :new-window -n "Window-name"
 ```
 
+4. Rename current window:
+
+```
+:rename-window "new-name"
 ```
 
-
-
-
+```
 
 ```
