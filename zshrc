@@ -163,7 +163,7 @@ alias gu="git pull"
 
 #Alias for brew bundle =================================
 
-alias bbd="brew bundle dump --force --describe"
+alias bbd="brew bundle dump --force --describe --file=/Users/jaimeledesma/.dotfiles/2.Packages-Apps/Brewfile"
 
 #Alias for Macos Updates and verions=======================
 
