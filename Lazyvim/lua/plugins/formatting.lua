@@ -18,5 +18,11 @@ return {
         },
       },
     },
+    prettier = {
+      prepend_args = {
+        "--single-quote",
+        "--jsx-single-quote",
+      },
+    },
   },
 }
