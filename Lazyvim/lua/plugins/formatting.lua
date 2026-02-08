@@ -9,6 +9,7 @@ return {
       json = { "prettierd", "prettier" },
       css = { "prettierd", "prettier" },
       html = { "prettierd", "prettier" },
+      kit = { "prettierd", "prettier" },
       sh = { "shfmt" },
       bash = { "shfmt" },
       zsh = { "shfmt" },
