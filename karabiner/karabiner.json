@@ -1129,7 +1129,7 @@
                         ]
                     },
                     {
-                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone, to cap_lock if held for 1000 milliseconds.",
+                        "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone, to cap_lock if held for 500 milliseconds.",
                         "manipulators": [
                             {
                                 "from": {

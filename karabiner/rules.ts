@@ -44,7 +44,7 @@ const rules: KarabinerRules[] = [
   // ===Define caps_lock to left_control if pressed with other keys and escape if pressed alone.===
   {
     description:
-      "Change caps_lock to control if pressed with other keys, to escape if pressed alone, to cap_lock if held for 1000 milliseconds.",
+      "Change caps_lock to control if pressed with other keys, to escape if pressed alone, to cap_lock if held for 500 milliseconds.",
     manipulators: [
       {
         from: {
