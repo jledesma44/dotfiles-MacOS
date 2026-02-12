@@ -259,4 +259,8 @@ fi
 export PATH="$PATH:/Users/jaimeledesma/.lmstudio/bin"
 # End of LM Studio CLI section
 
+# Path to hledger finances folder
+export LEDGER_FILE=~/USER/jaimeledesma/Finances/2026.journal
+
+#Path to global scripts in .local/bin
 export PATH="$HOME/.local/bin:$PATH"
