@@ -9,6 +9,14 @@ vim.keymap.set("n", "<leader>ps", ":PencilSoft<CR>") -- toggle PencilSoft
 -- Use jj to esc insert mode
 vim.keymap.set("i", "jj", "<Esc>", { desc = "escapes with jj" })
 
+-- Use <leader>uw to convert current word to upper case
+vim.keymap.set(
+  { "n", "o" },
+  "<leader>uw",
+  "gUiw",
+  { noremap = true, silent = true, desc = "changes word to uppercase with uw" }
+)
+
 --  Save file
 vim.keymap.set("n", "<leader>ww", ":w!<CR>", { desc = "Save File", noremap = true, silent = true })
 
