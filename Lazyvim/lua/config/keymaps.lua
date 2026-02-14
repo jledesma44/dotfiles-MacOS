@@ -12,9 +12,9 @@ vim.keymap.set("i", "jj", "<Esc>", { desc = "escapes with jj" })
 -- Use <leader>uw to convert current word to upper case
 vim.keymap.set(
   { "n", "o" },
-  "<leader>uw",
+  "<leader>tu",
   "gUiw",
-  { noremap = true, silent = true, desc = "changes word to uppercase with uw" }
+  { noremap = true, silent = true, desc = "change current word to uppercase" }
 )
 
 --  Save file
