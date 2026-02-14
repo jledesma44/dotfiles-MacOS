@@ -9,12 +9,28 @@ vim.keymap.set("n", "<leader>ps", ":PencilSoft<CR>") -- toggle PencilSoft
 -- Use jj to esc insert mode
 vim.keymap.set("i", "jj", "<Esc>", { desc = "escapes with jj" })
 
--- Use <leader>uw to convert current word to upper case
+-- Use <leader>tu (Text-Uppercase) to convert current word to upper case
 vim.keymap.set(
   { "n", "o" },
   "<leader>tu",
   "gUiw",
   { noremap = true, silent = true, desc = "change current word to uppercase" }
+)
+
+--Find and replace text in visual-block
+vim.keymap.set(
+  "v",
+  "<leader>r",
+  ":s///g<Left><Left><Left>",
+  { desc = "replace selected text in visual block ", noremap = true, silent = true }
+)
+
+--Find a replace text all (in file)
+vim.keymap.set(
+  "n",
+  "<leader>rr",
+  ":%s///g<Left><Left><Left>",
+  { desc = "replace selected text whole file", noremap = true, silent = true }
 )
 
 --  Save file
