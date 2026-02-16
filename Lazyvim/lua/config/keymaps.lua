@@ -17,6 +17,14 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "change current word to uppercase" }
 )
 
+-- Use <leader>ta (Text-Uppercase-visual mode) to convert selected text to upper case
+vim.keymap.set(
+  { "v", "o" },
+  "<leader>ta",
+  "gU",
+  { noremap = true, silent = true, desc = "change selected text to uppercase" }
+)
+
 --Find and replace text in visual-block
 vim.keymap.set(
   "v",
