@@ -10,13 +10,10 @@
 
 - link:
     ~/.local/bin:
-    ~/.config/AstroNvim:
     ~/.config/bat:
-    ~/.config/Devstack44nvim:
     ~/.config/karabiner:
     ~/.config/kitty:
-    ~/.config/Lazyvim:
-    ~/.config/NvChad:
+    ~/.config/nvim:
     ~/.config/opencode:
     ~/.gitconfig:
     ~/.tmux.conf:
