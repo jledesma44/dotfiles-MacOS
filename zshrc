@@ -221,27 +221,27 @@ export PATH="/Users/jaimeledesma/.rd/bin:$PATH"
 # FUNCTIONS ===================================================================
 
 # Neovim Distribution switcher
-alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
-alias nvim-devstack44="NVIM_APPNAME=Devstack44nvim nvim"
-alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
-
-function nvims() {
-  items=("Lazyvim" "Devstack44nvim" "default" "NvChad" "AstroNvim")
-  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-  if [[ -z $config ]]; then
-    echo "Nothing selected"
-    return 0
-  elif [[ $config == "default" ]]; then
-    config=""
-  fi
-  NVIM_APPNAME=$config nvim $@
-}
-
-bindkey -s ^n "nvims\n"
-
-alias vim="nvims"
-alias nvim="nvims"
+# alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+# alias nvim-devstack44="NVIM_APPNAME=Devstack44nvim nvim"
+# alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+# alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+#
+# function nvims() {
+#   items=("Lazyvim" "Devstack44nvim" "default" "NvChad" "AstroNvim")
+#   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+#   if [[ -z $config ]]; then
+#     echo "Nothing selected"
+#     return 0
+#   elif [[ $config == "default" ]]; then
+#     config=""
+#   fi
+#   NVIM_APPNAME=$config nvim $@
+# }
+#
+# bindkey -s ^n "nvims\n"
+#
+# alias vim="nvims"
+# alias nvim="nvims"
 
 # Make a directory and cd into to it
 function mkcd() {
