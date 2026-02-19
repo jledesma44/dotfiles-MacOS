@@ -369,7 +369,7 @@ ls.add_snippets("css", {
     },
     fmt(
       [[
-       @import url('https://fonts.googleapis.com/css2?family={}:wght@{}{}{}{}&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family={}:wght@{}{}{}{}&{}display=swap');
 
        body {{
          font-family: '{}', sans-serif;
@@ -381,6 +381,7 @@ ls.add_snippets("css", {
         c(3, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
         c(4, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
         c(5, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
+        c(6, { t("family="), t("display=swap") }),
         rep(1),
       }
     )
