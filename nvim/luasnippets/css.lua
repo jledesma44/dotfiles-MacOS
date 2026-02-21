@@ -1,7 +1,7 @@
 local ls = require("luasnip")
 -- some shorthands...
 local s = ls.snippet
-local n = ls.snippet_node
+local sn = ls.snippet_node
 local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
@@ -376,12 +376,26 @@ ls.add_snippets("css", {
          }}
       ]],
       {
-        i(1, "Roboto"),
+        c(1, {
+          sn(nil, { i(1, "Roboto") }),
+          t("Poppins"),
+          t("Lato"),
+          t("Montserrat"),
+          t("Inter"),
+          t("Nunito"),
+          t("Raleway"),
+          t("Oswald"),
+          t("Ubuntu"),
+          t("Mulish"),
+        }),
         c(2, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
         c(3, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
         c(4, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
         c(5, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
-        c(6, { t("family="), t("display=swap") }),
+        c(6, {
+          t(""),
+          sn(nil, { t("family="), i(1, "Manrope"), t("&") }),
+        }),
         rep(1),
       }
     )
