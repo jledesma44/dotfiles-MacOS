@@ -11,7 +11,7 @@ return {
         "json-lsp",
         "marksman",
         "stylua",
-        "tailwindcss-languge-server",
+        "tailwindcss-language-server",
 
         -- DAPs
         "js-debug-adapter",
