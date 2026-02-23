@@ -53,8 +53,6 @@ const rules: KarabinerRules[] = [
         },
         to: [{ key_code: "left_control" }],
         to_if_alone: [{ key_code: "escape" }],
-        to_if_held_down: [{ key_code: "caps_lock" }],
-        parameters: { "basic.to_if_held_down_threshold_milliseconds": 500 },
         type: "basic",
       },
     ],

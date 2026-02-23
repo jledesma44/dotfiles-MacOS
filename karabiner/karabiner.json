@@ -1136,10 +1136,8 @@
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "parameters": { "basic.to_if_held_down_threshold_milliseconds": 500 },
                                 "to": [{ "key_code": "left_control" }],
                                 "to_if_alone": [{ "key_code": "escape" }],
-                                "to_if_held_down": [{ "key_code": "caps_lock" }],
                                 "type": "basic"
                             }
                         ]
