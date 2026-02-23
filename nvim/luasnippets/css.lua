@@ -369,34 +369,20 @@ ls.add_snippets("css", {
     },
     fmt(
       [[
-       @import url('https://fonts.googleapis.com/css2?family={}:wght@{}{}{}{}&{}display=swap');
+       @import url('https://fonts.googleapis.com/css2?family={}:wght@100...900{});
 
        body {{
-         font-family: '{}', sans-serif;
+         font-family: '{}', {};
          }}
       ]],
       {
-        c(1, {
-          sn(nil, { i(1, "Roboto") }),
-          t("Poppins"),
-          t("Lato"),
-          t("Montserrat"),
-          t("Inter"),
-          t("Nunito"),
-          t("Raleway"),
-          t("Oswald"),
-          t("Ubuntu"),
-          t("Mulish"),
-        }),
-        c(2, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
-        c(3, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
-        c(4, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
-        c(5, { t(""), t("200,"), t("300,"), t("400,"), t("500,"), t("600,"), t("700,"), t("800,"), t("900") }),
-        c(6, {
-          t(""),
-          sn(nil, { t("family="), i(1, "Manrope"), t("&") }),
+        i(1, "Poppins"),
+        c(2, {
+          t("&display=swap"),
+          sn(nil, { t("&family="), i(1, "Manrope"), t(":wght@100...900'") }),
         }),
         rep(1),
+        c(3, { t("sans-serif"), t("sans-serif"), t("mono") }),
       }
     )
   ),
