@@ -4,6 +4,8 @@
 
 --Zen Mode
 vim.keymap.set("n", "<leader>zz", ":ZenMode<CR>") -- toggle Zen Mode
+
+--PencilSoft toggle
 vim.keymap.set("n", "<leader>ps", ":PencilSoft<CR>") -- toggle PencilSoft
 
 -- Use jj to esc insert mode
