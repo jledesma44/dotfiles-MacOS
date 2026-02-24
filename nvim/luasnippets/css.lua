@@ -4,9 +4,9 @@ local s = ls.snippet
 local sn = ls.snippet_node
 local t = ls.text_node
 local i = ls.insert_node
-local f = ls.function_node
+--local f = ls.function_node
 local c = ls.choice_node
-local d = ls.dynamic_node
+--local d = ls.dynamic_node
 
 local extras = require("luasnip.extras")
 local rep = extras.rep
@@ -268,7 +268,7 @@ ls.add_snippets("css", {
     },
     fmt(
       [[ 
-       @import url('https://fonts.googleapis.com/css2?family={}:wght@200,300,400,500,600,700,800,900&family={}:wght@200,300,400,500,600,700,800,900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family={}:wght@100...900&family={}:wght@100...900&display=swap');
 
       :root {{
         /*  ========== Colors ================== * */
@@ -382,7 +382,7 @@ ls.add_snippets("css", {
           sn(nil, { t("&family="), i(1, "Manrope"), t(":wght@100...900'") }),
         }),
         rep(1),
-        c(3, { t("sans-serif"), t("sans-serif"), t("mono") }),
+        c(3, { t("sans-serif"), t("serif"), t("mono") }),
       }
     )
   ),
