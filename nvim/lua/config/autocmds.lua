@@ -8,7 +8,7 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "markdown", "html", "css" },
+  pattern = { "markdown", "html", "css", "lua" },
   callback = function()
     vim.cmd("PencilSoft")
   end,
