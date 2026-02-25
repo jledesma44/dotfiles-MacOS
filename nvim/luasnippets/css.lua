@@ -373,12 +373,12 @@ ls.add_snippets("css", {
 
        body {{
          font-family: '{}', {};
-         }}
+       }}
       ]],
       {
         i(1, "Poppins"),
         c(2, {
-          t("&display=swap"),
+          t("&display=swap'"),
           sn(nil, { t("&family="), i(1, "Manrope"), t(":wght@100...900'") }),
         }),
         rep(1),
