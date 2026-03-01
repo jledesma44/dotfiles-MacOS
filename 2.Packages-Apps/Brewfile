@@ -2,6 +2,7 @@ tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
+tap "krishkrosh/apps"
 tap "shopify/shopify"
 tap "sst/tap"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -138,6 +139,8 @@ brew "shopify/shopify/themekit"
 cask "balenaetcher"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Collaborative team software
 cask "figma"
 # Web browser
@@ -196,6 +199,8 @@ cask "spotify"
 cask "syncthing-app"
 # Temperature monitoring, fan control and diagnostics
 cask "tg-pro"
+# Turn your MacBook's trackpad into a precise digital weighing scale
+cask "krishkrosh/apps/trackweight"
 # Open-source code editor
 cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
