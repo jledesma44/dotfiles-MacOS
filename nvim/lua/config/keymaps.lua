@@ -27,7 +27,7 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "change selected text to uppercase" }
 )
 
---Find and replace text in visual-block
+--Find and replace pattern text in visual-block
 vim.keymap.set(
   "v",
   "<leader>r",
@@ -35,7 +35,14 @@ vim.keymap.set(
   { desc = "replace selected text in visual block ", noremap = true, silent = true }
 )
 
---Find a replace text all (in file)
+--Find and replace pattern text "selected only"
+vim.keymap.set(
+  "n",
+  "<leader>rc",
+  ":%s///gc<Left><Left><Left><Left>",
+  { desc = "replace selected text with confirmation ", noremap = true, silent = true }
+)
+--Find a replace pattern text all (in file)
 vim.keymap.set(
   "n",
   "<leader>rr",
