@@ -112,14 +112,43 @@ ls.add_snippets("css", {
     },
     fmt(
       [[ 
-    box-shadow: {}px {}px {}px {}px {};
+    box-shadow: {}px {}px {}px {} {};
     ]],
       {
         i(1, "10"),
         i(2, "10"),
         i(3, "10"),
-        i(4, "2"),
+        c(4, {
+          sn(nil, { i(1, "10"), t("px") }),
+          t(""),
+        }),
         c(5, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+        }),
+      }
+    )
+  ),
+
+  --Text shadow
+  s(
+    {
+      trig = "textsh",
+      dscr = "css text-shadow",
+    },
+    fmt(
+      [[ 
+    text-shadow: {}px {}px {} {};
+    ]],
+      {
+        i(1, "10"),
+        i(2, "10"),
+        c(3, {
+          sn(nil, { i(1, "10"), t("px") }),
+          t(""),
+        }),
+        c(4, {
           sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
           sn(nil, { t("#"), i(1, "ffffff") }),
           sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
@@ -131,22 +160,28 @@ ls.add_snippets("css", {
   --Transparent button
   s(
     {
-      trig = "trans-btn",
+      trig = "btn-trans",
       dscr = "button with transparent background",
     },
     fmt(
       [[ 
-      .btn {{
+      {} {{
         padding: {}px {}px;
         border-radius: {}px;
-        border: 1px solid var({});
+        border: 1px solid {};
       }} 
     ]],
       {
-        i(1, "12"),
-        i(2, "22"),
-        i(3, "15"),
-        i(4, "--medium-gray"),
+        i(1, ".btn-transparent"),
+        i(2, "12"),
+        i(3, "22"),
+        i(4, "15"),
+        c(5, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
       }
     )
   ),
@@ -154,12 +189,12 @@ ls.add_snippets("css", {
   --Solid button
   s(
     {
-      trig = "solid-btn",
+      trig = "btn-solid",
       dscr = "button with solid color background",
     },
     fmt(
       [[ 
-      .btn {{
+      {} {{
         padding: {}px {}px;
         border-radius: {}px;
         background: {}; 
@@ -167,11 +202,22 @@ ls.add_snippets("css", {
       }} 
     ]],
       {
-        i(1, "12"),
-        i(2, "22"),
-        i(3, "15"),
-        i(4, "steelblue"),
-        i(5, "white"),
+        i(1, ".btn-solid"),
+        i(2, "12"),
+        i(3, "22"),
+        i(4, "15"),
+        c(5, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
+        c(6, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
       }
     )
   ),
