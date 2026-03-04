@@ -104,15 +104,15 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 # Aliases (app configs) ====================================================================
 
-alias zshconfig="nvims ~/.zshrc"
-alias ohmyzsh="nvims ~/.oh-my-zsh"
-alias tmuxconfig="nvims ~/.tmux.conf"
-alias kittyconfig="nvims ~/.config/kitty/kitty.conf"
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias tmuxconfig="nvim ~/.tmux.conf"
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias kittycolors="kitten themes"
-alias sshconfig="nvims ~/.ssh/config"
+alias sshconfig="nvim ~/.ssh/config"
 alias reloadzsh="source ~/.zshrc"
-alias nvimconfig="nvims .config/nvim"
-alias gitconfig="nvims ~/.gitconfig"
+alias nvimconfig="nvim .config/nvim"
+alias gitconfig="nvim ~/.gitconfig"
 
 # Aliases (quick cd/ directories) ================================
 
