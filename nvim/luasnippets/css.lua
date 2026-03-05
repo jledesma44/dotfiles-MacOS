@@ -4,7 +4,7 @@ local s = ls.snippet
 local sn = ls.snippet_node
 local t = ls.text_node
 local i = ls.insert_node
---local f = ls.function_node
+local f = ls.function_node
 local c = ls.choice_node
 --local d = ls.dynamic_node
 
@@ -30,9 +30,64 @@ vim.keymap.set({ "i", "s" }, "<C-E>", function()
   end
 end, { silent = true })
 
+--=== Functions
+--Google font function_node
+
+local function get_google_font()
+  local bufnr = vim.api.nvim_get_current_buf()
+  local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+
+  for _, line in ipairs(lines) do
+    -- Match fonts.googleapis.com/css2?family=FontName or fonts.googleapis.com/css?family=FontName
+    local font = line:match("fonts%.googleapis%.com/css2?%?family=([^&:;'\"%)]+)")
+    if font then
+      -- Replace "+" with spaces (Google Fonts encodes spaces as +)
+      -- e.g. "Open+Sans" → "Open Sans"
+      font = font:gsub("%+", " ")
+
+      -- Strip any trailing weight/style params like ":wght@400"
+      font = font:match("^([^:]+)") or font
+
+      -- Trim whitespace
+      font = font:match("^%s*(.-)%s*$")
+
+      return '"' .. font .. '"'
+    end
+  end
+
+  -- Fallback if no Google Font import is found
+  return '"sans-serif"'
+end
+
 --Css snippets ===================================================
 
 ls.add_snippets("css", {
+
+  --
+  s({
+    trig = "ff",
+    dscr = "font-family (gfont) snippet",
+  }, {
+    t("font-family: "),
+
+    -- Node 1: auto-detected font name from buffer
+    f(function()
+      return get_google_font()
+    end, {}),
+
+    t(", "),
+
+    -- Node 2: choose the fallback generic family
+    c(1, {
+      t("sans-serif"),
+      t("serif"),
+      t("monospace"),
+      t("cursive"),
+      t("fantasy"),
+    }),
+
+    t(";"),
+  }),
 
   --container snippet
   s(
@@ -44,14 +99,22 @@ ls.add_snippets("css", {
       [[
       .container {{
         max-width: {};
-        padding-inline: {};
-        margin-inline: {};
+        padding-inline: {}{};
+        margin-inline: auto;
       }}
     ]],
       {
-        i(1, "1400px"),
-        i(2, "40px"),
-        i(3, "auto"),
+        c(1, {
+          t("400px"),
+          t("600px"),
+          t("800px"),
+          t("900px"),
+          t("1100px"),
+          t("1200px"),
+          t("1400px"),
+        }),
+        i(2, "40"),
+        t("px"),
       }
     )
   ),
@@ -244,11 +307,10 @@ ls.add_snippets("css", {
     )
   ),
 
-  --Css reset
   s(
     {
-      trig = "reset",
-      dscr = "css reset values",
+      trig = "reset-spacing",
+      dscr = "css spacing resets",
     },
     fmt(
       [[ 
@@ -260,7 +322,19 @@ ls.add_snippets("css", {
         padding: 0;
       }}
       
-      
+      ]],
+      {}
+    )
+  ),
+
+  --Css reset
+  s(
+    {
+      trig = "reset-general",
+      dscr = "css general resets",
+    },
+    fmt(
+      [[ 
       /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
       ul[role='list'],
       ol[role='list'] {{
@@ -420,10 +494,6 @@ ls.add_snippets("css", {
     fmt(
       [[
        @import url('https://fonts.googleapis.com/css2?family={}:wght@100...900{});
-
-       body {{
-         font-family: '{}', {};
-       }}
       ]],
       {
         i(1, "Poppins"),
@@ -431,8 +501,6 @@ ls.add_snippets("css", {
           t("&display=swap'"),
           sn(nil, { t("&family="), i(1, "Manrope"), t(":wght@100...900'") }),
         }),
-        rep(1),
-        c(3, { t("sans-serif"), t("serif"), t("mono") }),
       }
     )
   ),
