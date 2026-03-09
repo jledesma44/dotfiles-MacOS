@@ -97,14 +97,15 @@ ls.add_snippets("css", {
     },
     fmt(
       [[
-      .container {{
+      {} {{
         max-width: {};
         padding-inline: {}{};
         margin-inline: auto;
       }}
     ]],
       {
-        c(1, {
+        i(1, ".container"),
+        c(2, {
           t("400px"),
           t("600px"),
           t("800px"),
@@ -113,7 +114,7 @@ ls.add_snippets("css", {
           t("1200px"),
           t("1400px"),
         }),
-        i(2, "40"),
+        i(3, "40"),
         t("px"),
       }
     )
@@ -229,58 +230,94 @@ ls.add_snippets("css", {
     fmt(
       [[ 
       {} {{
-        padding: {}px {}px;
+        padding: {}px {}
+        {}
         border-radius: {}px;
         border: 1px solid {};
+        color: {};
+        background: none;
+        margin-bottom: {}px;
       }} 
     ]],
       {
         i(1, ".btn-transparent"),
-        i(2, "12"),
-        i(3, "22"),
-        i(4, "15"),
-        c(5, {
-          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
-          sn(nil, { t("#"), i(1, "ffffff") }),
-          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
-          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        i(2, "20"),
+        c(3, {
+          sn(nil, { i(1, "15"), t("px") }),
+          sn(nil, { t(""), t(";") }),
         }),
-      }
-    )
-  ),
-
-  --Solid button
-  s(
-    {
-      trig = "btn-solid",
-      dscr = "button with solid color background",
-    },
-    fmt(
-      [[ 
-      {} {{
-        padding: {}px {}px;
-        border-radius: {}px;
-        background: {}; 
-        color: {};
-      }} 
-    ]],
-      {
-        i(1, ".btn-solid"),
-        i(2, "12"),
-        i(3, "22"),
-        i(4, "15"),
-        c(5, {
-          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
-          sn(nil, { t("#"), i(1, "ffffff") }),
-          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
-          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        c(4, {
+          sn(nil, { t("width:"), i(1, "100%"), t(";") }),
+          t(""),
         }),
+        i(5, "5"),
         c(6, {
           sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
           sn(nil, { t("#"), i(1, "ffffff") }),
           sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
           sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
         }),
+        c(7, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
+        i(8, "40"),
+      }
+    )
+  ),
+
+  --Solid btn
+
+  s(
+    {
+      trig = "btn-solid",
+      dscr = "button with background-color",
+    },
+    fmt(
+      [[ 
+      {} {{
+        padding: {}px {}
+        {}
+        border-radius: {}px;
+        border: 1px solid {};
+        color: {};
+        background: {};
+        margin-bottom: {}px;
+      }} 
+    ]],
+      {
+        i(1, ".btn-solid"),
+        i(2, "20"),
+        c(3, {
+          sn(nil, { i(1, "15"), t("px") }),
+          sn(nil, { t(""), t(";") }),
+        }),
+        c(4, {
+          sn(nil, { t("width:"), i(1, "100%"), t(";") }),
+          t(""),
+        }),
+        i(5, "5"),
+        c(6, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
+        c(7, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
+        c(8, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
+        i(9, "40"),
       }
     )
   ),
@@ -293,16 +330,13 @@ ls.add_snippets("css", {
     },
     fmt(
       [[ 
-      .{} {{
         background-image: linear-gradient(to right, {}, {});
         color: {};
-      }}
     ]],
       {
-        i(1, "card"),
-        i(2, "#ed7cda"),
-        i(3, "#ffaa1b"),
-        i(4, "white"),
+        i(1, "#ed7cda"),
+        i(2, "#ffaa1b"),
+        i(3, "white"),
       }
     )
   ),
