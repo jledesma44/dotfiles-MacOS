@@ -138,6 +138,8 @@ brew "shopify/shopify/themekit"
 cask "balenaetcher"
 # Tool to customise input devices and automate computer systems
 cask "bettertouchtool"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
 # Collaborative team software
@@ -152,7 +154,6 @@ cask "font-sf-pro"
 cask "gimp"
 # Git client focusing on productivity
 cask "gitkraken"
-# Web browser
 # Keyboard shortcuts for every button on your screen
 cask "homerow"
 # Vector graphics editor
