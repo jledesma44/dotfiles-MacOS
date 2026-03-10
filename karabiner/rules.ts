@@ -149,6 +149,7 @@ const rules: KarabinerRules[] = [
       g: app("ChatGPT"),
       v: app("v0 by Vercel"),
       c: app("Claude"),
+      d: app("Claude"),
       r: app("RepoPrompt"),
       b: app("Bolt.gee"),
       x: app("Perplexity"),
