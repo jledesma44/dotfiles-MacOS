@@ -98,14 +98,15 @@ ls.add_snippets("css", {
     fmt(
       [[
       {} {{
-        max-width: {};
-        padding-inline: {}{};
-        margin-inline: auto;
+        {}: {};
+        {}
+        {}
       }}
     ]],
       {
         i(1, ".container"),
-        c(2, {
+        c(2, { t("width"), t("max-width") }),
+        c(3, {
           t("400px"),
           t("600px"),
           t("800px"),
@@ -113,9 +114,18 @@ ls.add_snippets("css", {
           t("1100px"),
           t("1200px"),
           t("1400px"),
+          t("70%"),
+          t("80%"),
+          t("90%"),
         }),
-        i(3, "40"),
-        t("px"),
+        c(4, {
+          sn(nil, { t("padding-inline: "), i(1, "20px"), t(";") }),
+          sn(nil, { t("padding: "), i(1, "20px 40px"), t(";") }),
+        }),
+        c(5, {
+          sn(nil, { t("margin-inline: "), i(1, "20px"), t(";") }),
+          sn(nil, { t("margin: "), i(1, "20px 40px"), t(";") }),
+        }),
       }
     )
   ),
