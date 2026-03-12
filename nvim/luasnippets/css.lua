@@ -123,7 +123,7 @@ ls.add_snippets("css", {
           sn(nil, { t("padding: "), i(1, "20px 40px"), t(";") }),
         }),
         c(5, {
-          sn(nil, { t("margin-inline: "), i(1, "20px"), t(";") }),
+          sn(nil, { t("margin-inline: "), i(1, "20px"), t(" auto;") }),
           sn(nil, { t("margin: "), i(1, "20px 40px"), t(";") }),
         }),
       }
