@@ -84,7 +84,7 @@ const rules: KarabinerRules[] = [
   // === This is the HyperSublayers section
   ...createHyperSubLayers({
     spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo",
     ),
 
     // B = Bluetooth toggle devices ==========================
@@ -92,15 +92,15 @@ const rules: KarabinerRules[] = [
     b: {
       //toggle Jlab Go Air
       j: open(
-        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1"
+        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-1",
       ),
       //toggle logitech BT audio living room
       l: open(
-        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2"
+        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-2",
       ),
       //toggle Gees Trackpad
       m: open(
-        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3"
+        "raycast://extensions/VladCuciureanu/toothpick/toggle-favorite-device-3",
       ),
     },
 
@@ -122,7 +122,7 @@ const rules: KarabinerRules[] = [
     d: {
       //Dismiss Notification banner / Bettertouchtool app
       n: open(
-        "btt://execute_assigned_actions_for_trigger/?uuid=93543ACA-AE92-4936-A74B-5D0A894D658E"
+        "btt://execute_assigned_actions_for_trigger/?uuid=93543ACA-AE92-4936-A74B-5D0A894D658E",
       ),
     },
 
@@ -147,7 +147,7 @@ const rules: KarabinerRules[] = [
 
     l: {
       g: app("ChatGPT"),
-      v: app("v0 by Vercel"),
+      v: app("v0 byVercel"),
       c: app("Claude"),
       d: app("Claude"),
       r: app("RepoPrompt"),
@@ -197,15 +197,15 @@ const rules: KarabinerRules[] = [
       c: open("raycast://extensions/thomas/color-picker/pick-color"),
       // Open Raycast Emoji's
       e: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
       ),
       // Open Clipboard History
       h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
+        "raycast://extensions/raycast/clipboard-history/clipboard-history",
       ),
       // Create Short link
       l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
+        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink",
       ),
       // Dismiss Notifications / Apple Script
       n: open("raycast://script-commands/dismiss-notifications"),
@@ -214,11 +214,11 @@ const rules: KarabinerRules[] = [
       s: open("raycast://extensions/peduarte/silent-mention/index"),
       //Bluetooth Favorite device 1
       1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
+        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1",
       ),
       //Bluetooth Favorite device 2
       2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
+        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2",
       ),
     },
 
@@ -292,7 +292,7 @@ const rules: KarabinerRules[] = [
         ],
       },
       e: open(
-        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
+        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`,
       ),
 
       // "Theme toggle system appearance
@@ -445,6 +445,6 @@ fs.writeFileSync(
       ],
     },
     null,
-    2
-  )
+    2,
+  ),
 );
