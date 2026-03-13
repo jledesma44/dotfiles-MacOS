@@ -3898,7 +3898,7 @@
                                 ],
                                 "description": "Window: Next Window",
                                 "from": {
-                                    "key_code": "n",
+                                    "key_code": "m",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -3940,7 +3940,7 @@
                                 ],
                                 "description": "Window: Forward",
                                 "from": {
-                                    "key_code": "m",
+                                    "key_code": "n",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
