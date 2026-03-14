@@ -387,7 +387,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      m: {
+      p: {
         description: "Window: Next Window",
         to: [
           {
@@ -430,6 +430,15 @@ const rules: KarabinerRules[] = [
           {
             key_code: "up_arrow",
             modifiers: ["right_control"],
+          },
+        ],
+      },
+      m: {
+        description: "open",
+        to: [
+          {
+            key_code: "o",
+            modifiers: ["right_command"],
           },
         ],
       },
