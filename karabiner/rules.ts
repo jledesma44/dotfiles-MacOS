@@ -424,6 +424,15 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      e: {
+        description: "Window: Expose (Mission Control - Show All Windows)",
+        to: [
+          {
+            key_code: "up_arrow",
+            modifiers: ["right_control"],
+          },
+        ],
+      },
     },
   }),
 ];
