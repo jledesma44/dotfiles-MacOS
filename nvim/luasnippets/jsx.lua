@@ -1,12 +1,12 @@
 local ls = require("luasnip")
 -- some shorthands...
 local s = ls.snippet
-local n = ls.snippet_node
+--local n = ls.snippet_node
 local t = ls.text_node
 local i = ls.insert_node
-local f = ls.function_node
+--local f = ls.function_node
 local c = ls.choice_node
-local d = ls.dynamic_node
+--local d = ls.dynamic_node
 
 local extras = require("luasnip.extras")
 local rep = extras.rep
@@ -33,6 +33,8 @@ end, { silent = true })
 --JSX snippets ==========================================
 --
 ls.add_snippets("javascriptreact", {
+
+  --JSX classname
   s(
     {
 
@@ -48,6 +50,8 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+
+  --React Component
   s(
     {
       trig = "comp",
@@ -69,6 +73,8 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+
+  --Props
   s(
     {
       trig = "props",
@@ -90,6 +96,8 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+
+  --Props Button
   s(
     {
       trig = "props-btn",
@@ -111,6 +119,8 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+
+  -- JSX Variable
   s(
     {
       trig = "var",
@@ -124,6 +134,209 @@ ls.add_snippets("javascriptreact", {
         c(1, { t("const"), t("let"), t("var") }),
         i(2, "y"),
         i(3, "9"),
+      }
+    )
+  ),
+
+  --Import React
+  s(
+    {
+      trig = "imr",
+      dscr = "Import React",
+    },
+    fmt(
+      [=[
+        import React from 'react';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Import React Component
+  s(
+    {
+      trig = "imrc",
+      dscr = "Import React Component",
+    },
+    fmt(
+      [=[
+        import React, {{ Component }} from 'react';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Import ReactDOM
+  s(
+    {
+      trig = "imrd",
+      dscr = "Import ReactDOM",
+    },
+    fmt(
+      [=[
+        import ReactDOM from 'react-dom';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Import React, {useState}
+  s(
+    {
+      trig = "imrs",
+      dscr = "Import react userstate",
+    },
+    fmt(
+      [=[
+        import react, {{ usestate }} from 'react';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Import React, {useState, useEffect}
+  s(
+    {
+      trig = "imrse",
+      dscr = "Import React useState useEffect",
+    },
+    fmt(
+      [=[
+        import react, {{ useState, useEffect }} from 'react';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Import PropTypes
+  s(
+    {
+      trig = "impt",
+      dscr = "Import PropTypes",
+    },
+    fmt(
+      [=[
+        import PropTypes from 'prop-types';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Import Pure Component
+  s(
+    {
+      trig = "impc",
+      dscr = "Import React PureComponent",
+    },
+    fmt(
+      [=[
+        import React, {{ PureComponent }} from 'react';
+        {}
+      ]=],
+      {
+        i(0),
+      }
+    )
+  ),
+
+  --Class Component
+  s(
+    {
+      trig = "cc",
+      dscr = "Class Component",
+    },
+    fmt(
+      [=[
+        
+        class {} extends Component {{
+         state = {{ {} }} 
+         render() {{ 
+           return {};
+         }}
+       }}
+      
+       export default {};
+      ]=],
+      {
+        i(1, ""),
+        i(2, ""),
+        i(0, ""),
+        rep(1),
+      }
+    )
+  ),
+
+  --Class Pure Component
+  s(
+    {
+      trig = "cpc",
+      dscr = "Class Pure Component",
+    },
+    fmt(
+      [=[
+        
+        class {} extends PureComponent {{
+         state = {{ {} }} 
+         render() {{ 
+           return {};
+         }}
+       }}
+      
+       export default {};
+      ]=],
+      {
+        i(1, ""),
+        i(2, ""),
+        i(0, ""),
+        rep(1),
+      }
+    )
+  ),
+
+  --Class Component with constructor
+  s(
+    {
+      trig = "ccc",
+      dscr = "Class Component with constructor",
+    },
+    fmt(
+      [=[
+        
+        class {} extends Component {{
+         constructor(props) {{
+           super(props);
+         }}
+         state = {{ {} }} 
+         render() {{ 
+           return {};
+         }}
+       }}
+      
+       export default {};
+      ]=],
+      {
+        i(1, ""),
+        i(2, ""),
+        i(0, ""),
+        rep(1),
       }
     )
   ),
