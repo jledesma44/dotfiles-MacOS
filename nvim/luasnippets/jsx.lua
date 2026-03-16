@@ -340,4 +340,110 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+
+  --Stateless function Component
+  s(
+    {
+      trig = "sfc",
+      dscr = "Stateless Function Component",
+    },
+    fmt(
+      [=[
+        
+        const {} = ({}) => {{
+           return ({});
+         }}
+       
+       export default {};
+      ]=],
+      {
+        i(1, ""),
+        i(2, ""),
+        i(0, ""),
+        rep(1),
+      }
+    )
+  ),
+
+  --Stateless function Naned Component
+  s(
+    {
+      trig = "sfnc",
+      dscr = "Stateless Function Named Component",
+    },
+    fmt(
+      [=[
+        
+        export const {} = ({}) => {{
+           return ({});
+         }}
+       
+      ]=],
+      {
+        i(1, ""),
+        i(2, ""),
+        i(0, ""),
+      }
+    )
+  ),
+
+  -- Function Syntax Component
+  s(
+    {
+      trig = "ffc",
+      dscr = "Function Syntax Component",
+    },
+    fmt(
+      [=[
+        
+        function {}({}) {{
+           return ({});
+         }}
+       
+       export default {};
+      ]=],
+      {
+        i(1, ""),
+        i(2, ""),
+        i(0, ""),
+        rep(1),
+      }
+    )
+  ),
+  --ComponentDidMount
+  s(
+    {
+      trig = "cdm",
+      dscr = "componentDidMount",
+    },
+    fmt(
+      [=[
+        compoenentDidMount() {{
+           {}
+         }}
+      ]=],
+      {
+        i(1, ""),
+      }
+    )
+  ),
+
+  --useEffect
+  s(
+    {
+      trig = "uef",
+      dscr = "useEffect Hook",
+    },
+    fmt(
+      [=[
+        useEffect(() => {{
+           {}
+         }}, []);
+       
+      ]=],
+      {
+        i(1, ""),
+      }
+    )
+  ),
 })
