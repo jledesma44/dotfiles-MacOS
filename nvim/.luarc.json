@@ -2,5 +2,6 @@
     "diagnostics.disable": [
         "missing-fields",
         "undefined-doc-name"
-    ]
+    ],
+    "workspace.library": ["$VIMRUNTIME"]
 }
