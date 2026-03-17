@@ -1,5 +1,7 @@
 tap "cloudflare/cloudflare"
 tap "felixkratz/formulae"
+tap "homebrew/bundle"
+tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "shopify/shopify"
@@ -64,6 +66,8 @@ brew "make"
 brew "mas"
 # Terminal-based visual file manager
 brew "midnight-commander"
+# Deep clean and optimize your Mac
+brew "mole"
 # Remote terminal application
 brew "mosh"
 # Fast, highly customisable system info script
@@ -154,6 +158,8 @@ cask "font-sf-pro"
 cask "gimp"
 # Git client focusing on productivity
 cask "gitkraken"
+# Web browser
+cask "google-chrome"
 # Keyboard shortcuts for every button on your screen
 cask "homerow"
 # Vector graphics editor
@@ -180,6 +186,8 @@ cask "notion"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Desktop virtualization software
+cask "parallels"
 # Kubernetes and container management on the desktop
 cask "rancher"
 # Imaging utility to install operating systems to a microSD card
@@ -203,9 +211,11 @@ cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer 2", id: 1616831348
 mas "Amphetamine", id: 937984704
+mas "Bree XLSX Editor", id: 6738905714
 mas "CatchMouse Pro", id: 1645766582
 mas "Eagle for Safari", id: 1526651672
 mas "Final Cut Pro", id: 424389933
+mas "Microsoft Excel", id: 462058435
 mas "Mobile Mouse Server", id: 412814284
 mas "Motion", id: 434290957
 mas "Nisus Thesaurus", id: 471448642
@@ -230,6 +240,7 @@ vscode "blinkshellinc.blink-fs"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "bschulte.php-autocomplete"
+vscode "burkeholland.simple-react-snippets"
 vscode "cantonios.project-templates"
 vscode "cipchk.cssrem"
 vscode "continue.continue"
