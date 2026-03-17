@@ -54,10 +54,11 @@ ls.add_snippets(nil, {
       },
       fmt(
         [[
+
+        --{}
         s(
           {{
             trig = "{}",
-            name = "{}",
             dscr = "{}",
           }},
           fmt(
@@ -71,8 +72,8 @@ ls.add_snippets(nil, {
         ),
         ]],
         {
-          i(1, "trigger"),
-          i(2, "snippet-name"),
+          i(1, "Snippet-name"),
+          i(2, "trigger"),
           i(3, "snippet-dscr"),
           i(4, "snippet-body"),
           i(5, "insert-1"),
