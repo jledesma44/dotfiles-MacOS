@@ -446,4 +446,26 @@ ls.add_snippets("javascriptreact", {
       }
     )
   ),
+
+  --useCallback
+  s(
+    {
+      trig = "ucb",
+      dscr = "useCallback Hook",
+    },
+    fmt(
+      [=[
+      useCallback(
+        () => {{
+          {}
+        }},
+        [{}],
+      )     
+      ]=],
+      {
+        i(1, "first"),
+        i(2, "second"),
+      }
+    )
+  ),
 })
