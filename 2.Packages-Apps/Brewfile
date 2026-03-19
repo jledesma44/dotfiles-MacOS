@@ -207,7 +207,6 @@ cask "visual-studio-code"
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer 2", id: 1616831348
 mas "Amphetamine", id: 937984704
-mas "Bree XLSX Editor", id: 6738905714
 mas "CatchMouse Pro", id: 1645766582
 mas "Eagle for Safari", id: 1526651672
 mas "Final Cut Pro", id: 424389933
