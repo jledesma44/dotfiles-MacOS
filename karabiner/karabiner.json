@@ -2977,12 +2977,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open raycast://script-commands/dismiss-notifications",
+                                "description": "Open raycast://script-commands/clear-notifications",
                                 "from": {
                                     "key_code": "n",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open raycast://script-commands/dismiss-notifications" }],
+                                "to": [{ "shell_command": "open raycast://script-commands/clear-notifications" }],
                                 "type": "basic"
                             },
                             {

@@ -208,7 +208,7 @@ const rules: KarabinerRules[] = [
         "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
       ),
       // Dismiss Notifications / Apple Script
-      n: open("raycast://script-commands/dismiss-notifications"),
+      n: open("raycast://script-commands/clear-notifications"),
       // Raycast Confetti
       p: open("raycast://extensions/raycast/raycast/confetti"),
       s: open("raycast://extensions/peduarte/silent-mention/index"),
