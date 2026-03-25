@@ -138,8 +138,6 @@ brew "shopify/shopify/shopify-cli"
 brew "shopify/shopify/themekit"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# Tool to customise input devices and automate computer systems
-cask "bettertouchtool"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
