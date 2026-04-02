@@ -2465,6 +2465,22 @@
                                         "value": 1
                                     }
                                 ],
+                                "description": "Open -a 'Preview.app'",
+                                "from": {
+                                    "key_code": "5",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Preview.app'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "hyper_sublayer_o",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
                                 "description": "Open -a 'GitHub.app'",
                                 "from": {
                                     "key_code": "g",

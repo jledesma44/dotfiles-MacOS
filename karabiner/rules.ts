@@ -186,6 +186,7 @@ const rules: KarabinerRules[] = [
       2: app("Karabiner-Elements"),
       3: app("Rectangle"),
       4: app("Geesproxmox"),
+      5: app("Preview"),
     },
 
     // R = "Raycast" ==================================================================
