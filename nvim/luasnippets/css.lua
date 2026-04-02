@@ -340,34 +340,72 @@ ls.add_snippets("css", {
     },
     fmt(
       [[ 
-        background-image: linear-gradient(to right, {}, {});
-        color: {};
-    ]],
+      linear-gradient({}, {}, {});
+      ]],
       {
-        i(1, "#ed7cda"),
-        i(2, "#ffaa1b"),
-        i(3, "white"),
+        c(1, {
+          t("to right"),
+          t("to left"),
+          t("to bottom"),
+          t("to top"),
+        }),
+        c(2, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
+        c(3, {
+          sn(nil, { t("rgba("), i(1, "0"), t(","), i(2, "0"), t(","), i(3, "0"), t(", 0."), i(4, "5"), t(")") }),
+          sn(nil, { t("#"), i(1, "ffffff") }),
+          sn(nil, { t("hsl("), i(1, "0"), t(" "), i(2, "0"), t("% "), i(3, "100"), t("% / "), i(4, "0.5"), t(")") }),
+          sn(nil, { t("var(--"), i(1, "primary-color"), t(")") }),
+        }),
       }
     )
   ),
 
+  --Img-URL
   s(
     {
-      trig = "reset-spacing",
-      dscr = "css spacing resets",
+      trig = "img-url",
+      dscr = "background image",
     },
     fmt(
       [[ 
-      *,
-      *::before,
-      *::after {{
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }}
-      
+      url('{}') {} {} {} {};
       ]],
-      {}
+      {
+        i(1, "../images/logo.png"),
+        c(2, {
+          t("no-repeat"),
+          t("repeat-x"),
+          t("repeat-y"),
+          t(""),
+        }),
+        c(3, {
+          t("center"),
+          t("top"),
+          t("bottom"),
+          t("left"),
+          t("right"),
+          t(""),
+        }),
+        c(4, {
+          t("center"),
+          t("top"),
+          t("bottom"),
+          t("left"),
+          t("right"),
+          t(""),
+        }),
+        c(5, {
+          t("cover"),
+          t("contain"),
+          t("auto"),
+          t(""),
+        }),
+      }
     )
   ),
 
