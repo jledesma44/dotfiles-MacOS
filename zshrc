@@ -243,6 +243,30 @@ export PATH="/Users/jaimeledesma/.rd/bin:$PATH"
 # alias vim="nvims"
 # alias nvim="nvims"
 
+## Coding cockpit: neovim + claude + terminal in tmux
+
+nic() {
+  local session_name="${1:-$(basename "$PWD")}"
+
+  if [[ -n "$TMUX" ]]; then
+    echo "Already in a tmux session. Detach first or run from outside tmux."
+    return 1
+  fi
+
+  if tmux has-session -t "$session_name" 2>/dev/null; then
+    tmux attach-session -t "$session_name"
+    return
+  fi
+
+  tmux new-session -d -s "$session_name" -c "$PWD" -x "$(tput cols)" -y "$(tput lines)"
+  tmux split-window -v -t "$session_name" -c "$PWD" -l 20%
+  tmux split-window -h -t "$session_name":1.1 -c "$PWD" -l 30%
+  tmux send-keys -t "$session_name":1.1 'nvim' C-m
+  tmux send-keys -t "$session_name":1.2 'claude' C-m
+  tmux select-pane -t "$session_name":1.1
+  tmux attach-session -t "$session_name"
+}
+
 # Make a directory and cd into to it
 function mkcd() {
   mkdir -p "$@" && cd "$_"
