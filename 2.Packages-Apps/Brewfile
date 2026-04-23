@@ -141,8 +141,6 @@ cask "balenaetcher"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
-cask "cmux"
-# Collaborative team software
 cask "figma"
 # Web browser
 cask "firefox"
@@ -153,8 +151,6 @@ cask "font-sf-pro"
 # Free and open-source image editor
 cask "gimp"
 # Git client focusing on productivity
-cask "gitkraken"
-# Web browser
 cask "google-chrome"
 # Keyboard shortcuts for every button on your screen
 cask "homerow"
