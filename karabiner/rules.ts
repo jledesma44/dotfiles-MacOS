@@ -169,7 +169,7 @@ const rules: KarabinerRules[] = [
       r: app("Safari"),
       a: app("Arc"),
       k: app("kitty"),
-      c: app("Visual Studio Code"),
+      c: app("Claude Design"),
       h: app("Figma"),
       v: app("RustDesk"),
       n: app("UTM"),

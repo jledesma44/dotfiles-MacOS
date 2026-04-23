@@ -2577,12 +2577,12 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Open -a 'Visual Studio Code.app'",
+                                "description": "Open -a 'Claude Design.app'",
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
+                                "to": [{ "shell_command": "open -a 'Claude Design.app'" }],
                                 "type": "basic"
                             },
                             {
