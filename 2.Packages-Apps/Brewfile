@@ -145,6 +145,8 @@ cask "claude"
 cask "claude-code"
 # Collaborative team software
 cask "figma"
+# Per-application volume mixer, equalizer, and audio router
+cask "finetune"
 # Web browser
 cask "firefox"
 # Web browser
@@ -173,6 +175,8 @@ cask "lm-studio"
 cask "local"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Open-source software for live streaming and screen recording
