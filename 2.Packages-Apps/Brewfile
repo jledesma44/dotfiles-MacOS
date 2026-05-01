@@ -143,6 +143,8 @@ cask "balenaetcher"
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Collaborative team software
 cask "figma"
 # Per-application volume mixer, equalizer, and audio router
@@ -183,8 +185,6 @@ cask "notion"
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Kubernetes and container management on the desktop
-cask "rancher"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
 # Control your tools with a few keystrokes
