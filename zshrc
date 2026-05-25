@@ -139,6 +139,9 @@ alias ll="eza --git --tree --level=2"
 alias root="sudo su"
 alias lg="lazygit"
 
+# Alias for launching Claude Code
+alias cc="claude"
+
 # Aliases (server start up) ============================
 
 alias l-server="live-server --port=5500 --host=0.0.0.0 --browser='firefox developer edition' ."
