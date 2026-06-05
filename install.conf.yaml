@@ -17,6 +17,7 @@
     ~/.config/opencode:
     ~/.gitconfig:
     ~/.tmux.conf:
+    ~/.bashrc:
     ~/.zshenv:
     ~/.zshrc:
 
