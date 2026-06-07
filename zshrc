@@ -214,8 +214,8 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 # Add Visual Studio Code (code)
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# use the vim editor
-export EDITOR=vim
+# use the nvim editor
+export EDITOR=nvim
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/jaimeledesma/.rd/bin:$PATH"
