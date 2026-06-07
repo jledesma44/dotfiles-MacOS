@@ -98,4 +98,4 @@ figlet Devstack44
 # Set up fzf keybindings and fuzzy completions
 eval "$(fzf --bash)"
 
-export EDITOR=vim
+export EDITOR=nvim
