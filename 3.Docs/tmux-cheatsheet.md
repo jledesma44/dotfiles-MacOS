@@ -24,10 +24,6 @@
 :rename-window "new-name"
 ```
 
-```
-
-```
-
 1. Creating a new session:
 
 ```tmux
