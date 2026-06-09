@@ -291,4 +291,4 @@ export PATH="$PATH:/Users/jaimeledesma/.lmstudio/bin"
 export LEDGER_FILE=~/USER/jaimeledesma/Finances/2026.journal
 
 #Path to global scripts in .local/bin
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
