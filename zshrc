@@ -191,9 +191,10 @@ RPROMPT='%*'
 
 # TERMINAL APPS================================================================
 
-fastfetch
-
-figlet Devstack44
+if [[ -z "$SKIP_SHELL_BANNER" ]]; then
+  fastfetch
+  figlet Devstack44
+fi
 
 # $PATH Variables=============================================================
 
