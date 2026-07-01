@@ -20,6 +20,7 @@ return {
         "prettier",
         "shellcheck",
         "shfmt",
+        "alejandra",
 
         -- Linters
         "eslint_d",
