@@ -1,4 +1,4 @@
-# -How to merge a commit that pushed to the remote repo on this machine with one that I need to stage then commit to push to the same repo on another device. What is the correct git commands to achieve this?
+# How to merge a commit that pushed to the remote repo on this machine with one that I need to stage then commit to push to the same repo on another device. What is the correct git commands to achieve this?
 
 ## Here's the workflow
 
