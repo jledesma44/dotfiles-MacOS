@@ -108,5 +108,32 @@ ls.add_snippets(nil, {
         }
       )
     ),
+    s(
+      {
+        trig = "script-info",
+        dscr = "bash script information header",
+      },
+      fmt(
+        [=[
+          # Author: {}
+          # Date Created: {}
+          # Last Modified: {}
+
+          # Description
+          # {}
+
+          # Usage
+          # {}
+
+        ]=],
+        {
+          i(1, "Jaime Ledesma"),
+          i(2, "Todays date"),
+          i(3, "Date last modified"),
+          i(4, "Creates a back up of current folder"),
+          i(5, "run our_first_script.zh"),
+        }
+      )
+    ),
   },
 })
