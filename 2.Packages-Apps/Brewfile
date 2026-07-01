@@ -1,8 +1,9 @@
+tap "anomalyco/tap", "https://github.com/anomalyco/homebrew-tap.git"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "cloudflare/cloudflare"
-tap "felixkratz/formulae"
 tap "jesseduffield/lazygit"
+tap "jurplel/tap"
 tap "koekeishiya/formulae"
-tap "krishkrosh/apps"
 tap "shopify/shopify"
 tap "sst/tap"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -17,6 +18,8 @@ brew "bat-extras"
 brew "blueutil"
 # Linux/OSX/FreeBSD resource monitor
 brew "bpytop"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Asynchronous event library
 brew "libevent"
 # Emacs dependency management
@@ -98,7 +101,7 @@ brew "python@3.9"
 # Pure Python Vim clone
 brew "pyvim"
 # Powerful, clean, object-oriented scripting language
-brew "ruby"
+brew "ruby", link: false
 # Safe, concurrent, practical language
 brew "rust"
 # Cross-shell prompt for astronauts
@@ -127,16 +130,6 @@ brew "yarn"
 brew "zsh"
 # Additional completion definitions for zsh
 brew "zsh-completions"
-# A window border system for macOS
-brew "felixkratz/formulae/borders"
-# Custom macOS statusbar with shell plugin, interaction and graph support
-brew "felixkratz/formulae/sketchybar"
-# Simple hotkey-daemon for macOS.
-brew "koekeishiya/formulae/skhd"
-# A CLI tool to build for the Shopify platform
-brew "shopify/shopify/shopify-cli"
-# Theme Kit is a tool kit for manipulating shopify themes
-brew "shopify/shopify/themekit"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Anthropic's official Claude AI desktop app
@@ -201,8 +194,6 @@ cask "spotify"
 cask "syncthing-app"
 # Temperature monitoring, fan control and diagnostics
 cask "tg-pro"
-# Turn your MacBook's trackpad into a precise digital weighing scale
-cask "krishkrosh/apps/trackweight"
 mas "1Password 7", id: 1333542190
 mas "Affinity Designer 2", id: 1616831348
 mas "Amphetamine", id: 937984704
@@ -221,3 +212,6 @@ mas "Ulysses", id: 1225570693
 mas "UTM", id: 1538878817
 mas "WhatFont", id: 1437138382
 mas "Xcode", id: 497799835
+npm "@fission-ai/openspec"
+npm "gulp-cli"
+npm "live-server"
