@@ -13,6 +13,7 @@ return {
       sh = { "shfmt" },
       bash = { "shfmt" },
       zsh = { "shfmt" },
+      nix = { "alejandra" },
       formatters = {
         shfmt = {
           prepend_args = { "-i", "2", "-ci" },
